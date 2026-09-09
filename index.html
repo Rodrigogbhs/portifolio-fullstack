@@ -275,14 +275,21 @@
       // cascata dos chips: só liga o efeito depois de confirmar que o JS roda
       document.documentElement.classList.add('js-cascata');
       var chips = document.querySelector('.chips');
+      var mostrar = function () {
+        chips.classList.add('visivel');
+      };
       var olho = new IntersectionObserver(function (entradas) {
         entradas.forEach(function (e) {
           if (!e.isIntersecting) return;
-          e.target.classList.add('visivel');
+          mostrar();
           olho.unobserve(e.target);
         });
       }, { threshold: 0.2 });
       olho.observe(chips);
+
+      // Rede de segurança: se o observer não disparar por qualquer motivo,
+      // os chips aparecem mesmo assim. Conteúdo não pode depender do efeito.
+      setTimeout(mostrar, 3000);
     })();
   </script>
 
