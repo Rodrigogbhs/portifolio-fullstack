@@ -160,10 +160,25 @@ img {
 }
 
 .marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  white-space: nowrap;
   font-family: "Bricolage Grotesque", system-ui, sans-serif;
   font-size: 1.1rem;
   font-weight: 800;
   letter-spacing: -0.02em;
+}
+
+.marca-avatar {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 1px solid var(--carpa);
+  border-radius: 50%;
+  background-color: #f7f4ee;
 }
 
 .marca .ponto {
@@ -831,7 +846,7 @@ body.portfolio-aberto { overflow: hidden; }
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 820px) {
   .menu { gap: 12px; }
   .menu ul { display: flex; }
   .menu ul li:not(.menu-portfolio) { display: none; }
@@ -848,6 +863,9 @@ body.portfolio-aberto { overflow: hidden; }
   .navbar {
     height: 66px;
   }
+
+  .marca-avatar { width: 34px; height: 34px; }
+  .marca { gap: 8px; }
 
   .degrade-secao {
     margin-top: 72px;
@@ -869,6 +887,13 @@ body.portfolio-aberto { overflow: hidden; }
     flex-direction: column;
     align-items: flex-start;
   }
+}
+
+@media (max-width: 380px) {
+  .navbar, .menu { gap: 8px; }
+  .marca { font-size: 0.95rem; gap: 6px; }
+  .marca-avatar { width: 28px; height: 28px; }
+  .menu .btn-curriculo { padding-inline: 8px; font-size: 0.75rem; }
 }
 
 /* ===== quem pediu menos movimento não recebe nenhum ===== */
