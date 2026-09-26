@@ -497,6 +497,132 @@ img {
   margin-bottom: 34px;
 }
 
+/* ===== portfólio ===== */
+.portfolio-cabecalho {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+.portfolio-sobretitulo {
+  color: var(--carpa);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.portfolio-ponto { color: var(--carpa); }
+.portfolio-cabecalho .linha-secao { margin-bottom: 0; }
+.portfolio-controles { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.portfolio-controles[hidden] { display: none; }
+.portfolio-contador { color: var(--old-white); font-size: 0.8rem; font-variant-numeric: tabular-nums; margin-right: 12px; white-space: nowrap; }
+.portfolio-contador span { color: var(--carpa); }
+.portfolio-seta {
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--linha-forte);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--fuji);
+  font: inherit;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+.portfolio-seta:hover:not(:disabled) { background: var(--carpa); color: var(--sumi); }
+.portfolio-seta:disabled { opacity: 0.3; cursor: default; }
+.portfolio-instrucao { color: var(--old-white); font-size: 0.8rem; margin-bottom: 14px; }
+.portfolio-galeria {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: var(--carpa) var(--sumi-2);
+  padding: 4px 4px 22px;
+  margin-inline: -4px;
+}
+.projeto { flex: 0 0 72%; min-width: 0; scroll-snap-align: start; }
+.projeto-previa {
+  display: block;
+  position: relative;
+  border: 1px solid var(--linha-forte);
+  border-radius: var(--raio);
+  overflow: hidden;
+  background: var(--sumi-2);
+}
+.projeto-janela { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 40px; padding-inline: 16px; color: var(--old-white); font-size: 0.65rem; }
+.projeto-janela > span:nth-child(2) { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.projeto-pontos { display: flex; gap: 5px; flex-shrink: 0; }
+.projeto-pontos i { width: 6px; height: 6px; border-radius: 50%; background: var(--linha-forte); }
+.projeto-pontos i:first-child { background: var(--carpa); }
+.projeto-tela { display: block; aspect-ratio: 16 / 9; overflow: hidden; background: var(--sumi-3); }
+.projeto-tela img { width: 100%; height: auto; transition: transform 0.8s var(--corte); }
+.projeto-ampliar {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 14px;
+  border: 1px solid var(--linha-forte);
+  border-radius: 999px;
+  background: var(--sumi);
+  color: var(--fuji);
+  font-size: 0.75rem;
+  box-shadow: 0 4px 24px #0003;
+}
+.projeto-previa:hover .projeto-ampliar { border-color: var(--carpa); color: var(--carpa); }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .projeto-previa:hover .projeto-tela img { transform: translateY(calc(-100% + var(--previa-altura, 450px))); transition: transform 12s linear; }
+}
+.projeto-info { padding: 22px 0 8px; }
+.projeto-categoria { display: flex; justify-content: space-between; gap: 12px; color: var(--old-white); font-size: 0.72rem; }
+.projeto-categoria > span:first-child { color: var(--carpa); }
+.projeto-info h3 { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: clamp(1.4rem, 2.8vw, 1.9rem); letter-spacing: -0.025em; margin: 8px 0; }
+.projeto-info > p { color: var(--old-white); font-size: 0.94rem; max-width: 66ch; }
+.projeto-stack { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.projeto-stack li { padding: 3px 10px; border: 1px solid var(--linha); border-radius: 999px; font-size: 0.72rem; color: var(--old-white); }
+.portfolio-rodape { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 20px; color: var(--old-white); font-size: 0.8rem; }
+.portfolio-rodape a { color: var(--carpa); }
+.portfolio-rodape a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.portfolio-dialog {
+  width: min(1040px, calc(100% - 32px));
+  max-width: none;
+  max-height: 90vh;
+  max-height: 90dvh;
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--linha-forte);
+  border-radius: var(--raio);
+  background: var(--sumi);
+  color: var(--fuji);
+  overflow: hidden;
+}
+.portfolio-dialog[open] { display: flex; flex-direction: column; }
+.portfolio-dialog::backdrop { background: #111119df; backdrop-filter: blur(8px); }
+body.portfolio-aberto { overflow: hidden; }
+.portfolio-dialog-topo { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 22px; border-bottom: 1px solid var(--linha); }
+.portfolio-dialog-topo h2 { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: 1.1rem; }
+.portfolio-dialog-topo p { color: var(--old-white); font-size: 0.75rem; }
+.portfolio-fechar { display: flex; align-items: center; gap: 12px; padding: 8px 12px; border: 1px solid var(--linha-forte); border-radius: 8px; background: transparent; color: var(--fuji); font: inherit; font-size: 0.8rem; cursor: pointer; }
+.portfolio-fechar:hover { border-color: var(--carpa); }
+.portfolio-fechar span { font-size: 1.2rem; }
+.portfolio-dialog-conteudo { overflow-y: auto; overscroll-behavior: contain; min-height: 0; }
+.portfolio-dialog-conteudo img { width: 100%; height: auto; }
+@media (max-width: 720px) {
+  .portfolio-cabecalho { align-items: flex-start; flex-direction: column; gap: 20px; }
+  .projeto { flex-basis: 90%; }
+  .portfolio-instrucao { max-width: 45ch; }
+  .portfolio-dialog-topo { padding: 12px; }
+  .portfolio-dialog-topo h2 { font-size: 0.94rem; }
+  .portfolio-dialog-topo p { max-width: 24ch; }
+  .portfolio-rodape { font-size: 0.75rem; }
+  .menu ul .menu-portfolio a { font-size: 0.85rem; }
+}
+
 /* ===== tecnologias ===== */
 .chips {
   display: flex;
@@ -706,9 +832,12 @@ img {
 }
 
 @media (max-width: 720px) {
-  .menu ul {
-    display: none;
-  }
+  .menu { gap: 12px; }
+  .menu ul { display: flex; }
+  .menu ul li:not(.menu-portfolio) { display: none; }
+  .menu .btn-curriculo { padding: 8px 12px; font-size: 0.8rem; }
+  .menu .btn-curriculo .icone { display: none; }
+  .navbar { gap: 12px; }
 }
 
 @media (max-width: 560px) {

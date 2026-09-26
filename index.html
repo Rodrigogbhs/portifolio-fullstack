@@ -52,6 +52,7 @@
       <nav class="menu">
         <ul>
           <li><a href="#inicio">Início</a></li>
+          <li class="menu-portfolio"><a href="#portfolio">Portfólio</a></li>
           <li><a href="#tecnologias">Tecnologias</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
@@ -149,6 +150,73 @@
         </div>
       </div>
 
+    </section>
+
+    <div class="container"><div class="degrade degrade-secao" aria-hidden="true"></div></div>
+
+    <section class="secao container portfolio" id="portfolio" aria-labelledby="titulo-portfolio">
+      <div class="portfolio-cabecalho">
+        <div>
+          <p class="portfolio-sobretitulo">Do código à experiência</p>
+          <h2 class="titulo-secao" id="titulo-portfolio">Portfólio<span class="portfolio-ponto">.</span></h2>
+          <p class="linha-secao">Projetos que saíram da ideia e ganharam forma. Explore cada detalhe.</p>
+        </div>
+        <div class="portfolio-controles" hidden>
+          <span class="portfolio-contador" aria-live="polite" aria-atomic="true"><span id="portfolio-atual">01</span> / 03</span>
+          <button class="portfolio-seta" type="button" id="portfolio-anterior" aria-label="Projeto anterior" aria-controls="portfolio-galeria" disabled>←</button>
+          <button class="portfolio-seta" type="button" id="portfolio-proximo" aria-label="Próximo projeto" aria-controls="portfolio-galeria">→</button>
+        </div>
+      </div>
+
+      <p class="portfolio-instrucao" id="portfolio-instrucao">Deslize para explorar os projetos. Selecione uma prévia para ampliar e rolar a página.</p>
+      <ul class="portfolio-galeria" id="portfolio-galeria" tabindex="0" aria-label="Galeria de projetos" aria-describedby="portfolio-instrucao">
+        <li class="projeto">
+          <article aria-labelledby="projeto-virlene">
+            <a class="projeto-previa" href="assets/images/portfolio/virlene-alves.webp" target="_blank" rel="noopener" data-projeto="Virlene Alves" aria-label="Ampliar prévia do projeto Virlene Alves">
+              <span class="projeto-janela" aria-hidden="true"><span class="projeto-pontos"><i></i><i></i><i></i></span><span>Virlene Alves · Aulas particulares</span><span>↗</span></span>
+              <span class="projeto-tela"><img src="assets/images/portfolio/virlene-alves.webp" alt="Página da professora Virlene Alves, com tons lilás, retrato e apresentação das aulas de matemática" width="1200" height="2725" loading="lazy" decoding="async"></span>
+              <span class="projeto-ampliar">Ampliar prévia <span aria-hidden="true">↗</span></span>
+            </a>
+            <div class="projeto-info">
+              <div class="projeto-categoria"><span>01 / Educação</span><span>Landing page</span></div>
+              <h3 id="projeto-virlene">Virlene Alves</h3>
+              <p>Uma apresentação acolhedora para aulas particulares de matemática, com informações sobre o acompanhamento e contato direto pelo WhatsApp.</p>
+              <ul class="projeto-stack" aria-label="Tecnologias do projeto"><li>HTML</li><li>CSS</li><li>Responsivo</li></ul>
+            </div>
+          </article>
+        </li>
+        <li class="projeto">
+          <article aria-labelledby="projeto-toussaint">
+            <a class="projeto-previa" href="assets/images/portfolio/toussaint.webp" target="_blank" rel="noopener" data-projeto="Barbearia Toussaint" aria-label="Ampliar prévia do projeto Barbearia Toussaint">
+              <span class="projeto-janela" aria-hidden="true"><span class="projeto-pontos"><i></i><i></i><i></i></span><span>Barbearia Toussaint · Belo Horizonte</span><span>↗</span></span>
+              <span class="projeto-tela"><img src="assets/images/portfolio/toussaint.webp" alt="Site da Barbearia Toussaint, com identidade azul, serviços, equipe e informações de agendamento" width="1200" height="4010" loading="lazy" decoding="async"></span>
+              <span class="projeto-ampliar">Ampliar prévia <span aria-hidden="true">↗</span></span>
+            </a>
+            <div class="projeto-info">
+              <div class="projeto-categoria"><span>02 / Serviços</span><span>Site institucional</span></div>
+              <h3 id="projeto-toussaint">Barbearia Toussaint</h3>
+              <p>A personalidade da barbearia em uma presença digital: serviços, profissionais, depoimentos e caminhos simples para agendar um horário.</p>
+              <ul class="projeto-stack" aria-label="Tecnologias do projeto"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            </div>
+          </article>
+        </li>
+        <li class="projeto">
+          <article aria-labelledby="projeto-veener">
+            <a class="projeto-previa" href="assets/images/portfolio/veener.webp" target="_blank" rel="noopener" data-projeto="Veener" aria-label="Ampliar prévia do projeto Veener">
+              <span class="projeto-janela" aria-hidden="true"><span class="projeto-pontos"><i></i><i></i><i></i></span><span>Veener · Joias em prata 925</span><span>↗</span></span>
+              <span class="projeto-tela"><img src="assets/images/portfolio/veener.webp" alt="Página da loja Veener, com identidade verde, tipografia editorial e espaços reservados para fotografias de joias" width="1200" height="3467" loading="lazy" decoding="async"></span>
+              <span class="projeto-ampliar">Ampliar prévia <span aria-hidden="true">↗</span></span>
+            </a>
+            <div class="projeto-info">
+              <div class="projeto-categoria"><span>03 / Joalheria</span><span>E-commerce</span></div>
+              <h3 id="projeto-veener">Veener</h3>
+              <p>Loja de joias em prata 925, com catálogo, carrinho, checkout e painel administrativo. Uma experiência de compra com identidade própria.</p>
+              <ul class="projeto-stack" aria-label="Tecnologias do projeto"><li>Next.js</li><li>TypeScript</li><li>Prisma</li><li>PostgreSQL</li></ul>
+            </div>
+          </article>
+        </li>
+      </ul>
+      <div class="portfolio-rodape"><span>3 projetos · 3 experiências diferentes</span><a href="#contato">Vamos criar o próximo? <span aria-hidden="true">↗</span></a></div>
     </section>
 
     <div class="container"><div class="degrade degrade-secao" aria-hidden="true"></div></div>
@@ -260,6 +328,15 @@
       </li>
     </ul>
   </footer>
+
+  <dialog class="portfolio-dialog" id="portfolio-dialog" aria-labelledby="portfolio-dialog-titulo">
+    <div class="portfolio-dialog-topo">
+      <div><h2 id="portfolio-dialog-titulo">Prévia do projeto</h2><p>Role para conhecer a página completa.</p></div>
+      <form method="dialog"><button class="portfolio-fechar" aria-label="Fechar prévia" autofocus>Fechar <span aria-hidden="true">×</span></button></form>
+    </div>
+    <div class="portfolio-dialog-conteudo" tabindex="0" role="region" aria-label="Captura completa do projeto"></div>
+  </dialog>
+  <script src="portfolio.js" defer></script>
 
   <script>
     // Progressive enhancement: sem JS a página fica inteira, só sem os dois
