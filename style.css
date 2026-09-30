@@ -1,0 +1,937 @@
+/* =========================================================
+   Dev.Rodrigo — portfólio
+   Conceito: "degradê". Em português a mesma palavra nomeia o
+   corte do barbeiro e o gradiente. A transição de carreira do
+   Rodrigo já tinha um nome visual — o site inteiro sai daí.
+   ========================================================= */
+
+/* ===== fontes =====
+   Servidas pelo próprio site (antes vinham do Google Fonts). Arquivos
+   variáveis cortados para o que a página usa: Bricolage com opsz 12–96 e
+   pesos 600–800; Instrument Sans com pesos 400–600; caracteres latinos
+   (português completo) + setas. Licença OFL em assets/fonts/. */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("assets/fonts/bricolage-grotesque.woff2") format("woff2");
+  font-weight: 600 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("assets/fonts/instrument-sans.woff2") format("woff2");
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== tokens ===== */
+:root {
+  /* Kanagawa Wave — os nomes são os do tema original (sumiInk = tinta
+     nanquim, fujiWhite = a neve do Fuji, carpYellow = a carpa) */
+  --sumi: #1f1f28;        /* sumiInk3 — o fundo canônico do Wave */
+  --sumi-2: #2a2a37;      /* sumiInk4 */
+  --sumi-3: #363646;      /* sumiInk5 */
+
+  --fuji: #dcd7ba;        /* fujiWhite — texto */
+  --old-white: #c8c093;   /* oldWhite — texto secundário */
+
+  --carpa: #e6c384;       /* carpYellow — o acento */
+  --carpa-claro: #f2d9a4;
+  --cristal: #7e9cd8;     /* crystalBlue — a onda */
+
+  --linha: #363646;       /* sumiInk5 */
+  --linha-forte: #54546d; /* sumiInk6 */
+
+  --largura: 1180px;
+  --raio: 14px;
+
+  /* uma curva só no site inteiro, para o movimento ter assinatura */
+  --corte: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ===== reset ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* o header fixo não pode cobrir o alvo das âncoras */
+  scroll-padding-top: 96px;
+}
+
+body {
+  background-color: var(--sumi);
+  color: var(--fuji);
+  font-family: "Instrument Sans", system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--carpa);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.svg-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.icone {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--largura);
+  margin: 0 auto;
+  padding-inline: 32px;
+}
+
+/* =========================================================
+   O DEGRADÊ
+   Traços verticais como o rastro da máquina. Duas máscaras
+   cruzadas afinam o traço na vertical e apagam nas pontas,
+   então a densidade cai como num fade de verdade.
+   ========================================================= */
+.degrade {
+  height: 52px;
+  width: min(100%, 560px);
+  /* base segura: um fio que some. Se mask-composite não existir,
+     é isto que aparece — discreto, nunca quebrado. */
+  background-image: linear-gradient(90deg, var(--linha-forte), transparent);
+  background-size: 100% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+}
+
+/* três máscaras cruzadas: os traços, a queda angulada e o crescimento
+   a partir da base. O que sobra é a silhueta de um degradê — denso e
+   alto à esquerda, sumindo à direita. */
+@supports (mask-composite: intersect) {
+  .degrade {
+    background-image: none;
+    background-color: var(--fuji);
+    opacity: 0.3;
+    mask-image:
+      repeating-linear-gradient(90deg, #000 0 1px, transparent 1px 10px),
+      linear-gradient(96deg, #000 0 12%, transparent 78%),
+      linear-gradient(180deg, transparent, #000 85%);
+    mask-composite: intersect, intersect;
+  }
+}
+
+.degrade-secao {
+  margin: 104px 0 0;
+}
+
+/* ===== header ===== */
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(31, 31, 40, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s var(--corte), background-color 0.3s var(--corte);
+}
+
+/* a hairline só aparece depois que a página rola — sem moldura à toa no topo */
+.topo.rolado {
+  border-bottom-color: var(--linha);
+  background-color: rgba(31, 31, 40, 0.9);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: 76px;
+}
+
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.marca-avatar {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 1px solid var(--carpa);
+  border-radius: 50%;
+  background-color: #f7f4ee;
+}
+
+.marca .ponto {
+  color: var(--carpa);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.menu ul {
+  display: flex;
+  gap: 30px;
+}
+
+.menu ul a {
+  position: relative;
+  color: var(--old-white);
+  font-size: 0.94rem;
+  transition: color 0.25s var(--corte);
+}
+
+/* o sublinhado do menu é o mesmo traço da navalha, em miniatura */
+.menu ul a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 1.5px;
+  background-color: var(--carpa);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s var(--corte);
+}
+
+.menu ul a:hover {
+  color: var(--fuji);
+}
+
+.menu ul a:hover::after,
+.menu ul a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.btn-curriculo {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 18px;
+  border: 1px solid var(--linha-forte);
+  border-radius: 999px;
+  color: var(--fuji);
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: border-color 0.3s var(--corte), color 0.3s var(--corte),
+    background-color 0.3s var(--corte);
+}
+
+.btn-curriculo .icone {
+  width: 16px;
+  height: 16px;
+  color: var(--carpa);
+  transition: transform 0.35s var(--corte);
+}
+
+.btn-curriculo:hover {
+  border-color: var(--carpa);
+  background-color: rgba(230, 195, 132, 0.09);
+}
+
+.btn-curriculo:hover .icone {
+  transform: translateY(2px);
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 72px;
+  align-items: start;
+  padding-top: 72px;
+}
+
+.hero-retrato {
+  position: relative;
+}
+
+/* a foto não tem borda: ela desvanece no fundo, igual a um degradê */
+.foto {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: var(--raio);
+}
+
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 22%;
+  -webkit-mask-image: linear-gradient(180deg, #000 58%, transparent 100%);
+  mask-image: linear-gradient(180deg, #000 58%, transparent 100%);
+}
+
+.hero-texto {
+  padding-top: 8px;
+}
+
+.papel {
+  color: var(--carpa);
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin-bottom: 14px;
+}
+
+/* o nome é o elemento mais alto da página — sem caixa, sem moldura */
+.nome {
+  position: relative;
+  /* min-content encolhe até a palavra mais longa, então o corte varre
+     exatamente as letras — fit-content pararia na largura da coluna */
+  width: min-content;
+  max-width: 100%;
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-size: clamp(2.6rem, 6.4vw, 4.6rem);
+  font-weight: 800;
+  line-height: 0.94;
+  letter-spacing: -0.035em;
+  padding-bottom: 22px;
+}
+
+/* o rastro da navalha */
+.nome::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--carpa), transparent);
+}
+
+.cargo {
+  font-family: "Instrument Sans", system-ui, sans-serif;
+  font-size: 1.22rem;
+  font-weight: 500;
+  color: var(--cristal);
+  margin-top: 20px;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 58ch;
+  margin-top: 26px;
+  color: var(--old-white);
+}
+
+.bio strong {
+  color: var(--fuji);
+  font-weight: 500;
+}
+
+.hero-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 34px;
+}
+
+/* ===== botões ===== */
+.btn-primario {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border: 1px solid var(--carpa);
+  border-radius: 999px;
+  background-color: var(--carpa);
+  color: var(--sumi);
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-size: 0.98rem;
+  font-weight: 600;
+  transition: background-color 0.3s var(--corte), transform 0.3s var(--corte),
+    box-shadow 0.3s var(--corte);
+}
+
+.btn-primario:hover {
+  background-color: var(--carpa-claro);
+  border-color: var(--carpa-claro);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(230, 195, 132, 0.2);
+}
+
+.btn-primario .icone {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.35s var(--corte);
+}
+
+.btn-primario:hover .icone {
+  transform: translateY(2px);
+}
+
+.btn-secundario {
+  position: relative;
+  color: var(--old-white);
+  font-size: 0.95rem;
+  padding-bottom: 3px;
+  transition: color 0.25s var(--corte);
+}
+
+.btn-secundario::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: var(--old-white);
+  transform-origin: right;
+  transition: transform 0.35s var(--corte), background-color 0.35s var(--corte);
+}
+
+.btn-secundario:hover {
+  color: var(--fuji);
+}
+
+.btn-secundario:hover::after {
+  background-color: var(--carpa);
+}
+
+/* ===== redes ===== */
+.redes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 26px;
+}
+
+/* a caixa aqui é informação: marca o que é clicável */
+.btn-rede {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 18px;
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+  color: var(--old-white);
+  transition: border-color 0.3s var(--corte), background-color 0.3s var(--corte),
+    transform 0.3s var(--corte);
+}
+
+.btn-rede .icone {
+  width: 21px;
+  height: 21px;
+  color: var(--old-white);
+  transition: color 0.3s var(--corte);
+}
+
+.rede-texto {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.28;
+  min-width: 0;
+}
+
+.rede-texto strong {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--fuji);
+}
+
+.rede-texto small {
+  font-size: 0.79rem;
+  color: var(--old-white);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.btn-rede:hover {
+  background-color: var(--sumi-2);
+  border-color: var(--linha-forte);
+  transform: translateX(4px);
+}
+
+/* cada rede acende na cor da própria marca */
+.rede-gmail:hover {
+  border-color: rgba(234, 67, 53, 0.5);
+}
+.rede-gmail:hover .icone {
+  color: #ea4335;
+}
+
+.rede-github:hover .icone {
+  color: var(--fuji);
+}
+.rede-linkedin:hover .icone {
+  color: #4aa3f0;
+}
+.rede-instagram:hover .icone {
+  color: #e1306c;
+}
+
+/* ===== seções ===== */
+.secao {
+  padding-top: 40px;
+}
+
+.titulo-secao {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-size: clamp(1.7rem, 3.4vw, 2.3rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  margin-bottom: 8px;
+}
+
+.linha-secao {
+  color: var(--old-white);
+  max-width: 56ch;
+  margin-bottom: 34px;
+}
+
+/* ===== portfólio ===== */
+.portfolio-cabecalho {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+.portfolio-sobretitulo {
+  color: var(--carpa);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.portfolio-ponto { color: var(--carpa); }
+.portfolio-cabecalho .linha-secao { margin-bottom: 0; }
+.portfolio-controles { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.portfolio-controles[hidden] { display: none; }
+.portfolio-contador { color: var(--old-white); font-size: 0.8rem; font-variant-numeric: tabular-nums; margin-right: 12px; white-space: nowrap; }
+.portfolio-contador span { color: var(--carpa); }
+.portfolio-seta {
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--linha-forte);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--fuji);
+  font: inherit;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+.portfolio-seta:hover:not(:disabled) { background: var(--carpa); color: var(--sumi); }
+.portfolio-seta:disabled { opacity: 0.3; cursor: default; }
+.portfolio-instrucao { color: var(--old-white); font-size: 0.8rem; margin-bottom: 14px; }
+.portfolio-galeria {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: var(--carpa) var(--sumi-2);
+  padding: 4px 4px 22px;
+  margin-inline: -4px;
+}
+.projeto { flex: 0 0 72%; min-width: 0; scroll-snap-align: start; }
+.projeto-previa {
+  display: block;
+  position: relative;
+  border: 1px solid var(--linha-forte);
+  border-radius: var(--raio);
+  overflow: hidden;
+  background: var(--sumi-2);
+}
+.projeto-janela { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 40px; padding-inline: 16px; color: var(--old-white); font-size: 0.65rem; }
+.projeto-janela > span:nth-child(2) { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.projeto-pontos { display: flex; gap: 5px; flex-shrink: 0; }
+.projeto-pontos i { width: 6px; height: 6px; border-radius: 50%; background: var(--linha-forte); }
+.projeto-pontos i:first-child { background: var(--carpa); }
+.projeto-tela { display: block; aspect-ratio: 16 / 9; overflow: hidden; background: var(--sumi-3); }
+.projeto-tela img { width: 100%; height: auto; transition: transform 0.8s var(--corte); }
+.projeto-ampliar {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 14px;
+  border: 1px solid var(--linha-forte);
+  border-radius: 999px;
+  background: var(--sumi);
+  color: var(--fuji);
+  font-size: 0.75rem;
+  box-shadow: 0 4px 24px #0003;
+}
+.projeto-previa:hover .projeto-ampliar { border-color: var(--carpa); color: var(--carpa); }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .projeto-previa:hover .projeto-tela img { transform: translateY(calc(-100% + var(--previa-altura, 450px))); transition: transform 12s linear; }
+}
+.projeto-info { padding: 22px 0 8px; }
+.projeto-categoria { display: flex; justify-content: space-between; gap: 12px; color: var(--old-white); font-size: 0.72rem; }
+.projeto-categoria > span:first-child { color: var(--carpa); }
+.projeto-info h3 { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: clamp(1.4rem, 2.8vw, 1.9rem); letter-spacing: -0.025em; margin: 8px 0; }
+.projeto-info > p { color: var(--old-white); font-size: 0.94rem; max-width: 66ch; }
+.projeto-stack { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.projeto-stack li { padding: 3px 10px; border: 1px solid var(--linha); border-radius: 999px; font-size: 0.72rem; color: var(--old-white); }
+.portfolio-rodape { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 20px; color: var(--old-white); font-size: 0.8rem; }
+.portfolio-rodape a { color: var(--carpa); }
+.portfolio-rodape a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.portfolio-dialog {
+  width: min(1040px, calc(100% - 32px));
+  max-width: none;
+  max-height: 90vh;
+  max-height: 90dvh;
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--linha-forte);
+  border-radius: var(--raio);
+  background: var(--sumi);
+  color: var(--fuji);
+  overflow: hidden;
+}
+.portfolio-dialog[open] { display: flex; flex-direction: column; }
+.portfolio-dialog::backdrop { background: #111119df; backdrop-filter: blur(8px); }
+body.portfolio-aberto { overflow: hidden; }
+.portfolio-dialog-topo { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 22px; border-bottom: 1px solid var(--linha); }
+.portfolio-dialog-topo h2 { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: 1.1rem; }
+.portfolio-dialog-topo p { color: var(--old-white); font-size: 0.75rem; }
+.portfolio-fechar { display: flex; align-items: center; gap: 12px; padding: 8px 12px; border: 1px solid var(--linha-forte); border-radius: 8px; background: transparent; color: var(--fuji); font: inherit; font-size: 0.8rem; cursor: pointer; }
+.portfolio-fechar:hover { border-color: var(--carpa); }
+.portfolio-fechar span { font-size: 1.2rem; }
+.portfolio-dialog-conteudo { overflow-y: auto; overscroll-behavior: contain; min-height: 0; }
+.portfolio-dialog-conteudo img { width: 100%; height: auto; }
+@media (max-width: 720px) {
+  .portfolio-cabecalho { align-items: flex-start; flex-direction: column; gap: 20px; }
+  .projeto { flex-basis: 90%; }
+  .portfolio-instrucao { max-width: 45ch; }
+  .portfolio-dialog-topo { padding: 12px; }
+  .portfolio-dialog-topo h2 { font-size: 0.94rem; }
+  .portfolio-dialog-topo p { max-width: 24ch; }
+  .portfolio-rodape { font-size: 0.75rem; }
+  .menu ul .menu-portfolio a { font-size: 0.85rem; }
+}
+
+/* ===== tecnologias ===== */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+}
+
+.chips li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px 10px 14px;
+  border: 1px solid var(--linha);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  color: var(--old-white);
+  transition: border-color 0.3s var(--corte), color 0.3s var(--corte),
+    background-color 0.3s var(--corte), transform 0.3s var(--corte);
+}
+
+.chips li:hover {
+  border-color: var(--linha-forte);
+  background-color: var(--sumi-2);
+  color: var(--fuji);
+  transform: translateY(-3px);
+}
+
+.chips img {
+  width: 23px;
+  height: 23px;
+  object-fit: contain;
+}
+
+/* ===== contato ===== */
+.contato-grade {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid var(--linha);
+  border-radius: 20px;
+  background-color: var(--sumi-2);
+}
+
+/* grade fixa: com 4 canais de larguras diferentes, o wrap deixava
+   as caixas irregulares */
+.contato-grade .redes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 22px;
+}
+
+.contato-grade .btn-rede {
+  background-color: var(--sumi);
+}
+
+.contato-grade .btn-rede:hover {
+  background-color: var(--sumi-3);
+}
+
+/* ===== rodapé ===== */
+.rodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 88px;
+  padding-block: 26px 40px;
+  border-top: 1px solid var(--linha);
+  color: var(--old-white);
+  font-size: 0.86rem;
+}
+
+.redes-mini {
+  display: flex;
+  gap: 10px;
+}
+
+.redes-mini a {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--linha);
+  border-radius: 50%;
+  color: var(--old-white);
+  transition: color 0.3s var(--corte), border-color 0.3s var(--corte),
+    transform 0.3s var(--corte);
+}
+
+.redes-mini a:hover {
+  color: var(--carpa);
+  border-color: var(--carpa);
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   MOVIMENTO
+   Um momento orquestrado: a navalha passa e revela o nome no
+   rastro. Depois disso a página fica quieta. Tudo aqui está
+   dentro de no-preference, então o estado padrão é o final —
+   sem animação, nada some.
+   ========================================================= */
+@media (prefers-reduced-motion: no-preference) {
+  .papel,
+  .cargo,
+  .bio,
+  .hero-acoes,
+  .hero-retrato,
+  .redes {
+    animation: surgir 0.7s var(--corte) both;
+  }
+
+  .hero-retrato { animation-delay: 0.05s; }
+  .papel        { animation-delay: 0.1s; }
+  .cargo        { animation-delay: 0.5s; }
+  .bio          { animation-delay: 0.58s; }
+  .hero-acoes   { animation-delay: 0.66s; }
+  .redes        { animation-delay: 0.73s; }
+
+  /* o nome é revelado da esquerda para a direita, como o corte */
+  .nome {
+    animation: cortar 0.75s var(--corte) 0.18s both;
+  }
+
+  /* e o fio de latão viaja junto, na frente do corte */
+  .nome::after {
+    animation: navalha 0.75s var(--corte) 0.18s both;
+  }
+
+  .topo {
+    animation: surgir 0.6s var(--corte) both;
+  }
+}
+
+@keyframes cortar {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes navalha {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes surgir {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.nome::after {
+  transform-origin: left;
+}
+
+/* Único momento no scroll: os chips entram em cascata, como
+   passadas de máquina. O JS só liga o efeito; sem JS eles já
+   estão visíveis. */
+.js-cascata .chips li {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.js-cascata .chips.visivel li {
+  animation: surgir 0.5s var(--corte) both;
+  animation-delay: calc(var(--i) * 45ms);
+}
+
+/* ===== responsivo ===== */
+@media (max-width: 940px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 48px;
+  }
+
+  /* no celular o nome vem primeiro: ninguém deve rolar meia tela
+     para descobrir de quem é o site */
+  .hero-texto {
+    order: -1;
+    padding-top: 0;
+  }
+
+  .hero-retrato {
+    max-width: 340px;
+  }
+
+  .contato-grade {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 820px) {
+  .menu { gap: 12px; }
+  .menu ul { display: flex; }
+  .menu ul li:not(.menu-portfolio) { display: none; }
+  .menu .btn-curriculo { padding: 8px 12px; font-size: 0.8rem; }
+  .menu .btn-curriculo .icone { display: none; }
+  .navbar { gap: 12px; }
+}
+
+@media (max-width: 560px) {
+  .container {
+    padding-inline: 20px;
+  }
+
+  .navbar {
+    height: 66px;
+  }
+
+  .marca-avatar { width: 34px; height: 34px; }
+  .marca { gap: 8px; }
+
+  .degrade-secao {
+    margin-top: 72px;
+  }
+
+  .hero-acoes > .btn-primario {
+    width: 100%;
+  }
+
+  .contato-grade {
+    padding: 26px 20px;
+  }
+
+  .contato-grade .redes {
+    flex-direction: column;
+  }
+
+  .rodape {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 380px) {
+  .navbar, .menu { gap: 8px; }
+  .marca { font-size: 0.95rem; gap: 6px; }
+  .marca-avatar { width: 28px; height: 28px; }
+  .menu .btn-curriculo { padding-inline: 8px; font-size: 0.75rem; }
+}
+
+/* ===== quem pediu menos movimento não recebe nenhum ===== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .js-cascata .chips li {
+    opacity: 1;
+    transform: none;
+  }
+}
