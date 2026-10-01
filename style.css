@@ -5,6 +5,27 @@
    Rodrigo já tinha um nome visual — o site inteiro sai daí.
    ========================================================= */
 
+/* ===== fontes =====
+   Servidas pelo próprio site (antes vinham do Google Fonts). Arquivos
+   variáveis cortados para o que a página usa: Bricolage com opsz 12–96 e
+   pesos 600–800; Instrument Sans com pesos 400–600; caracteres latinos
+   (português completo) + setas. Licença OFL em assets/fonts/. */
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("assets/fonts/bricolage-grotesque.woff2") format("woff2");
+  font-weight: 600 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("assets/fonts/instrument-sans.woff2") format("woff2");
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ===== tokens ===== */
 :root {
   /* Kanagawa Wave — os nomes são os do tema original (sumiInk = tinta

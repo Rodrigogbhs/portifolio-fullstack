@@ -17,9 +17,13 @@ index.html                 página inteira (os ícones SVG ficam em <symbol> no 
 style.css                  estilos e animações
 portfolio.js               navegação da galeria e prévias ampliadas
 assets/icons/              logos das tecnologias (Devicon, baixados — funcionam offline)
-assets/images/             foto
+assets/fonts/              Bricolage Grotesque e Instrument Sans (WOFF2 + licença OFL)
+assets/images/             foto (JPG original + WebP 480/960), avatar, imagem de compartilhamento
 assets/images/portfolio/   capturas completas dos três projetos em WebP
 assets/*.pdf               currículos (PT e EN)
+favicon.ico, icon-96.png,
+apple-touch-icon.png       ícones da aba, do Google e do iPhone
+robots.txt, sitemap.xml    instruções para buscadores
 vercel.json                cabeçalhos de cache
 ```
 
@@ -28,6 +32,27 @@ vercel.json                cabeçalhos de cache
 Substitua o PDF em `assets/` mantendo o nome do arquivo. O cache está
 configurado como `must-revalidate`, então a troca vale na hora — não é
 preciso esperar cache expirar.
+
+O Google indexa PDFs e mostra o **título interno** do arquivo no resultado.
+Antes de exportar, preencha em Arquivo → Propriedades (LibreOffice):
+título "Currículo — Rodrigo Guimarães, Desenvolvedor Full Stack" e autor
+"Rodrigo Guimarães". Depois atualize a data do PDF em `sitemap.xml`.
+
+## SEO
+
+- **Domínio**: o endereço completo aparece em `index.html` (canonical,
+  Open Graph, JSON-LD), `robots.txt` e `sitemap.xml`. Mudou de domínio?
+  Buscar-e-substituir nos três arquivos.
+- **Dados estruturados**: bloco JSON-LD no `<head>` (WebSite, ProfilePage e
+  Person, com links para GitHub, LinkedIn e Instagram). Valide em
+  https://search.google.com/test/rich-results depois de publicar.
+- **Imagem de compartilhamento**: `assets/images/og-rodrigo-guimaraes.jpg`
+  (1200×630). Para testar a prévia no LinkedIn:
+  https://www.linkedin.com/post-inspector/
+- **Ao editar a página**: atualize `dateModified` no JSON-LD e `lastmod` no
+  `sitemap.xml`.
+- **Foto**: o navegador escolhe entre os WebP de 480 e 960 px e o JPG. Se
+  trocar a foto, gere as três versões com o mesmo nome.
 
 ## Design
 
@@ -38,7 +63,8 @@ revelação do nome na home, em que um fio passa como uma navalha e o nome
 aparece no rastro.
 
 Paleta: [Kanagawa Wave](https://github.com/rebelot/kanagawa.nvim).
-Tipografia: Bricolage Grotesque (títulos) e Instrument Sans (texto).
+Tipografia: Bricolage Grotesque (títulos) e Instrument Sans (texto), servidas
+localmente em `assets/fonts/` e cortadas para os pesos e caracteres usados.
 
 ## Portfólio visual
 
