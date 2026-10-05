@@ -1,0 +1,76 @@
+.caso-menu { display: flex; align-items: center; gap: 28px; font-size: 0.85rem; color: var(--old-white); }
+.caso-menu a:last-child { color: var(--carpa); }
+.caso-menu a:hover, .caso-voltar:hover, .caso-rodape a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.caso-hero { padding: 46px 0 72px; }
+.caso-voltar { font-size: 0.82rem; color: var(--old-white); }
+.caso-apresentacao { display: grid; grid-template-columns: 1fr 1.1fr; align-items: center; gap: 54px; margin-top: 54px; }
+.caso-apresentacao h1 { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: clamp(2.6rem, 5vw, 4.5rem); line-height: 1.05; letter-spacing: -0.055em; }
+.caso-apresentacao h1 span { color: var(--carpa); }
+.caso-chamada { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: clamp(1.5rem, 2.4vw, 2rem); line-height: 1.2; margin: 24px 0 20px; color: var(--carpa); }
+.caso-resumo { max-width: 48ch; color: var(--old-white); font-size: 0.96rem; }
+.caso-acoes { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.caso-acoes a { font-size: 0.82rem; padding: 12px 17px; }
+.caso-capa { min-width: 0; }
+.caso-capa img, .caso-telefone img { width: 100%; height: auto; }
+.caso-capa .projeto-previa { box-shadow: 0 24px 70px #0003; }
+.caso-capa figcaption { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; font-size: 0.72rem; color: var(--old-white); margin-top: 18px; }
+.caso-status { display: inline-flex; align-items: center; gap: 8px; }
+.caso-status::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #98bb6c; }
+.caso-secao { padding: 68px 0; }
+.caso-funcionalidades { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 34px; }
+.caso-funcionalidades article { border-top: 1px solid var(--linha-forte); padding-top: 24px; }
+.caso-numero { color: var(--carpa); font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase; }
+.caso-funcionalidades h3, .caso-telas h3, .caso-passos h3 { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: 1.2rem; line-height: 1.35; margin: 12px 0; }
+.caso-funcionalidades p, .caso-telas figcaption p { color: var(--old-white); font-size: 0.9rem; }
+.caso-telas-cabecalho { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 36px; }
+.caso-telas-cabecalho > p { color: var(--old-white); font-size: 0.78rem; }
+.caso-telas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 28px; }
+.caso-captura { aspect-ratio: 1440 / 1000; background: #f7f8f5; }
+.caso-captura img { width: 100%; height: auto; }
+.caso-ampliar { position: absolute; right: 12px; bottom: 12px; width: 36px; height: 36px; display: grid; place-items: center; border: 1px solid var(--linha-forte); border-radius: 50%; background: var(--sumi); color: var(--carpa); }
+.caso-telas figcaption { margin-top: 20px; }
+.caso-telas h3 { margin: 6px 0 8px; font-size: 1.4rem; }
+.caso-mobile { display: grid; grid-template-columns: 1fr 300px; align-items: center; gap: 80px; padding: 50px 90px 88px; }
+.caso-mobile > div > p:not(.portfolio-sobretitulo) { max-width: 46ch; color: var(--old-white); font-size: 0.96rem; }
+.caso-mobile .titulo-secao { line-height: 1.12; margin-bottom: 26px; font-size: clamp(2rem, 4vw, 3.2rem); }
+.caso-detalhe { margin-top: 22px; padding-top: 22px; border-top: 1px solid var(--linha-forte); }
+.caso-telefone { width: 260px; justify-self: center; }
+.caso-telefone .projeto-previa { border: 6px solid var(--sumi-3); border-radius: 28px; box-shadow: 0 20px 60px #0004; }
+.caso-telefone figcaption { font-size: 0.72rem; color: var(--old-white); text-align: center; margin-top: 16px; }
+.caso-acesso { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 72px; }
+.caso-acesso > div > p:not(.portfolio-sobretitulo) { color: var(--old-white); font-size: 0.94rem; }
+.caso-acesso .caso-requisitos { margin-top: 26px; font-size: 0.78rem; }
+.caso-passos { min-width: 0; list-style: none; counter-reset: acesso; }
+.caso-passos > li { position: relative; padding: 0 0 28px 46px; counter-increment: acesso; }
+.caso-passos > li::before { content: "0" counter(acesso); position: absolute; left: 0; top: 0; font-size: 0.8rem; color: var(--carpa); }
+.caso-passos h3 { margin-top: 0; }
+.caso-passos p { color: var(--old-white); font-size: 0.86rem; }
+.caso-passos code { font-size: 0.78rem; overflow-wrap: anywhere; }
+.caso-passos details { margin-top: 16px; font-size: 0.82rem; }
+.caso-passos summary { color: var(--carpa); cursor: pointer; }
+.caso-passos pre { padding: 18px; margin-top: 12px; border: 1px solid var(--linha-forte); border-radius: 10px; background: var(--sumi-2); overflow-x: auto; }
+.caso-passos pre code { overflow-wrap: normal; }
+.caso-rodape a { color: var(--carpa); font-size: 0.85rem; }
+.pagina-projeto .portfolio-dialog-conteudo img { object-fit: contain; max-height: none; }
+.pagina-projeto .portfolio-dialog-conteudo img[width="390"] { max-width: 390px; margin-inline: auto; }
+@media (max-width: 1000px) {
+  .caso-apresentacao { grid-template-columns: 1fr; gap: 36px; }
+  .caso-capa { max-width: 760px; }
+  .caso-mobile { padding-inline: 20px; gap: 32px; }
+  .caso-acesso { gap: 36px; }
+}
+@media (max-width: 720px) {
+  .caso-menu { gap: 14px; font-size: 0.75rem; }
+  .caso-menu a:first-child { display: none; }
+  .caso-hero { padding-top: 28px; padding-bottom: 48px; }
+  .caso-apresentacao { margin-top: 32px; }
+  .caso-secao { padding: 48px 0; }
+  .caso-funcionalidades, .caso-telas, .caso-acesso, .caso-mobile { grid-template-columns: 1fr; }
+  .caso-funcionalidades { gap: 26px; }
+  .caso-telas-cabecalho { align-items: flex-start; flex-direction: column; gap: 14px; }
+  .caso-telas { gap: 32px; }
+  .caso-mobile { padding: 36px 0 48px; gap: 32px; }
+  .caso-telefone { width: min(260px, 100%); }
+  .caso-acesso { gap: 36px; }
+  .caso-passos > li { padding-left: 36px; }
+}

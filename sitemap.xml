@@ -3,9 +3,16 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://devrodfullstack-portifolio.vercel.app/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-04</lastmod>
     <image:image>
       <image:loc>https://devrodfullstack-portifolio.vercel.app/assets/images/foto-rodrigo.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://devrodfullstack-portifolio.vercel.app/torneioapp</loc>
+    <lastmod>2026-10-04</lastmod>
+    <image:image>
+      <image:loc>https://devrodfullstack-portifolio.vercel.app/assets/images/portfolio/torneioapp/dashboard.webp</image:loc>
     </image:image>
   </url>
   <url>

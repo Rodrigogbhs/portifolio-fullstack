@@ -62,7 +62,7 @@
         "name": "Rodrigo Guimarães — Desenvolvedor Full Stack Júnior em BH",
         "inLanguage": "pt-BR",
         "isPartOf": { "@id": "https://devrodfullstack-portifolio.vercel.app/#website" },
-        "dateModified": "2026-09-30",
+        "dateModified": "2026-10-04",
         "mainEntity": { "@id": "https://devrodfullstack-portifolio.vercel.app/#rodrigo" }
       },
       {
@@ -250,7 +250,7 @@
           <p class="linha-secao">Projetos que saíram da ideia e ganharam forma. Explore cada detalhe.</p>
         </div>
         <div class="portfolio-controles" hidden>
-          <span class="portfolio-contador" aria-live="polite" aria-atomic="true"><span id="portfolio-atual">01</span> / 03</span>
+          <span class="portfolio-contador" aria-live="polite" aria-atomic="true"><span id="portfolio-atual">01</span> / <span id="portfolio-total">04</span></span>
           <button class="portfolio-seta" type="button" id="portfolio-anterior" aria-label="Projeto anterior" aria-controls="portfolio-galeria" disabled>←</button>
           <button class="portfolio-seta" type="button" id="portfolio-proximo" aria-label="Próximo projeto" aria-controls="portfolio-galeria">→</button>
         </div>
@@ -259,6 +259,22 @@
       <p class="portfolio-instrucao" id="portfolio-instrucao">Deslize para explorar os projetos. Selecione uma prévia para ampliar e rolar a página.</p>
       <ul class="portfolio-galeria" id="portfolio-galeria" tabindex="0" aria-label="Galeria de projetos" aria-describedby="portfolio-instrucao">
         <li class="projeto">
+          <article aria-labelledby="projeto-torneioapp">
+            <a class="projeto-previa" href="assets/images/portfolio/torneioapp/dashboard.webp" target="_blank" rel="noopener" data-projeto="TorneioApp · Dashboard" aria-label="Ampliar tela do dashboard do TorneioApp">
+              <span class="projeto-janela" aria-hidden="true"><span class="projeto-pontos"><i></i><i></i><i></i></span><span>TorneioApp · Gestão de torneios esportivos</span><span>↗</span></span>
+              <span class="projeto-tela"><img src="assets/images/portfolio/torneioapp/dashboard.webp" alt="Dashboard do TorneioApp com atalhos para criar torneios, descobrir eventos e acompanhar inscrições" width="1440" height="1000" loading="lazy" decoding="async"></span>
+              <span class="projeto-ampliar">Ampliar tela <span aria-hidden="true">↗</span></span>
+            </a>
+            <div class="projeto-info">
+              <div class="projeto-categoria"><span>01 / Esporte</span><span>Sistema web</span></div>
+              <h3 id="projeto-torneioapp">TorneioApp</h3>
+              <p>Sistema para organizar torneios esportivos, cadastrar participantes e gerenciar inscrições e pagamentos Pix com confirmação manual. Áreas do organizador e do participante, com temas claro e escuro.</p>
+              <ul class="projeto-stack" aria-label="Tecnologias do projeto"><li>PHP</li><li>Laravel</li><li>Livewire</li><li>PostgreSQL</li><li>Tailwind CSS</li></ul>
+              <div class="projeto-links"><a href="torneioapp.html">Ver funcionalidades, telas e acesso <span aria-hidden="true">↗</span></a><a href="https://github.com/Rodrigogbhs/torneioapp" target="_blank" rel="noopener noreferrer">Código no GitHub <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+        </li>
+        <li class="projeto">
           <article aria-labelledby="projeto-virlene">
             <a class="projeto-previa" href="assets/images/portfolio/virlene-alves.webp" target="_blank" rel="noopener" data-projeto="Virlene Alves" aria-label="Ampliar prévia do projeto Virlene Alves">
               <span class="projeto-janela" aria-hidden="true"><span class="projeto-pontos"><i></i><i></i><i></i></span><span>Virlene Alves · Aulas particulares</span><span>↗</span></span>
@@ -266,7 +282,7 @@
               <span class="projeto-ampliar">Ampliar prévia <span aria-hidden="true">↗</span></span>
             </a>
             <div class="projeto-info">
-              <div class="projeto-categoria"><span>01 / Educação</span><span>Landing page</span></div>
+              <div class="projeto-categoria"><span>02 / Educação</span><span>Landing page</span></div>
               <h3 id="projeto-virlene">Virlene Alves</h3>
               <p>Uma apresentação acolhedora para aulas particulares de matemática, com informações sobre o acompanhamento e contato direto pelo WhatsApp.</p>
               <ul class="projeto-stack" aria-label="Tecnologias do projeto"><li>HTML</li><li>CSS</li><li>Responsivo</li></ul>
@@ -281,7 +297,7 @@
               <span class="projeto-ampliar">Ampliar prévia <span aria-hidden="true">↗</span></span>
             </a>
             <div class="projeto-info">
-              <div class="projeto-categoria"><span>02 / Serviços</span><span>Site institucional</span></div>
+              <div class="projeto-categoria"><span>03 / Serviços</span><span>Site institucional</span></div>
               <h3 id="projeto-toussaint">Barbearia Toussaint</h3>
               <p>A personalidade da barbearia em uma presença digital: serviços, profissionais, depoimentos e caminhos simples para agendar um horário.</p>
               <ul class="projeto-stack" aria-label="Tecnologias do projeto"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
@@ -296,7 +312,7 @@
               <span class="projeto-ampliar">Ampliar prévia <span aria-hidden="true">↗</span></span>
             </a>
             <div class="projeto-info">
-              <div class="projeto-categoria"><span>03 / Joalheria</span><span>E-commerce</span></div>
+              <div class="projeto-categoria"><span>04 / Joalheria</span><span>E-commerce</span></div>
               <h3 id="projeto-veener">Veener</h3>
               <p>Loja de joias em prata 925, com catálogo, carrinho, checkout e painel administrativo. Uma experiência de compra com identidade própria.</p>
               <ul class="projeto-stack" aria-label="Tecnologias do projeto"><li>Next.js</li><li>TypeScript</li><li>Prisma</li><li>PostgreSQL</li></ul>
@@ -304,7 +320,7 @@
           </article>
         </li>
       </ul>
-      <div class="portfolio-rodape"><span>3 projetos · 3 experiências diferentes</span><a href="#contato">Vamos criar o próximo? <span aria-hidden="true">↗</span></a></div>
+      <div class="portfolio-rodape"><span>4 projetos · 4 experiências diferentes</span><a href="#contato">Vamos criar o próximo? <span aria-hidden="true">↗</span></a></div>
     </section>
 
     <div class="container"><div class="degrade degrade-secao" aria-hidden="true"></div></div>

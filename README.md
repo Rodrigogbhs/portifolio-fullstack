@@ -16,10 +16,12 @@ python3 -m http.server 8000
 index.html                 página inteira (os ícones SVG ficam em <symbol> no topo)
 style.css                  estilos e animações
 portfolio.js               navegação da galeria e prévias ampliadas
+torneioapp.html             funcionalidades, telas e acesso ao TorneioApp
+torneioapp.css              estilos da apresentação do sistema
 assets/icons/              logos das tecnologias (Devicon, baixados — funcionam offline)
 assets/fonts/              Bricolage Grotesque e Instrument Sans (WOFF2 + licença OFL)
 assets/images/             foto (JPG original + WebP 480/960), avatar, imagem de compartilhamento
-assets/images/portfolio/   capturas completas dos três projetos em WebP
+assets/images/portfolio/   capturas dos quatro projetos em WebP
 assets/*.pdf               currículos (PT e EN)
 favicon.ico, icon-96.png,
 apple-touch-icon.png       ícones da aba, do Google e do iPhone
@@ -68,8 +70,8 @@ localmente em `assets/fonts/` e cortadas para os pesos e caracteres usados.
 
 ## Portfólio visual
 
-A seção `#portfolio` apresenta Virlene Alves, Barbearia Toussaint e Veener
-em uma galeria horizontal. Funciona com toque, barra de rolagem, setas e
+A seção `#portfolio` apresenta TorneioApp, Virlene Alves, Barbearia Toussaint
+e Veener em uma galeria horizontal. Funciona com toque, barra de rolagem, setas e
 teclado (←/→, Home/End quando a galeria está focada). Ao passar o mouse,
 a captura percorre a página; ao selecionar a prévia, uma janela permite
 rolar a imagem completa. Feche com Escape, com o botão Fechar ou pelo fundo.
@@ -81,3 +83,17 @@ Para atualizá-las, substitua os WebP em `assets/images/portfolio/` e ajuste
 os atributos `width` e `height` no HTML se as dimensões mudarem.
 As capturas refletem os arquivos locais, inclusive os espaços reservados
 para fotos e o catálogo vazio da Veener. Não são links para sites publicados.
+
+### TorneioApp
+
+A página `torneioapp.html` apresenta o sistema Laravel com telas de dashboard,
+descoberta de torneios, criação de eventos, gerenciamento, inscrição e Pix,
+além da interface no celular em tema escuro. As imagens em
+`assets/images/portfolio/torneioapp/` foram capturadas de uma instalação
+isolada do código real, com nomes, eventos e chave Pix fictícios.
+
+O acesso inclui o [repositório](https://github.com/Rodrigogbhs/torneioapp),
+o guia oficial de instalação e o fluxo de criação de conta e confirmação de
+e-mail. Os pagamentos Pix são confirmados manualmente pelo organizador.
+As telas podem ser ampliadas com o mesmo diálogo usado pela galeria principal;
+sem JavaScript, os links abrem diretamente as imagens.
