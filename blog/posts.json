@@ -1,5 +1,30 @@
 [
   {
+    "slug": "2026-10-07-wordpress-7-1-3-correcoes-seguranca",
+    "title": "WordPress 7.1.3 corrige sete falhas de segurança",
+    "category": "Segurança",
+    "summary": "Atualização corrige exposição de comentários privados e falhas na moderação e em conteúdo incorporado. O projeto recomenda atualizar os sites imediatamente.",
+    "published_at": "2026-10-07T08:49:28-03:00",
+    "edition": "07:00",
+    "paragraphs": [
+      "O WordPress lançou em 6 de outubro a versão 7.1.3, com sete correções de segurança e quatro ajustes de funcionamento. O projeto recomenda atualizar os sites imediatamente; instalações com atualização automática em segundo plano podem receber a nova versão sem intervenção manual.",
+      "As correções incluem uma falha que permitia consultar comentários de publicações privadas ou não publicadas sem login. Outra podia executar scripts maliciosos na área de comentários do painel. A Patchstack, que analisou as mudanças no código, explica que esse ataque exige um clique do moderador em um link de comentário pendente.",
+      "Para desenvolvedores e responsáveis por sites, a atualização importa por reduzir o risco de exposição de dados e de scripts maliciosos no painel. A Patchstack também alerta que a correção de uma falha nas incorporações do Imgur não remove conteúdo malicioso já armazenado: é preciso revisar e limpar o cache dessas incorporações após atualizar."
+    ],
+    "sources": [
+      {
+        "name": "WordPress · Anúncio oficial da versão 7.1.3",
+        "url": "https://wordpress.org/news/2026/10/wordpress-7-1-3-maintenance-and-security-release/",
+        "published_on": "2026-10-06"
+      },
+      {
+        "name": "Patchstack · Análise das correções de segurança",
+        "url": "https://www.patchstack.com/articles/wordpress-7-1-3-security-release/",
+        "published_on": "2026-10-06"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-06-mistral-large-4-previa-publica",
     "title": "Mistral apresenta Large 4 e prepara abertura dos pesos",
     "category": "Inteligência artificial",
