@@ -1,3 +1,7 @@
 .vercel
 .DS_Store
 node_modules/
+
+# Notícias aguardando revisão, somente locais.
+drafts/
+__pycache__/

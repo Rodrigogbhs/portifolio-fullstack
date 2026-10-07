@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "2026-10-06-mistral-large-4-previa-publica",
+    "title": "Mistral apresenta Large 4 e prepara abertura dos pesos",
+    "category": "Inteligência artificial",
+    "summary": "A prévia pública do novo modelo já pode ser testada por API. A empresa prevê liberar os pesos até o fim de outubro.",
+    "published_at": "2026-10-06T22:46:52-03:00",
+    "edition": "inicial",
+    "paragraphs": [
+      "A Mistral anunciou em 6 de outubro a prévia pública do Large 4, modelo multimodal com cerca de um trilhão de parâmetros e 49 bilhões ativos. O acesso inicial acontece pela API do Mistral Studio.",
+      "Segundo a empresa, o modelo foi treinado em infraestrutura própria na Europa e está passando por testes de segurança antes da liberação dos pesos, prevista para o fim do mês. As alegações de desempenho são da fabricante.",
+      "Para quem desenvolve, vale acompanhar a abertura dos pesos e as avaliações independentes. Esse lançamento pode ampliar as opções de modelos que empresas conseguem adaptar e hospedar em sua própria infraestrutura."
+    ],
+    "sources": [
+      {
+        "name": "Mistral · Anúncio oficial do Large 4",
+        "url": "https://mistral.ai/news/mistral-large-4/",
+        "published_on": "2026-10-06"
+      }
+    ]
+  },
+  {
+    "slug": "2026-10-06-google-embeddinggemma-2",
+    "title": "Google lança EmbeddingGemma 2 para buscas multimodais no dispositivo",
+    "category": "Desenvolvimento e IA",
+    "summary": "O modelo reúne texto, código, imagem, vídeo e áudio em um espaço comum de busca, com foco em processamento local.",
+    "published_at": "2026-10-06T22:46:52-03:00",
+    "edition": "inicial",
+    "paragraphs": [
+      "O Google apresentou em 6 de outubro o EmbeddingGemma 2, um modelo de 740 milhões de parâmetros distribuído sob licença Apache 2.0. Ele transforma diferentes tipos de conteúdo em representações numéricas que permitem encontrar informações por significado.",
+      "O anúncio destaca a possibilidade de executar buscas e recuperação de informação diretamente em dispositivos. Um exemplo é localizar um trecho de vídeo usando uma consulta por texto ou áudio.",
+      "Para desenvolvedores, o interesse está em criar ferramentas de busca que processem arquivos localmente. Isso pode reduzir a necessidade de enviar dados a servidores. O desempenho prático depende do hardware, da configuração e das avaliações de cada aplicação."
+    ],
+    "sources": [
+      {
+        "name": "Google · Anúncio oficial do EmbeddingGemma 2",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+        "published_on": "2026-10-06"
+      }
+    ]
+  }
+]

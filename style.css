@@ -872,7 +872,7 @@ body.portfolio-aberto { overflow: hidden; }
 @media (max-width: 820px) {
   .menu { gap: 12px; }
   .menu ul { display: flex; }
-  .menu ul li:not(.menu-portfolio) { display: none; }
+  .menu ul li:not(.menu-portfolio):not(.menu-blog) { display: none; }
   .menu .btn-curriculo { padding: 8px 12px; font-size: 0.8rem; }
   .menu .btn-curriculo .icone { display: none; }
   .navbar { gap: 12px; }
@@ -917,6 +917,9 @@ body.portfolio-aberto { overflow: hidden; }
   .marca { font-size: 0.95rem; gap: 6px; }
   .marca-avatar { width: 28px; height: 28px; }
   .menu .btn-curriculo { padding-inline: 8px; font-size: 0.75rem; }
+  .menu ul { gap: 12px; }
+  .menu ul a { font-size: 0.8rem; }
+  .menu .btn-curriculo { display: none; }
 }
 
 /* ===== quem pediu menos movimento não recebe nenhum ===== */

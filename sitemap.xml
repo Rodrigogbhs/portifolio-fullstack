@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://devrodfullstack-portifolio.vercel.app/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <image:image>
       <image:loc>https://devrodfullstack-portifolio.vercel.app/assets/images/foto-rodrigo.jpg</image:loc>
     </image:image>
@@ -22,5 +22,17 @@
   <url>
     <loc>https://devrodfullstack-portifolio.vercel.app/assets/curriculo_rodrigo_en.pdf</loc>
     <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://devrodfullstack-portifolio.vercel.app/blog</loc>
+    <lastmod>2026-10-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devrodfullstack-portifolio.vercel.app/blog/2026-10-06-mistral-large-4-previa-publica</loc>
+    <lastmod>2026-10-06</lastmod>
+  </url>
+  <url>
+    <loc>https://devrodfullstack-portifolio.vercel.app/blog/2026-10-06-google-embeddinggemma-2</loc>
+    <lastmod>2026-10-06</lastmod>
   </url>
 </urlset>

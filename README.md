@@ -16,6 +16,12 @@ python3 -m http.server 8000
 index.html                 página inteira (os ícones SVG ficam em <symbol> no topo)
 style.css                  estilos e animações
 portfolio.js               navegação da galeria e prévias ampliadas
+blog.html                  índice de notícias de tecnologia
+blog.css                   estilos do blog, usando a paleta do portfólio
+blog/posts.json            notícias aprovadas e suas fontes
+blog/*.html                páginas estáticas das notícias
+scripts/build_blog.py      gera o blog e atualiza o sitemap (Python 3.9+)
+drafts/blog/               rascunhos locais, ignorados pelo Git e pela Vercel
 torneioapp.html             funcionalidades, telas e acesso ao TorneioApp
 torneioapp.css              estilos da apresentação do sistema
 assets/icons/              logos das tecnologias (Devicon, baixados — funcionam offline)
@@ -97,3 +103,39 @@ o guia oficial de instalação e o fluxo de criação de conta e confirmação d
 e-mail. Os pagamentos Pix são confirmados manualmente pelo organizador.
 As telas podem ser ampliadas com o mesmo diálogo usado pela galeria principal;
 sem JavaScript, os links abrem diretamente as imagens.
+
+## Blog de tecnologia
+
+A aba Blog está disponível no menu, inclusive no celular. O índice e os artigos
+são HTML estático: continuam legíveis sem JavaScript, com endereço próprio,
+fontes, metadados de compartilhamento e entradas no sitemap. As duas notícias
+iniciais foram selecionadas em 6 de outubro de 2026; seus horários indicam
+a preparação do conteúdo, sem simular as edições das 7h ou das 13h.
+
+As edições diárias usam o fuso `America/Sao_Paulo`: uma notícia às 7h e outra
+às 13h. A seleção prioriza relevância, novidades das últimas 24 horas e fontes
+primárias; a segunda edição deve trazer um assunto diferente da primeira.
+Os agendamentos são gerenciados em Automações no Codex. Para executar tarefas
+locais, o computador precisa estar ligado e o aplicativo em execução.
+
+Para preparar uma notícia, salve um arquivo JSON em
+`drafts/blog/AAAA-MM-DD-0700.json` ou `drafts/blog/AAAA-MM-DD-1300.json`.
+Esses arquivos não entram no índice público, no Git ou no upload da Vercel.
+Após revisar, adicione o objeto à lista em `blog/posts.json` e gere as páginas:
+
+```bash
+python3 scripts/build_blog.py
+python3 scripts/build_blog.py --check
+```
+
+Cada objeto contém `slug`, `title`, `category`, `summary`, `published_at`
+(data ISO 8601 com fuso), `edition` (`07:00`, `13:00` ou `inicial`),
+`paragraphs` (lista de textos, sem HTML) e `sources` (lista de objetos com
+`name`, `url` e `published_on`, a data do anúncio original).
+Use a hora real da aprovação em `published_at`; `edition` identifica o
+agendamento. O gerador rejeita slugs repetidos, datas sem fuso, edições
+duplicadas no mesmo dia e notícias sem fontes. Conteúdos com data futura
+só aparecem quando esse horário chega e as páginas são geradas novamente.
+
+Gerar os arquivos atualiza a cópia local. Para aparecerem no site publicado,
+é necessário enviar as alterações pelo fluxo de publicação da Vercel.
