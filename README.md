@@ -18,7 +18,7 @@ style.css                  estilos e animações
 portfolio.js               navegação da galeria e prévias ampliadas
 blog.html                  índice de notícias de tecnologia
 blog.css                   estilos do blog, usando a paleta do portfólio
-blog/posts.json            notícias aprovadas e suas fontes
+blog/posts.json            notícias publicadas e suas fontes
 blog/*.html                páginas estáticas das notícias
 scripts/build_blog.py      gera o blog e atualiza o sitemap (Python 3.9+)
 drafts/blog/               rascunhos locais, ignorados pelo Git e pela Vercel
@@ -112,16 +112,29 @@ fontes, metadados de compartilhamento e entradas no sitemap. As duas notícias
 iniciais foram selecionadas em 6 de outubro de 2026; seus horários indicam
 a preparação do conteúdo, sem simular as edições das 7h ou das 13h.
 
-As edições diárias usam o fuso `America/Sao_Paulo`: uma notícia às 7h e outra
-às 13h. A seleção prioriza relevância, novidades das últimas 24 horas e fontes
-primárias; a segunda edição deve trazer um assunto diferente da primeira.
-Os agendamentos são gerenciados em Automações no Codex. Para executar tarefas
-locais, o computador precisa estar ligado e o aplicativo em execução.
+As edições usam o fuso `America/Sao_Paulo`: uma notícia às 7h de segunda a
+sexta-feira e outra às 13h todos os dias. A seleção prioriza relevância,
+novidades das últimas 24 horas e fontes primárias; a segunda edição deve
+trazer um acontecimento diferente da primeira.
 
-Para preparar uma notícia, salve um arquivo JSON em
-`drafts/blog/AAAA-MM-DD-0700.json` ou `drafts/blog/AAAA-MM-DD-1300.json`.
-Esses arquivos não entram no índice público, no Git ou no upload da Vercel.
-Após revisar, adicione o objeto à lista em `blog/posts.json` e gere as páginas:
+As duas Automações no Codex pesquisam e verificam as fontes, salvam uma cópia
+local em `drafts/blog/AAAA-MM-DD-0700.json` ou
+`drafts/blog/AAAA-MM-DD-1300.json` e publicam a notícia automaticamente.
+A publicação inclui o objeto em `blog/posts.json`, gera e verifica as páginas,
+cria um commit apenas dos arquivos do blog e envia para `origin/main`.
+A integração existente do GitHub com a Vercel atualiza o site de produção;
+a tarefa confere o deployment e a presença do artigo no índice público.
+Para executar essas tarefas locais, o computador precisa estar ligado, com
+o aplicativo em execução, acesso à internet e autenticação do GitHub válida.
+
+Uma edição já publicada não gera outro post. Se houver somente o rascunho,
+a tarefa retoma a verificação e a publicação desse conteúdo. Se as fontes
+não puderem ser verificadas ou houver conflito com alterações locais,
+a tarefa informa o impedimento e preserva o rascunho.
+
+Os rascunhos não entram no índice público, no Git ou no upload da Vercel.
+Para publicar manualmente, adicione o objeto à lista em `blog/posts.json`
+e gere as páginas:
 
 ```bash
 python3 scripts/build_blog.py
@@ -132,10 +145,12 @@ Cada objeto contém `slug`, `title`, `category`, `summary`, `published_at`
 (data ISO 8601 com fuso), `edition` (`07:00`, `13:00` ou `inicial`),
 `paragraphs` (lista de textos, sem HTML) e `sources` (lista de objetos com
 `name`, `url` e `published_on`, a data do anúncio original).
-Use a hora real da aprovação em `published_at`; `edition` identifica o
+Use a hora real da publicação em `published_at`; `edition` identifica o
 agendamento. O gerador rejeita slugs repetidos, datas sem fuso, edições
 duplicadas no mesmo dia e notícias sem fontes. Conteúdos com data futura
 só aparecem quando esse horário chega e as páginas são geradas novamente.
 
-Gerar os arquivos atualiza a cópia local. Para aparecerem no site publicado,
-é necessário enviar as alterações pelo fluxo de publicação da Vercel.
+Gerar os arquivos atualiza a cópia local. Após conferir as mudanças, faça
+commit apenas dos arquivos envolvidos e envie para `origin/main`, que aciona
+a publicação na Vercel. Confirme o deployment antes de considerar a edição
+publicada.
