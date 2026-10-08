@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Gerado por scripts/build_blog.py. Edite o conteúdo em blog/posts.json. -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Falha crítica em Jira e Confluence segue sob tentativas de exploração — Dev.Rodrigo</title>
+  <meta name="description" content="Monitoramento atualizado em 8 de outubro registra 196 tentativas contra produtos Atlassian Data Center; correções já estão disponíveis.">
+  <meta name="theme-color" content="#1f1f28">
+  <link rel="canonical" href="https://devrodfullstack-portifolio.vercel.app/blog/2026-10-08-atlassian-falha-critica-tentativas-exploracao">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Dev.Rodrigo">
+  <meta property="og:title" content="Falha crítica em Jira e Confluence segue sob tentativas de exploração">
+  <meta property="og:description" content="Monitoramento atualizado em 8 de outubro registra 196 tentativas contra produtos Atlassian Data Center; correções já estão disponíveis.">
+  <meta property="og:url" content="https://devrodfullstack-portifolio.vercel.app/blog/2026-10-08-atlassian-falha-critica-tentativas-exploracao">
+  <meta property="og:image" content="https://devrodfullstack-portifolio.vercel.app/assets/images/og-rodrigo-guimaraes.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Falha crítica em Jira e Confluence segue sob tentativas de exploração">
+  <meta name="twitter:description" content="Monitoramento atualizado em 8 de outubro registra 196 tentativas contra produtos Atlassian Data Center; correções já estão disponíveis.">
+  <meta name="twitter:image" content="https://devrodfullstack-portifolio.vercel.app/assets/images/og-rodrigo-guimaraes.jpg">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../blog.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Falha crítica em Jira e Confluence segue sob tentativas de exploração", "description": "Monitoramento atualizado em 8 de outubro registra 196 tentativas contra produtos Atlassian Data Center; correções já estão disponíveis.", "datePublished": "2026-10-08T13:02:53-03:00", "inLanguage": "pt-BR", "url": "https://devrodfullstack-portifolio.vercel.app/blog/2026-10-08-atlassian-falha-critica-tentativas-exploracao", "author": {"@type": "Person", "name": "Rodrigo Guimarães", "url": "https://devrodfullstack-portifolio.vercel.app"}, "image": "https://devrodfullstack-portifolio.vercel.app/assets/images/og-rodrigo-guimaraes.jpg", "isPartOf": {"@type": "Blog", "url": "https://devrodfullstack-portifolio.vercel.app/blog"}, "citation": ["https://confluence.atlassian.com/security/cve-2026-21589-arbitrary-file-access-vulnerability-impacts-multiple-products-1870495748.html", "https://previdian.com/CVE-2026-21589", "https://www.securityweek.com/attackers-target-critical-atlassian-vulnerability-within-hours-of-poc-publication/"]}</script>
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topo">
+    <div class="container navbar">
+      <a href="../index.html" class="marca"><img class="marca-avatar" src="../assets/images/avatar-rodrigo.webp" alt="" width="40" height="40"><span>Dev<span class="ponto">.</span>Rodrigo</span></a>
+      <nav class="blog-menu" aria-label="Navegação principal"><a href="../index.html#portfolio">Portfólio</a><a href="../blog.html" aria-current="true">Blog</a><a class="blog-contato" href="../index.html#contato">Contato</a></nav>
+    </div>
+  </header>
+  <main id="conteudo">
+    <article class="blog-artigo container">
+      <a class="blog-voltar" href="../blog.html">← Todas as notícias</a>
+      <header><p class="blog-categoria">Segurança</p><h1>Falha crítica em Jira e Confluence segue sob tentativas de exploração</h1><div class="blog-meta"><time datetime="2026-10-08T13:02:53-03:00">8 out 2026 · 13:02 (Brasília)</time><span>Edição das 13:00</span><span>1 min de leitura</span></div><p class="blog-resumo">Monitoramento atualizado em 8 de outubro registra 196 tentativas contra produtos Atlassian Data Center; correções já estão disponíveis.</p></header>
+      <div class="blog-texto"><p>A falha CVE-2026-21589 em produtos Atlassian Data Center continua sendo alvo de tentativas de exploração. Em seu painel atualizado em 8 de outubro, a Previdian registrou 196 tentativas, vindas de 34 endereços IP em 12 países. Os registros vêm de sensores que simulam sistemas vulneráveis e não representam uma contagem de empresas invadidas.</p>
+<p>A Atlassian divulgou a vulnerabilidade em 5 de outubro e a classificou como crítica, com nota 9,3 no CVSS. Ela permite ler arquivos específicos da aplicação sem login, desde que o atacante conheça o nome e o caminho. O problema afeta oito produtos, entre eles Jira, Confluence e Bitbucket nas instalações mantidas pelos clientes. Dependendo da configuração, arquivos sensíveis podem ficar expostos.</p>
+<p>Para equipes que hospedam essas ferramentas, a recomendação da Atlassian é atualizar imediatamente para uma versão corrigida. Se isso não for possível, o aviso orienta restringir o acesso externo ou aplicar as mitigações indicadas e revisar os registros de acesso. Segundo a empresa, os produtos Atlassian Cloud afetados já receberam correções e seus clientes não precisam agir.</p></div>
+      <aside class="blog-fontes" aria-labelledby="titulo-fontes"><h2 id="titulo-fontes">Fontes para continuar a leitura</h2><ul><li><a href="https://confluence.atlassian.com/security/cve-2026-21589-arbitrary-file-access-vulnerability-impacts-multiple-products-1870495748.html" target="_blank" rel="noopener noreferrer">Atlassian · Aviso oficial, versões corrigidas e mitigações <span aria-hidden="true">↗</span></a><small>Fonte publicada em 5 out 2026</small></li>
+<li><a href="https://previdian.com/CVE-2026-21589" target="_blank" rel="noopener noreferrer">Previdian · Registro iniciado em 6/10, com telemetria atualizada em 8/10 <span aria-hidden="true">↗</span></a><small>Fonte publicada em 6 out 2026</small></li>
+<li><a href="https://www.securityweek.com/attackers-target-critical-atlassian-vulnerability-within-hours-of-poc-publication/" target="_blank" rel="noopener noreferrer">SecurityWeek · Cobertura independente das tentativas de exploração <span aria-hidden="true">↗</span></a><small>Fonte publicada em 8 out 2026</small></li></ul></aside>
+    </article>
+  </main>
+  <footer class="rodape container blog-rodape"><p>© 2026 Rodrigo Guimarães.</p><a href="../index.html">Conheça meu trabalho <span aria-hidden="true">↗</span></a></footer>
+</body>
+</html>

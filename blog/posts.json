@@ -1,5 +1,35 @@
 [
   {
+    "slug": "2026-10-08-atlassian-falha-critica-tentativas-exploracao",
+    "title": "Falha crítica em Jira e Confluence segue sob tentativas de exploração",
+    "category": "Segurança",
+    "summary": "Monitoramento atualizado em 8 de outubro registra 196 tentativas contra produtos Atlassian Data Center; correções já estão disponíveis.",
+    "published_at": "2026-10-08T13:02:53-03:00",
+    "edition": "13:00",
+    "paragraphs": [
+      "A falha CVE-2026-21589 em produtos Atlassian Data Center continua sendo alvo de tentativas de exploração. Em seu painel atualizado em 8 de outubro, a Previdian registrou 196 tentativas, vindas de 34 endereços IP em 12 países. Os registros vêm de sensores que simulam sistemas vulneráveis e não representam uma contagem de empresas invadidas.",
+      "A Atlassian divulgou a vulnerabilidade em 5 de outubro e a classificou como crítica, com nota 9,3 no CVSS. Ela permite ler arquivos específicos da aplicação sem login, desde que o atacante conheça o nome e o caminho. O problema afeta oito produtos, entre eles Jira, Confluence e Bitbucket nas instalações mantidas pelos clientes. Dependendo da configuração, arquivos sensíveis podem ficar expostos.",
+      "Para equipes que hospedam essas ferramentas, a recomendação da Atlassian é atualizar imediatamente para uma versão corrigida. Se isso não for possível, o aviso orienta restringir o acesso externo ou aplicar as mitigações indicadas e revisar os registros de acesso. Segundo a empresa, os produtos Atlassian Cloud afetados já receberam correções e seus clientes não precisam agir."
+    ],
+    "sources": [
+      {
+        "name": "Atlassian · Aviso oficial, versões corrigidas e mitigações",
+        "url": "https://confluence.atlassian.com/security/cve-2026-21589-arbitrary-file-access-vulnerability-impacts-multiple-products-1870495748.html",
+        "published_on": "2026-10-05"
+      },
+      {
+        "name": "Previdian · Registro iniciado em 6/10, com telemetria atualizada em 8/10",
+        "url": "https://previdian.com/CVE-2026-21589",
+        "published_on": "2026-10-06"
+      },
+      {
+        "name": "SecurityWeek · Cobertura independente das tentativas de exploração",
+        "url": "https://www.securityweek.com/attackers-target-critical-atlassian-vulnerability-within-hours-of-poc-publication/",
+        "published_on": "2026-10-08"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-08-surface-laptop-ultra-pre-venda-ia-local",
     "title": "Microsoft abre pré-venda do Surface Laptop Ultra com foco em IA local",
     "category": "Hardware e inovação",
