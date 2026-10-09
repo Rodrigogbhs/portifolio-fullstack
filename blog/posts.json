@@ -1,5 +1,35 @@
 [
   {
+    "slug": "2026-10-09-anthropic-oss-scanner-gratuito-codigo-aberto",
+    "title": "Anthropic lança OSS Scanner gratuito para projetos de código aberto",
+    "category": "Desenvolvimento e IA",
+    "summary": "Serviço oferece buscas periódicas por vulnerabilidades em projetos elegíveis. Os relatórios são gerados por IA e enviados sem revisão humana.",
+    "published_at": "2026-10-09T10:46:09-03:00",
+    "edition": "07:00",
+    "paragraphs": [
+      "A Anthropic anunciou em 8 de outubro o OSS Scanner, serviço gratuito que realiza buscas periódicas por vulnerabilidades em projetos de código aberto. A participação é voluntária e depende de aprovação; a prioridade são projetos relevantes para a infraestrutura e a segurança dos usuários.",
+      "Segundo a empresa, os relatórios produzidos por seus modelos de IA incluem uma explicação da falha, um exemplo para reproduzi-la e uma sugestão de correção, quando disponível. Eles chegam aos mantenedores sem revisão humana e podem conter erros, inclusive na classificação da gravidade. Cada achado precisa ser validado antes de aplicar mudanças.",
+      "Para equipes que mantêm projetos usados por outros sistemas, a iniciativa pode ampliar o acesso a análises de segurança sem custo de processamento. A contrapartida é ter capacidade para verificar e corrigir os resultados. Os mantenedores elegíveis podem solicitar adesão pelo repositório do serviço no GitHub. O lançamento integra a Cyber Mission, que também oferece apoio técnico à defesa de infraestrutura crítica."
+    ],
+    "sources": [
+      {
+        "name": "Anthropic · Anúncio oficial do OSS Scanner e critérios de participação",
+        "url": "https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source",
+        "published_on": "2026-10-08"
+      },
+      {
+        "name": "Anthropic · Cyber Mission e apoio à infraestrutura crítica",
+        "url": "https://www.anthropic.com/news/anthropic-cyber-mission",
+        "published_on": "2026-10-08"
+      },
+      {
+        "name": "SecurityWeek · Cobertura independente do serviço e de seus limites",
+        "url": "https://www.securityweek.com/anthropic-fast-tracks-ai-bug-reports-to-oss-maintainers-taps-11-firms-for-ot-security/",
+        "published_on": "2026-10-09"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-08-atlassian-falha-critica-tentativas-exploracao",
     "title": "Falha crítica em Jira e Confluence segue sob tentativas de exploração",
     "category": "Segurança",
