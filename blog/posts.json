@@ -1,5 +1,30 @@
 [
   {
+    "slug": "2026-10-09-remessas-pcs-queda-terceiro-trimestre-idc",
+    "title": "Remessas globais de PCs caem 20,1% no terceiro trimestre, aponta IDC",
+    "category": "Hardware e mercado",
+    "summary": "Relatório preliminar associa retração a estoques antecipados, falta de componentes e preços altos; queda não garante computadores mais baratos.",
+    "published_at": "2026-10-09T13:38:47-03:00",
+    "edition": "13:00",
+    "paragraphs": [
+      "A IDC divulgou em 8 de outubro estimativas preliminares que apontam queda de 20,1% nas remessas globais de computadores no terceiro trimestre de 2026. Foram 62,7 milhões de unidades, contra 78,5 milhões um ano antes. O volume também recuou 9,1% em relação ao trimestre anterior, contrariando a recuperação sazonal normalmente esperada nesse período.",
+      "Segundo a consultoria, fabricantes e distribuidores anteciparam estoques no primeiro semestre para se proteger de aumentos nos custos de memória. Isso reduziu a necessidade de novos pedidos. A IDC também relaciona a retração à oferta limitada de componentes e aos preços elevados, pressionados pela expansão dos data centers de inteligência artificial.",
+      "Para consumidores e equipes de desenvolvimento, o relatório ajuda a contextualizar os custos de renovar computadores. A IDC considera possíveis promoções para reduzir estoques, mas não espera preços próximos aos de um ano atrás. Os números incluem equipamentos enviados a distribuidores ou usuários finais; não medem apenas compras no varejo nem descrevem isoladamente o mercado brasileiro."
+    ],
+    "sources": [
+      {
+        "name": "IDC · Relatório preliminar, metodologia e perspectiva de preços",
+        "url": "https://www.idc.com/resource-center/press-releases/idc-pc-tracker-3q26/",
+        "published_on": "2026-10-08"
+      },
+      {
+        "name": "MacRumors · Cobertura independente dos dados globais e do mercado de Macs",
+        "url": "https://www.macrumors.com/2026/10/09/mac-shipments-fall-but-apple-gains-ground/",
+        "published_on": "2026-10-09"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-09-anthropic-oss-scanner-gratuito-codigo-aberto",
     "title": "Anthropic lança OSS Scanner gratuito para projetos de código aberto",
     "category": "Desenvolvimento e IA",
