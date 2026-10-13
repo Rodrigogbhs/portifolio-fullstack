@@ -1,5 +1,35 @@
 [
   {
+    "slug": "2026-10-13-npm-slugfest-falha-trusted-publishing",
+    "title": "Pesquisa revela falha no npm que expôs mais de 1.500 pacotes a sequestro",
+    "category": "Segurança e desenvolvimento",
+    "summary": "Divulgação do SlugFest mostra risco em vínculos com repositórios abandonados; GitHub informa correção lançada em 2 de outubro.",
+    "published_at": "2026-10-13T15:12:19-03:00",
+    "edition": "07:00",
+    "paragraphs": [
+      "A Bloom Security divulgou em 13 de outubro a pesquisa SlugFest, sobre uma falha no Trusted Publishing do npm, mecanismo usado para publicar pacotes sem guardar credenciais permanentes. Segundo os pesquisadores, mais de 1.500 pacotes estavam expostos ao sequestro de publicação. A contagem indica risco identificado, não pacotes comprovadamente invadidos.",
+      "O problema ocorria quando a autorização apontava para um repositório renomeado, transferido ou excluído e ainda não tinha sido usada para publicar. Nesse intervalo, o npm verificava o endereço do repositório, em vez de sua identidade permanente. Reutilizar um endereço abandonado podia permitir a publicação de versões maliciosas sob o nome de um pacote legítimo, sem roubar credenciais.",
+      "O GitHub anunciou em 2 de outubro que configurações não validadas passam a expirar após 48 horas; a primeira publicação as vincula à identidade permanente do repositório. A Bloom recomenda revisar os vínculos com npm trust list e recriar os que apontem para endereços antigos. Para equipes e agentes que instalam dependências automaticamente, o caso reforça a importância de conferir a origem das versões. Segundo o Help Net Security, não se sabe se houve exploração real."
+    ],
+    "sources": [
+      {
+        "name": "Bloom Security · Pesquisa original SlugFest, divulgada em 13/10",
+        "url": "https://bloom.security/blog/slugfest-millions-of-ai-agents-download-exposed-npm-packages",
+        "published_on": "2026-10-13"
+      },
+      {
+        "name": "GitHub · Mudança oficial no Trusted Publishing, anunciada em 2/10",
+        "url": "https://github.blog/changelog/2026-10-02-unvalidated-npm-trusted-publishing-configurations-now-expire/",
+        "published_on": "2026-10-02"
+      },
+      {
+        "name": "Help Net Security · Cobertura independente e resposta do GitHub",
+        "url": "https://www.helpnetsecurity.com/2026/10/13/slugfest-npm-trusted-publishing-flaw/",
+        "published_on": "2026-10-13"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-13-gitlab-correcao-falha-critica-execucao-codigo",
     "title": "GitLab corrige falha crítica que permite executar código sem login",
     "category": "Segurança e desenvolvimento",
