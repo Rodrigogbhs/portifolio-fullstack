@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- Gerado por scripts/build_blog.py. Edite o conteúdo em blog/posts.json. -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GitLab corrige falha crítica que permite executar código sem login — Dev.Rodrigo</title>
+  <meta name="description" content="Atualizações corrigem vulnerabilidade com nota máxima de gravidade; instalações próprias precisam atualizar, enquanto GitLab.com já recebeu a correção.">
+  <meta name="theme-color" content="#1f1f28">
+  <link rel="canonical" href="https://devrodfullstack-portifolio.vercel.app/blog/2026-10-13-gitlab-correcao-falha-critica-execucao-codigo">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Dev.Rodrigo">
+  <meta property="og:title" content="GitLab corrige falha crítica que permite executar código sem login">
+  <meta property="og:description" content="Atualizações corrigem vulnerabilidade com nota máxima de gravidade; instalações próprias precisam atualizar, enquanto GitLab.com já recebeu a correção.">
+  <meta property="og:url" content="https://devrodfullstack-portifolio.vercel.app/blog/2026-10-13-gitlab-correcao-falha-critica-execucao-codigo">
+  <meta property="og:image" content="https://devrodfullstack-portifolio.vercel.app/assets/images/og-rodrigo-guimaraes.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GitLab corrige falha crítica que permite executar código sem login">
+  <meta name="twitter:description" content="Atualizações corrigem vulnerabilidade com nota máxima de gravidade; instalações próprias precisam atualizar, enquanto GitLab.com já recebeu a correção.">
+  <meta name="twitter:image" content="https://devrodfullstack-portifolio.vercel.app/assets/images/og-rodrigo-guimaraes.jpg">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../blog.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "GitLab corrige falha crítica que permite executar código sem login", "description": "Atualizações corrigem vulnerabilidade com nota máxima de gravidade; instalações próprias precisam atualizar, enquanto GitLab.com já recebeu a correção.", "datePublished": "2026-10-13T15:10:53-03:00", "inLanguage": "pt-BR", "url": "https://devrodfullstack-portifolio.vercel.app/blog/2026-10-13-gitlab-correcao-falha-critica-execucao-codigo", "author": {"@type": "Person", "name": "Rodrigo Guimarães", "url": "https://devrodfullstack-portifolio.vercel.app"}, "image": "https://devrodfullstack-portifolio.vercel.app/assets/images/og-rodrigo-guimaraes.jpg", "isPartOf": {"@type": "Blog", "url": "https://devrodfullstack-portifolio.vercel.app/blog"}, "citation": ["https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released/", "https://www.csoonline.com/article/4234306/gitlab-patches-a-max-severity-regex-flaw-alongside-five-high-severity-bugs.html"]}</script>
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topo">
+    <div class="container navbar">
+      <a href="../index.html" class="marca"><img class="marca-avatar" src="../assets/images/avatar-rodrigo.webp" alt="" width="40" height="40"><span>Dev<span class="ponto">.</span>Rodrigo</span></a>
+      <nav class="blog-menu" aria-label="Navegação principal"><a href="../index.html#portfolio">Portfólio</a><a href="../blog.html" aria-current="true">Blog</a><a class="blog-contato" href="../index.html#contato">Contato</a></nav>
+    </div>
+  </header>
+  <main id="conteudo">
+    <article class="blog-artigo container">
+      <a class="blog-voltar" href="../blog.html">← Todas as notícias</a>
+      <header><p class="blog-categoria">Segurança e desenvolvimento</p><h1>GitLab corrige falha crítica que permite executar código sem login</h1><div class="blog-meta"><time datetime="2026-10-13T15:10:53-03:00">13 out 2026 · 15:10 (Brasília)</time><span>Edição das 13:00</span><span>1 min de leitura</span></div><p class="blog-resumo">Atualizações corrigem vulnerabilidade com nota máxima de gravidade; instalações próprias precisam atualizar, enquanto GitLab.com já recebeu a correção.</p></header>
+      <div class="blog-texto"><p>O GitLab divulgou em 12 de outubro atualizações de segurança para as edições Community e Enterprise. O aviso, repercutido hoje pela CSO, destaca a CVE-2026-97229, uma falha classificada com nota 10,0 no CVSS, escala usada para medir a gravidade de vulnerabilidades.</p>
+<p>Segundo a empresa, uma validação insuficiente de expressões regulares nas configurações de CI/CD pode permitir, sob determinadas condições, que alguém sem autenticação execute código no servidor. As versões afetadas são as da série 19.2 anteriores à 19.2.8, da 19.3 anteriores à 19.3.5 e da 19.4 anteriores à 19.4.2.</p>
+<p>Para equipes que hospedam o próprio GitLab, a orientação é atualizar imediatamente para uma versão corrigida. Proteger esse servidor importa porque ele reúne repositórios e automações de entrega de software. O pacote também corrige falhas de autorização em pipelines e de injeção de instruções em agentes de IA. Segundo o GitLab, o GitLab.com já está corrigido e clientes do GitLab Dedicated não precisam agir.</p></div>
+      <aside class="blog-fontes" aria-labelledby="titulo-fontes"><h2 id="titulo-fontes">Fontes para continuar a leitura</h2><ul><li><a href="https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released/" target="_blank" rel="noopener noreferrer">GitLab · Aviso oficial, versões afetadas e correções <span aria-hidden="true">↗</span></a><small>Fonte publicada em 12 out 2026</small></li>
+<li><a href="https://www.csoonline.com/article/4234306/gitlab-patches-a-max-severity-regex-flaw-alongside-five-high-severity-bugs.html" target="_blank" rel="noopener noreferrer">CSO Online · Cobertura independente, atualizada em 13/10 <span aria-hidden="true">↗</span></a><small>Fonte publicada em 13 out 2026</small></li></ul></aside>
+    </article>
+  </main>
+  <footer class="rodape container blog-rodape"><p>© 2026 Rodrigo Guimarães.</p><a href="../index.html">Conheça meu trabalho <span aria-hidden="true">↗</span></a></footer>
+</body>
+</html>
