@@ -1,5 +1,35 @@
 [
   {
+    "slug": "2026-10-15-citizen-lab-adfection-espionagem-anuncios-sem-clique",
+    "title": "Citizen Lab revela espionagem por anúncios que dispensa cliques",
+    "category": "Segurança e privacidade",
+    "summary": "Pesquisa AdFection liga anúncios direcionados a spyware e documenta ataques contra a Al Jazeera em 2024 e 2025.",
+    "published_at": "2026-10-15T13:57:05-03:00",
+    "edition": "07:00",
+    "paragraphs": [
+      "O Citizen Lab, da Universidade de Toronto, divulgou em 15 de outubro a investigação AdFection, que documenta infecções por spyware entregues por anúncios online sem exigir cliques. O laboratório identificou ataques contra pelo menos 45 dispositivos da Al Jazeera em 2024 e 2025; a novidade é a divulgação das evidências técnicas.",
+      "Segundo os pesquisadores, a Discover-Tech comprava anúncios direcionados e permitia que fornecedores como a Candiru selecionassem aparelhos para instalar programas de espionagem. O anúncio servia de porta de entrada ao ser carregado em um site ou aplicativo. A presença de um anúncio na rede de uma organização, porém, não comprova que houve infecção.",
+      "Para usuários e equipes que desenvolvem sites e aplicativos, o caso amplia a atenção ao código de terceiros carregado pela publicidade. O Citizen Lab recomenda bloquear anúncios direcionados na rede e reforçar a fiscalização dos fornecedores. Segundo o relatório, Google, IAB Europe e outras plataformas já cortaram ou suspenderam o acesso da Discover-Tech."
+    ],
+    "sources": [
+      {
+        "name": "Citizen Lab · Investigação original AdFection e recomendações",
+        "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+        "published_on": "2026-10-15"
+      },
+      {
+        "name": "Confiant · Análise técnica paralela, em colaboração com o Citizen Lab",
+        "url": "https://blog.confiant.com/p/adint-weaponized-ad-tech-for-zero-click-spyware-and-mass-identity-vacuuming",
+        "published_on": "2026-10-15"
+      },
+      {
+        "name": "Security Affairs · Cobertura independente e distinção entre exposição e infecção",
+        "url": "https://securityaffairs.com/201015/hacking/adfection-beyond-the-click-citizen-lab-exposes-ad-delivered-spyware-networks.html",
+        "published_on": "2026-10-15"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-15-ubuntu-26-10-rust-ditado-local-myna",
     "title": "Ubuntu 26.10 chega com ferramentas em Rust e ditado local por IA",
     "category": "Software e código aberto",
