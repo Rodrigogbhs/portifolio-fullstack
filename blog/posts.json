@@ -1,5 +1,35 @@
 [
   {
+    "slug": "2026-10-15-ubuntu-26-10-rust-ditado-local-myna",
+    "title": "Ubuntu 26.10 chega com ferramentas em Rust e ditado local por IA",
+    "category": "Software e código aberto",
+    "summary": "Versão traz GNOME 51, conclui a migração dos comandos básicos para Rust e oferece o Myna como prévia opcional; suporte vai até julho de 2027.",
+    "published_at": "2026-10-15T13:55:02-03:00",
+    "edition": "13:00",
+    "paragraphs": [
+      "A Canonical lançou em 15 de outubro o Ubuntu 26.10, chamado Stonking Stingray, disponível para download. A versão traz o desktop GNOME 51 e conclui a migração das ferramentas básicas de linha de comando para o uutils, escrito em Rust. Comandos como cp, mv e rm, usados para copiar, mover e apagar arquivos, também passam a usar essa implementação.",
+      "Outra novidade é o Myna, uma prévia experimental de ditado que transforma fala em texto nos aplicativos. O processamento acontece no próprio computador, sem enviar o áudio a um serviço de rede. A ferramenta é opcional e não vem instalada por padrão; seus recursos ainda podem mudar antes da versão estável.",
+      "Para quem desenvolve, a atualização reúne ferramentas de programação mais recentes e amplia as opções para testar aplicações no Linux. A troca dos comandos básicos também torna relevante conferir a compatibilidade de scripts usados no trabalho. O Ubuntu 26.10 terá nove meses de suporte, até julho de 2027, prazo que precisa entrar no planejamento de quem adotar essa versão intermediária."
+    ],
+    "sources": [
+      {
+        "name": "Canonical · Anúncio oficial do Ubuntu 26.10",
+        "url": "https://ubuntu.com/blog/canonical-releases-ubuntu-26-10-stonking-stingray",
+        "published_on": "2026-10-15"
+      },
+      {
+        "name": "Ubuntu Release Team · Comunicado de lançamento e período de manutenção",
+        "url": "https://lists.ubuntu.com/archives/ubuntu-announce/2026-October/000330.html",
+        "published_on": "2026-10-15"
+      },
+      {
+        "name": "Linuxiac · Cobertura independente do lançamento e dos limites do Myna",
+        "url": "https://linuxiac.com/ubuntu-26-10-released-with-gnome-51-linux-kernel-7-3-and-rust-coreutils/",
+        "published_on": "2026-10-15"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-13-npm-slugfest-falha-trusted-publishing",
     "title": "Pesquisa revela falha no npm que expôs mais de 1.500 pacotes a sequestro",
     "category": "Segurança e desenvolvimento",
