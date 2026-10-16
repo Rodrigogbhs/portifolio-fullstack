@@ -1,5 +1,30 @@
 [
   {
+    "slug": "2026-10-16-utc-continuo-fim-segundos-intercalares-2027",
+    "title": "UTC deixará de usar segundos intercalares em maio de 2027",
+    "category": "Infraestrutura e inovação",
+    "summary": "Decisão internacional busca reduzir falhas de sincronização em serviços digitais e antecipa uma mudança antes prevista para ocorrer até 2035.",
+    "published_at": "2026-10-16T13:04:08-03:00",
+    "edition": "13:00",
+    "paragraphs": [
+      "A Conferência Geral de Pesos e Medidas aprovou em 15 de outubro o fim dos ajustes por segundos intercalares no Tempo Universal Coordenado (UTC), referência usada para sincronizar sistemas digitais. A resolução estabelece que o UTC contínuo entrará em vigor em 20 de maio de 2027, antecipando uma mudança antes prevista para ocorrer até 2035.",
+      "Esses ajustes aproximam o tempo dos relógios atômicos daquele calculado pela rotação irregular da Terra. Pela nova regra, a diferença entre UTC e o tempo de rotação terrestre poderá chegar a uma hora, permitindo séculos de continuidade. Isso não significa adiantar os relógios em uma hora na data da mudança.",
+      "Segundo a resolução, inserir segundos e usar métodos diferentes para compensá-los pode causar falhas e divergências entre servidores. Retirar um segundo, algo nunca realizado, também preocupa os especialistas. Para quem desenvolve e opera serviços distribuídos, a decisão reduz uma fonte de complexidade na sincronização. Telecomunicações, redes de energia e outros sistemas que dependem de horários precisos estão entre os beneficiados."
+    ],
+    "sources": [
+      {
+        "name": "BIPM · Resolução 5 da CGPM, texto oficial e data de implementação",
+        "url": "https://www.bipm.org/fr/cgpm-2026/resolution-5",
+        "published_on": "2026-10-15"
+      },
+      {
+        "name": "Xinhua · Cobertura independente da decisão, publicada em 16/10",
+        "url": "https://www3.xinhuanet.com/politics/20261016/2a1342bc7d4e4245b58741f4d1185b8b/c.html",
+        "published_on": "2026-10-16"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-16-meta-muse-spark-open-pesos-programacao-agentes",
     "title": "Meta libera pesos do Muse Spark Open para programação e agentes de IA",
     "category": "Inteligência artificial e desenvolvimento",
