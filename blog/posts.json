@@ -1,5 +1,35 @@
 [
   {
+    "slug": "2026-10-17-connectwise-suspende-backups-ataque-microsoft-365",
+    "title": "ConnectWise suspende backups após ataque a integrações do Microsoft 365",
+    "category": "Segurança e serviços em nuvem",
+    "summary": "Serviço segue sem prazo de retorno; empresa também pausa ferramentas de gestão e segurança, enquanto clientes precisam revisar acessos de aplicações.",
+    "published_at": "2026-10-17T22:31:44-03:00",
+    "edition": "13:00",
+    "paragraphs": [
+      "A ConnectWise mantém suspenso o Cloud Backup, antigo SkyKick, após identificar acesso não autorizado a identidades de aplicações usadas no serviço. Em atualização publicada às 22h de 17 de outubro, no horário de Brasília, a empresa informou que backups agendados e restaurações seguem indisponíveis, sem previsão de retorno. SaaS Security e Cloud Management também foram retirados do ar por precaução.",
+      "A Huntress relatou autenticações indevidas em ambientes Microsoft 365 usando credenciais dessas integrações. As permissões já concedidas às aplicações podem dar acesso a e-mails e arquivos sem exigir login de uma pessoa. O volume de dados eventualmente copiados continua incerto; a ConnectWise diz não haver evidências de acesso aos arquivos de backup armazenados.",
+      "Para empresas e equipes de TI, o impacto combina interrupção da proteção dos dados com a necessidade de investigar acessos anteriores. A orientação é manter as integrações afetadas desativadas, preservar registros e revisar credenciais e permissões. Desligar a conexão original não elimina acessos adicionais que um invasor possa ter criado. A interrupção, por si só, não comprova que cada cliente foi invadido."
+    ],
+    "sources": [
+      {
+        "name": "ConnectWise · Aviso oficial, atualizado em 17/10 às 22h de Brasília",
+        "url": "https://www.connectwise.com/company/trust/advisories",
+        "published_on": "2026-10-16"
+      },
+      {
+        "name": "Huntress · Investigação dos acessos indevidos, atualizada em 17/10",
+        "url": "https://www.huntress.com/blog/vendor-credential-enables-unauthorized-access",
+        "published_on": "2026-10-16"
+      },
+      {
+        "name": "BleepingComputer · Cobertura independente do incidente e das incertezas",
+        "url": "https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/",
+        "published_on": "2026-10-17"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-16-utc-continuo-fim-segundos-intercalares-2027",
     "title": "UTC deixará de usar segundos intercalares em maio de 2027",
     "category": "Infraestrutura e inovação",
