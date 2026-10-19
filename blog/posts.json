@@ -1,5 +1,35 @@
 [
   {
+    "slug": "2026-10-19-linux-7-3-armazenamento-suporte-hardware",
+    "title": "Linux 7.3 é lançado com melhorias de armazenamento e suporte a hardware",
+    "category": "Software e código aberto",
+    "summary": "Versão final reúne otimizações de leitura e escrita, avanços para GPUs com pouca memória e correções para inicialização e SSDs Samsung.",
+    "published_at": "2026-10-19T17:11:22-03:00",
+    "edition": "07:00",
+    "paragraphs": [
+      "Linus Torvalds lançou em 18 de outubro a versão final do Linux 7.3, já disponível no repositório oficial do kernel. O núcleo usado por distribuições Linux em computadores e servidores reúne melhorias de armazenamento, gráficos e compatibilidade com hardware.",
+      "Entre as mudanças estão otimizações nas operações de leitura e escrita e no sistema de arquivos Btrfs, além de ajustes no gerenciamento de memória de vídeo em GPUs com pouca capacidade. A versão também inclui suporte inicial ao Steam Controller de 2026 e avança na preparação para processadores AMD Zen 6. Os ganhos práticos dependem do equipamento e da carga de trabalho.",
+      "Na reta final, entraram correções para travamentos raros na inicialização e adaptações para SSDs Samsung 990 PRO e 990 EVO Plus com determinados firmwares. Para usuários e equipes de desenvolvimento, a atualização combina novas possibilidades de desempenho com ajustes de estabilidade. A chegada aos computadores do dia a dia depende de cada distribuição integrar e disponibilizar o novo kernel."
+    ],
+    "sources": [
+      {
+        "name": "Linux · Registro oficial da versão v7.3 por Linus Torvalds",
+        "url": "https://github.com/torvalds/linux/releases/tag/v7.3",
+        "published_on": "2026-10-18"
+      },
+      {
+        "name": "Phoronix · Confirmação independente do lançamento e das correções finais",
+        "url": "https://www.phoronix.com/news/Linux-7.3-Released",
+        "published_on": "2026-10-18"
+      },
+      {
+        "name": "Phoronix · Panorama dos recursos de armazenamento, gráficos e hardware",
+        "url": "https://www.phoronix.com/news/Linux-7.3-Best-Features",
+        "published_on": "2026-10-16"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-17-connectwise-suspende-backups-ataque-microsoft-365",
     "title": "ConnectWise suspende backups após ataque a integrações do Microsoft 365",
     "category": "Segurança e serviços em nuvem",
