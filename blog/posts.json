@@ -1,5 +1,30 @@
 [
   {
+    "slug": "2026-10-19-tenstorrent-aporte-servidores-ia",
+    "title": "Tenstorrent capta US$ 1,5 bilhão para ampliar servidores de IA",
+    "category": "Hardware e infraestrutura de IA",
+    "summary": "Rodada avalia empresa em US$ 6,2 bilhões e financiará produção em escala, expansão global e tecnologias para executar modelos de IA.",
+    "published_at": "2026-10-19T17:12:08-03:00",
+    "edition": "13:00",
+    "paragraphs": [
+      "A Tenstorrent anunciou em 19 de outubro o fechamento de uma rodada de investimento série E de US$ 1,5 bilhão. A operação, liderada por Trace Capital e Innovation X, avalia a fabricante de chips de inteligência artificial em US$ 6,2 bilhões após o aporte. Os valores foram confirmados em cobertura da Reuters.",
+      "Segundo a empresa, os recursos financiarão a produção em escala e a expansão dos servidores Galaxy, usados para executar modelos de linguagem e gerar vídeos. O dinheiro também apoiará o desenvolvimento de projetos de processadores licenciados a outras fabricantes. A Tenstorrent combina hardware próprio, software de código aberto e processadores baseados na arquitetura RISC-V.",
+      "Para desenvolvedores e empresas, ampliar essa oferta pode trazer mais opções para hospedar modelos de IA em infraestrutura própria. O aporte destaca a disputa pela inferência: o processamento que transforma modelos já treinados em respostas e outros resultados. Na prática, adotar uma plataforma alternativa exige avaliar a compatibilidade das ferramentas e os custos de cada aplicação."
+    ],
+    "sources": [
+      {
+        "name": "Tenstorrent · Anúncio oficial da rodada e destino dos recursos",
+        "url": "https://tenstorrent.com/newsroom/tenstorrent-announces-series-e",
+        "published_on": "2026-10-19"
+      },
+      {
+        "name": "Reuters / Investing.com · Confirmação independente do aporte e dos servidores Galaxy",
+        "url": "https://www.investing.com/news/stock-market-news/ai-chip-startup-tenstorrent-more-than-doubles-its-valuation-to-62-billion-in-funding-round-4957179",
+        "published_on": "2026-10-19"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-19-linux-7-3-armazenamento-suporte-hardware",
     "title": "Linux 7.3 é lançado com melhorias de armazenamento e suporte a hardware",
     "category": "Software e código aberto",
