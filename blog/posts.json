@@ -1,5 +1,35 @@
 [
   {
+    "slug": "2026-10-20-amazon-torchneuron-pytorch-trainium",
+    "title": "Amazon anuncia TorchNeuron para executar PyTorch nos chips Trainium",
+    "category": "Desenvolvimento e inteligência artificial",
+    "summary": "Integração de código aberto busca simplificar o uso dos chips da AWS com ferramentas conhecidas, mas a beta ainda tem limites de compatibilidade.",
+    "published_at": "2026-10-20T10:39:35-03:00",
+    "edition": "07:00",
+    "paragraphs": [
+      "A Amazon anunciou em 19 de outubro o TorchNeuron, uma integração de código aberto para executar modelos de inteligência artificial feitos com PyTorch nos chips AWS Trainium2 e Trainium3. O projeto estreia em beta pública, sob a licença Apache 2.0, com código disponível no GitHub.",
+      "Segundo a Amazon, a integração reduz o trabalho de adaptação ao permitir reaproveitar código e ferramentas do PyTorch. Ela oferece execução interativa para pesquisa e depuração, compilação para otimizar modelos e treinamento distribuído em vários chips. A proposta é facilitar a avaliação de uma alternativa às GPUs sem reconstruir toda a aplicação.",
+      "A compatibilidade ainda é parcial: a documentação informa que entradas com dimensões variáveis podem exigir novas compilações e que algumas interfaces do PyTorch não são suportadas. Para equipes de desenvolvimento, a novidade amplia as opções de infraestrutura para treinar e executar IA, mas exige testes com os próprios modelos antes de uma migração. Economia e desempenho dependem da carga de trabalho."
+    ],
+    "sources": [
+      {
+        "name": "PyTorch · Anúncio dos engenheiros da AWS, recursos e abertura da beta",
+        "url": "https://pytorch.org/blog/introducing-torchneuron-native-pytorch-backend-for-aws-trainium/",
+        "published_on": "2026-10-19"
+      },
+      {
+        "name": "AWS Neuron · Notas oficiais da beta e limites de compatibilidade",
+        "url": "https://awsdocs-neuron.readthedocs-hosted.com/en/latest/release-notes/components/torchneuron.html",
+        "published_on": "2026-10-19"
+      },
+      {
+        "name": "The Next Web · Cobertura independente do anúncio e das limitações",
+        "url": "https://thenextweb.com/news/amazon-torchneuron-pytorch-trainium",
+        "published_on": "2026-10-19"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-19-tenstorrent-aporte-servidores-ia",
     "title": "Tenstorrent capta US$ 1,5 bilhão para ampliar servidores de IA",
     "category": "Hardware e infraestrutura de IA",
