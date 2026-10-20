@@ -1,5 +1,30 @@
 [
   {
+    "slug": "2026-10-20-google-cloud-falha-londres-servicos-bancarios",
+    "title": "Falha no Google Cloud em Londres afeta serviços bancários",
+    "category": "Infraestrutura e serviços em nuvem",
+    "summary": "Problema elétrico em uma zona de Londres afetou bancos e aplicações; Google informa recuperação da maioria dos clientes e investiga o incidente.",
+    "published_at": "2026-10-20T13:13:52-03:00",
+    "edition": "13:00",
+    "paragraphs": [
+      "A região de Londres do Google Cloud sofreu uma interrupção em 20 de outubro, com reflexos em serviços bancários. Segundo o Google, um problema elétrico atingiu a zona europe-west2-b a partir das 3h08, no horário de Brasília. A lista de produtos afetados inclui Cloud Run, Cloud SQL e Google Kubernetes Engine.",
+      "Em atualização das 11h03 de Brasília, o Google informou que o problema havia sido mitigado para a maioria dos clientes, mas um número muito pequeno ainda enfrentava dificuldades. A empresa prometeu publicar uma análise após concluir a investigação. O registro oficial encerra o incidente às 11h, sem garantir recuperação completa de todos os clientes.",
+      "Segundo a Reuters, a interrupção afetou pagamentos com cartão e saques em caixas eletrônicos do Revolut. O banco afirmou que o dinheiro e os dados dos clientes estavam seguros. Para quem desenvolve aplicações, o episódio ilustra como uma falha localizada pode alcançar serviços usados por muitas pessoas e reforça a importância de testar planos de recuperação e dependências de infraestrutura."
+    ],
+    "sources": [
+      {
+        "name": "Google Cloud · Registro oficial do incidente e atualização sobre a recuperação",
+        "url": "https://status.cloud.google.com/incidents/Xs2XTHzAVC9YnafnPyzj",
+        "published_on": "2026-10-20"
+      },
+      {
+        "name": "Reuters / Investing.com · Confirmação independente dos efeitos no Revolut",
+        "url": "https://www.investing.com/news/stock-market-news/google-cloud-outage-in-uk-eases-after-impacting-digital-banks-public-sector-websites-4960432",
+        "published_on": "2026-10-20"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-20-amazon-torchneuron-pytorch-trainium",
     "title": "Amazon anuncia TorchNeuron para executar PyTorch nos chips Trainium",
     "category": "Desenvolvimento e inteligência artificial",
