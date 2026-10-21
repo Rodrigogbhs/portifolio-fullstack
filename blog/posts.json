@@ -1,5 +1,35 @@
 [
   {
+    "slug": "2026-10-21-nvidia-openshell-arquitetura-agentes-ia",
+    "title": "NVIDIA apresenta arquitetura para limitar ações de agentes de IA",
+    "category": "Inteligência artificial e desenvolvimento",
+    "summary": "Nova arquitetura OpenShell combina isolamento, permissões e monitoramento para controlar agentes que acessam arquivos, ferramentas e serviços de empresas.",
+    "published_at": "2026-10-21T14:17:23-03:00",
+    "edition": "07:00",
+    "paragraphs": [
+      "A NVIDIA apresentou em 21 de outubro, durante a GTC Berlin, a OpenShell Reference Architecture, um projeto de infraestrutura para executar e controlar agentes de inteligência artificial. Segundo a empresa, a arquitetura já está disponível e amplia o software OpenShell de código aberto, que cria ambientes isolados para esses agentes.",
+      "A proposta é controlar, fora do próprio agente, quais arquivos, serviços de rede e credenciais ele pode acessar. Na arquitetura, sistemas Vera Rubin executam os modelos, enquanto processadores Vera cuidam das ferramentas usadas pelos agentes. Uma camada adicional opcional usa chips BlueField-4 e o software Sentry para monitorar atividades e aplicar regras em hardware, conforme a documentação da NVIDIA.",
+      "Para equipes que automatizam programação e tarefas com dados empresariais, a novidade oferece uma referência para definir permissões e acompanhar ações durante a execução. Isso importa porque agentes podem escrever arquivos, executar comandos e usar serviços externos. Na prática, adotar a arquitetura exige configurar e testar esses limites em cada aplicação; o anúncio não demonstra que todos os riscos foram eliminados."
+    ],
+    "sources": [
+      {
+        "name": "NVIDIA · Anúncio oficial da arquitetura OpenShell na GTC Berlin",
+        "url": "https://nvidianews.nvidia.com/news/openshell-reference-architecture",
+        "published_on": "2026-10-21"
+      },
+      {
+        "name": "NVIDIA Developer · Controles de acesso e camada opcional de proteção em hardware",
+        "url": "https://developer.nvidia.com/blog/how-nvidia-openshell-reference-architecture-secures-and-governs-ai-agent-workloads-at-scale/",
+        "published_on": "2026-10-21"
+      },
+      {
+        "name": "The Register · Cobertura independente do anúncio e dos limites do projeto",
+        "url": "https://www.theregister.com/ai-and-ml/2026/10/21/nvidia-picks-openshell-to-tame-ai-gents/5304319",
+        "published_on": "2026-10-21"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-21-php-correcoes-emergencia-falhas-criticas",
     "title": "PHP lança correções de emergência para duas falhas críticas",
     "category": "Segurança e desenvolvimento",

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Gerado por scripts/build_blog.py. Edite o conteúdo em blog/posts.json. -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NVIDIA apresenta arquitetura para limitar ações de agentes de IA — Dev.Rodrigo</title>
+  <meta name="description" content="Nova arquitetura OpenShell combina isolamento, permissões e monitoramento para controlar agentes que acessam arquivos, ferramentas e serviços de empresas.">
+  <meta name="theme-color" content="#1f1f28">
+  <link rel="canonical" href="https://devrodfullstack-portifolio.vercel.app/blog/2026-10-21-nvidia-openshell-arquitetura-agentes-ia">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Dev.Rodrigo">
+  <meta property="og:title" content="NVIDIA apresenta arquitetura para limitar ações de agentes de IA">
+  <meta property="og:description" content="Nova arquitetura OpenShell combina isolamento, permissões e monitoramento para controlar agentes que acessam arquivos, ferramentas e serviços de empresas.">
+  <meta property="og:url" content="https://devrodfullstack-portifolio.vercel.app/blog/2026-10-21-nvidia-openshell-arquitetura-agentes-ia">
+  <meta property="og:image" content="https://devrodfullstack-portifolio.vercel.app/assets/images/og-rodrigo-guimaraes.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NVIDIA apresenta arquitetura para limitar ações de agentes de IA">
+  <meta name="twitter:description" content="Nova arquitetura OpenShell combina isolamento, permissões e monitoramento para controlar agentes que acessam arquivos, ferramentas e serviços de empresas.">
+  <meta name="twitter:image" content="https://devrodfullstack-portifolio.vercel.app/assets/images/og-rodrigo-guimaraes.jpg">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../blog.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "NVIDIA apresenta arquitetura para limitar ações de agentes de IA", "description": "Nova arquitetura OpenShell combina isolamento, permissões e monitoramento para controlar agentes que acessam arquivos, ferramentas e serviços de empresas.", "datePublished": "2026-10-21T14:17:23-03:00", "inLanguage": "pt-BR", "url": "https://devrodfullstack-portifolio.vercel.app/blog/2026-10-21-nvidia-openshell-arquitetura-agentes-ia", "author": {"@type": "Person", "name": "Rodrigo Guimarães", "url": "https://devrodfullstack-portifolio.vercel.app"}, "image": "https://devrodfullstack-portifolio.vercel.app/assets/images/og-rodrigo-guimaraes.jpg", "isPartOf": {"@type": "Blog", "url": "https://devrodfullstack-portifolio.vercel.app/blog"}, "citation": ["https://nvidianews.nvidia.com/news/openshell-reference-architecture", "https://developer.nvidia.com/blog/how-nvidia-openshell-reference-architecture-secures-and-governs-ai-agent-workloads-at-scale/", "https://www.theregister.com/ai-and-ml/2026/10/21/nvidia-picks-openshell-to-tame-ai-gents/5304319"]}</script>
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topo">
+    <div class="container navbar">
+      <a href="../index.html" class="marca"><img class="marca-avatar" src="../assets/images/avatar-rodrigo.webp" alt="" width="40" height="40"><span>Dev<span class="ponto">.</span>Rodrigo</span></a>
+      <nav class="blog-menu" aria-label="Navegação principal"><a href="../index.html#portfolio">Portfólio</a><a href="../blog.html" aria-current="true">Blog</a><a class="blog-contato" href="../index.html#contato">Contato</a></nav>
+    </div>
+  </header>
+  <main id="conteudo">
+    <article class="blog-artigo container">
+      <a class="blog-voltar" href="../blog.html">← Todas as notícias</a>
+      <header><p class="blog-categoria">Inteligência artificial e desenvolvimento</p><h1>NVIDIA apresenta arquitetura para limitar ações de agentes de IA</h1><div class="blog-meta"><time datetime="2026-10-21T14:17:23-03:00">21 out 2026 · 14:17 (Brasília)</time><span>Edição das 07:00</span><span>1 min de leitura</span></div><p class="blog-resumo">Nova arquitetura OpenShell combina isolamento, permissões e monitoramento para controlar agentes que acessam arquivos, ferramentas e serviços de empresas.</p></header>
+      <div class="blog-texto"><p>A NVIDIA apresentou em 21 de outubro, durante a GTC Berlin, a OpenShell Reference Architecture, um projeto de infraestrutura para executar e controlar agentes de inteligência artificial. Segundo a empresa, a arquitetura já está disponível e amplia o software OpenShell de código aberto, que cria ambientes isolados para esses agentes.</p>
+<p>A proposta é controlar, fora do próprio agente, quais arquivos, serviços de rede e credenciais ele pode acessar. Na arquitetura, sistemas Vera Rubin executam os modelos, enquanto processadores Vera cuidam das ferramentas usadas pelos agentes. Uma camada adicional opcional usa chips BlueField-4 e o software Sentry para monitorar atividades e aplicar regras em hardware, conforme a documentação da NVIDIA.</p>
+<p>Para equipes que automatizam programação e tarefas com dados empresariais, a novidade oferece uma referência para definir permissões e acompanhar ações durante a execução. Isso importa porque agentes podem escrever arquivos, executar comandos e usar serviços externos. Na prática, adotar a arquitetura exige configurar e testar esses limites em cada aplicação; o anúncio não demonstra que todos os riscos foram eliminados.</p></div>
+      <aside class="blog-fontes" aria-labelledby="titulo-fontes"><h2 id="titulo-fontes">Fontes para continuar a leitura</h2><ul><li><a href="https://nvidianews.nvidia.com/news/openshell-reference-architecture" target="_blank" rel="noopener noreferrer">NVIDIA · Anúncio oficial da arquitetura OpenShell na GTC Berlin <span aria-hidden="true">↗</span></a><small>Fonte publicada em 21 out 2026</small></li>
+<li><a href="https://developer.nvidia.com/blog/how-nvidia-openshell-reference-architecture-secures-and-governs-ai-agent-workloads-at-scale/" target="_blank" rel="noopener noreferrer">NVIDIA Developer · Controles de acesso e camada opcional de proteção em hardware <span aria-hidden="true">↗</span></a><small>Fonte publicada em 21 out 2026</small></li>
+<li><a href="https://www.theregister.com/ai-and-ml/2026/10/21/nvidia-picks-openshell-to-tame-ai-gents/5304319" target="_blank" rel="noopener noreferrer">The Register · Cobertura independente do anúncio e dos limites do projeto <span aria-hidden="true">↗</span></a><small>Fonte publicada em 21 out 2026</small></li></ul></aside>
+    </article>
+  </main>
+  <footer class="rodape container blog-rodape"><p>© 2026 Rodrigo Guimarães.</p><a href="../index.html">Conheça meu trabalho <span aria-hidden="true">↗</span></a></footer>
+</body>
+</html>
