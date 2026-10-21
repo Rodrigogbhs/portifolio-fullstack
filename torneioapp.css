@@ -4,9 +4,9 @@
 .caso-hero { padding: 46px 0 72px; }
 .caso-voltar { font-size: 0.82rem; color: var(--old-white); }
 .caso-apresentacao { display: grid; grid-template-columns: 1fr 1.1fr; align-items: center; gap: 54px; margin-top: 54px; }
-.caso-apresentacao h1 { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: clamp(2.6rem, 5vw, 4.5rem); line-height: 1.05; letter-spacing: -0.055em; }
+.caso-apresentacao h1 { font-family: "Cascadia Code", monospace; font-size: clamp(2.6rem, 5vw, 4.5rem); line-height: 1.05; letter-spacing: -0.055em; }
 .caso-apresentacao h1 span { color: var(--carpa); }
-.caso-chamada { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: clamp(1.5rem, 2.4vw, 2rem); line-height: 1.2; margin: 24px 0 20px; color: var(--carpa); }
+.caso-chamada { font-family: "Cascadia Code", monospace; font-size: clamp(1.5rem, 2.4vw, 2rem); line-height: 1.2; margin: 24px 0 20px; color: var(--carpa); }
 .caso-resumo { max-width: 48ch; color: var(--old-white); font-size: 0.96rem; }
 .caso-acoes { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .caso-acoes a { font-size: 0.82rem; padding: 12px 17px; }
@@ -20,7 +20,7 @@
 .caso-funcionalidades { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 34px; }
 .caso-funcionalidades article { border-top: 1px solid var(--linha-forte); padding-top: 24px; }
 .caso-numero { color: var(--carpa); font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase; }
-.caso-funcionalidades h3, .caso-telas h3, .caso-passos h3 { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: 1.2rem; line-height: 1.35; margin: 12px 0; }
+.caso-funcionalidades h3, .caso-telas h3, .caso-passos h3 { font-family: "Cascadia Code", monospace; font-size: 1.2rem; line-height: 1.35; margin: 12px 0; }
 .caso-funcionalidades p, .caso-telas figcaption p { color: var(--old-white); font-size: 0.9rem; }
 .caso-telas-cabecalho { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 36px; }
 .caso-telas-cabecalho > p { color: var(--old-white); font-size: 0.78rem; }
@@ -74,3 +74,5 @@
   .caso-acesso { gap: 36px; }
   .caso-passos > li { padding-left: 36px; }
 }
+
+@media (max-width: 560px) { .caso-menu { gap: 12px; font-size: .7rem; } }

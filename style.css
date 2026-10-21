@@ -1,28 +1,19 @@
-/* =========================================================
-   Dev.Rodrigo — portfólio
-   Conceito: "degradê". Em português a mesma palavra nomeia o
-   corte do barbeiro e o gradiente. A transição de carreira do
-   Rodrigo já tinha um nome visual — o site inteiro sai daí.
-   ========================================================= */
+/* Dev.Rodrigo — estilos compartilhados por blog e páginas de projeto.
+   Home: root-os.css. Paleta Kanagawa preservada. */
 
-/* ===== fontes =====
-   Servidas pelo próprio site (antes vinham do Google Fonts). Arquivos
-   variáveis cortados para o que a página usa: Bricolage com opsz 12–96 e
-   pesos 600–800; Instrument Sans com pesos 400–600; caracteres latinos
-   (português completo) + setas. Licença OFL em assets/fonts/. */
+/* ===== Cascadia Code variável, WOFF2 local e licença OFL em assets/fonts/ ===== */
 @font-face {
-  font-family: "Bricolage Grotesque";
-  src: url("assets/fonts/bricolage-grotesque.woff2") format("woff2");
-  font-weight: 600 800;
+  font-family: "Cascadia Code";
+  src: url("assets/fonts/cascadia-code.woff2") format("woff2");
   font-style: normal;
+  font-weight: 200 700;
   font-display: swap;
 }
-
 @font-face {
-  font-family: "Instrument Sans";
-  src: url("assets/fonts/instrument-sans.woff2") format("woff2");
-  font-weight: 400 600;
-  font-style: normal;
+  font-family: "Cascadia Code";
+  src: url("assets/fonts/cascadia-code-italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 200 700;
   font-display: swap;
 }
 
@@ -45,7 +36,7 @@
   --linha-forte: #54546d; /* sumiInk6 */
 
   --largura: 1180px;
-  --raio: 14px;
+  --raio: 2px;
 
   /* uma curva só no site inteiro, para o movimento ter assinatura */
   --corte: cubic-bezier(0.22, 1, 0.36, 1);
@@ -69,7 +60,7 @@ html {
 body {
   background-color: var(--sumi);
   color: var(--fuji);
-  font-family: "Instrument Sans", system-ui, sans-serif;
+  font-family: "Cascadia Code", monospace;
   font-size: 1.0625rem;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -186,7 +177,7 @@ img {
   gap: 10px;
   flex-shrink: 0;
   white-space: nowrap;
-  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-family: "Cascadia Code", monospace;
   font-size: 1.1rem;
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -328,7 +319,7 @@ img {
      exatamente as letras — fit-content pararia na largura da coluna */
   width: min-content;
   max-width: 100%;
-  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-family: "Cascadia Code", monospace;
   font-size: clamp(2.6rem, 6.4vw, 4.6rem);
   font-weight: 800;
   line-height: 0.94;
@@ -348,7 +339,7 @@ img {
 }
 
 .cargo {
-  font-family: "Instrument Sans", system-ui, sans-serif;
+  font-family: "Cascadia Code", monospace;
   font-size: 1.22rem;
   font-weight: 500;
   color: var(--cristal);
@@ -388,7 +379,7 @@ img {
   border-radius: 999px;
   background-color: var(--carpa);
   color: var(--sumi);
-  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-family: "Cascadia Code", monospace;
   font-size: 0.98rem;
   font-weight: 600;
   transition: background-color 0.3s var(--corte), transform 0.3s var(--corte),
@@ -476,7 +467,7 @@ img {
 }
 
 .rede-texto strong {
-  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-family: "Cascadia Code", monospace;
   font-size: 0.92rem;
   font-weight: 600;
   color: var(--fuji);
@@ -520,7 +511,7 @@ img {
 }
 
 .titulo-secao {
-  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-family: "Cascadia Code", monospace;
   font-size: clamp(1.7rem, 3.4vw, 2.3rem);
   font-weight: 600;
   letter-spacing: -0.025em;
@@ -617,7 +608,7 @@ img {
 .projeto-info { padding: 22px 0 8px; }
 .projeto-categoria { display: flex; justify-content: space-between; gap: 12px; color: var(--old-white); font-size: 0.72rem; }
 .projeto-categoria > span:first-child { color: var(--carpa); }
-.projeto-info h3 { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: clamp(1.4rem, 2.8vw, 1.9rem); letter-spacing: -0.025em; margin: 8px 0; }
+.projeto-info h3 { font-family: "Cascadia Code", monospace; font-size: clamp(1.4rem, 2.8vw, 1.9rem); letter-spacing: -0.025em; margin: 8px 0; }
 .projeto-info > p { color: var(--old-white); font-size: 0.94rem; max-width: 66ch; }
 .projeto-stack { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
 .projeto-stack li { padding: 3px 10px; border: 1px solid var(--linha); border-radius: 999px; font-size: 0.72rem; color: var(--old-white); }
@@ -643,7 +634,7 @@ img {
 .portfolio-dialog::backdrop { background: #111119df; backdrop-filter: blur(8px); }
 body.portfolio-aberto { overflow: hidden; }
 .portfolio-dialog-topo { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 22px; border-bottom: 1px solid var(--linha); }
-.portfolio-dialog-topo h2 { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-size: 1.1rem; }
+.portfolio-dialog-topo h2 { font-family: "Cascadia Code", monospace; font-size: 1.1rem; }
 .portfolio-dialog-topo p { color: var(--old-white); font-size: 0.75rem; }
 .portfolio-fechar { display: flex; align-items: center; gap: 12px; padding: 8px 12px; border: 1px solid var(--linha-forte); border-radius: 8px; background: transparent; color: var(--fuji); font: inherit; font-size: 0.8rem; cursor: pointer; }
 .portfolio-fechar:hover { border-color: var(--carpa); }
@@ -939,4 +930,13 @@ body.portfolio-aberto { overflow: hidden; }
     opacity: 1;
     transform: none;
   }
+}
+
+/* Marca e tipografia compartilhadas com a identidade Root OS. */
+.marca-terminal { display: grid; place-items: center; width: 32px; height: 32px; background: var(--cristal); color: var(--sumi); flex: none; font-family: "Cascadia Code", monospace; font-size: 17px; }
+@media (max-width: 560px) {
+  .marca { gap: 8px; font-size: .8rem; }
+  .marca-terminal { width: 24px; height: 24px; font-size: 14px; }
+  .marca-suffix { display: none; }
+  .navbar { gap: 16px; }
 }

@@ -13,9 +13,11 @@ python3 -m http.server 8000
 ## Estrutura
 
 ```
-index.html                 página inteira (os ícones SVG ficam em <symbol> no topo)
-style.css                  estilos e animações
-portfolio.js               navegação da galeria e prévias ampliadas
+index.html                 home estática na identidade Root OS
+root-os.css                layout Root OS, foto com máscara no hover e tecnologias
+root-os.js                 abas, menu mobile e notícias recentes
+style.css                  estilos compartilhados do blog e dos projetos
+portfolio.js               prévias ampliadas; galeria das páginas de projeto
 blog.html                  índice de notícias de tecnologia
 blog.css                   estilos do blog, usando a paleta do portfólio
 blog/posts.json            notícias publicadas e suas fontes
@@ -25,7 +27,7 @@ drafts/blog/               rascunhos locais, ignorados pelo Git e pela Vercel
 torneioapp.html             funcionalidades, telas e acesso ao TorneioApp
 torneioapp.css              estilos da apresentação do sistema
 assets/icons/              logos das tecnologias (Devicon, baixados — funcionam offline)
-assets/fonts/              Bricolage Grotesque e Instrument Sans (WOFF2 + licença OFL)
+assets/fonts/              Cascadia Code variável (WOFF2 normal/itálico + licença OFL)
 assets/images/             foto (JPG original + WebP 480/960), avatar, imagem de compartilhamento
 assets/images/portfolio/   capturas dos quatro projetos em WebP
 assets/*.pdf               currículos (PT e EN)
@@ -64,31 +66,38 @@ título "Currículo — Rodrigo Guimarães, Desenvolvedor Full Stack" e autor
 
 ## Design
 
-O conceito é o **degradê**: em português a mesma palavra nomeia o corte do
-barbeiro e o gradiente. Daí saem os dois elementos visuais do site — o
-divisor de seções (traços que rareiam da esquerda para a direita) e a
-revelação do nome na home, em que um fio passa como uma navalha e o nome
-aparece no rastro.
+A direção aprovada é **Root OS**: um desktop com explorador, janelas e abas
+para apresentar o trabalho de Rodrigo. A paleta [Kanagawa Wave](https://github.com/rebelot/kanagawa.nvim)
+foi preservada; a fonte é **Cascadia Code**, variável e servida localmente em WOFF2.
 
-Paleta: [Kanagawa Wave](https://github.com/rebelot/kanagawa.nvim).
-Tipografia: Bricolage Grotesque (títulos) e Instrument Sans (texto), servidas
-localmente em `assets/fonts/` e cortadas para os pesos e caracteres usados.
+A foto original continua como retrato principal. Uma máscara com textura lo-fi
+aparece apenas enquanto um ponteiro do tipo mouse está sobre a imagem. O efeito
+não alterna por clique nem fica ativo por toque, inclusive em notebooks híbridos. A preferência por redução
+de movimento elimina a transição. A arte foi gerada com ImageGen e distribuída em
+WebP sem perdas; a foto original não foi editada.
+
+A seção de tecnologias apresenta as ferramentas de desenvolvimento e as habilidades
+em hacking ético, pentest web e análise de vulnerabilidades. O Kali Linux usa apenas
+o dragão branco do [pacote oficial](https://gitlab.com/kalilinux/documentation/press-pack/-/blob/main/Kali/Logomark/kali-dragon-white.svg),
+sem alterações e sem o wordmark. A atribuição está em `assets/icons/NOTICE-kali-linux.md`.
 
 ## Portfólio visual
 
 A seção `#portfolio` apresenta TorneioApp, Virlene Alves, Barbearia Toussaint
-e Veener em uma galeria horizontal. Funciona com toque, barra de rolagem, setas e
-teclado (←/→, Home/End quando a galeria está focada). Ao passar o mouse,
-a captura percorre a página; ao selecionar a prévia, uma janela permite
-rolar a imagem completa. Feche com Escape, com o botão Fechar ou pelo fundo.
-A preferência por movimento reduzido é respeitada.
+e Veener em uma grade responsiva. As imagens abrem no diálogo já usado pelas
+páginas de projeto; Escape e o botão Fechar encerram a prévia e restauram o foco.
+Sem JavaScript, os links continuam abrindo as capturas diretamente.
 
-Sem JavaScript, a galeria continua rolável e os links abrem as capturas.
-As imagens são locais: não precisam dos projetos originais em execução.
-Para atualizá-las, substitua os WebP em `assets/images/portfolio/` e ajuste
-os atributos `width` e `height` no HTML se as dimensões mudarem.
-As capturas refletem os arquivos locais, inclusive os espaços reservados
-para fotos e o catálogo vazio da Veener. Não são links para sites publicados.
+O HTML contém projetos, biografia, tecnologias, contato, currículos PT/EN e notícias.
+JavaScript acrescenta as abas, o menu mobile e a máscara por eventos de ponteiro. As últimas três notícias são atualizadas
+pela leitura de `blog/posts.json`, com conteúdo inserido por nós DOM e filtro de datas
+futuras. Se a leitura falhar, permanecem o conteúdo estático e o link do blog. As
+Automações do blog continuam usando o mesmo gerador, formato e rascunhos locais.
+
+As capturas são locais e não dependem dos projetos em execução. Para atualizá-las,
+substitua os WebP em `assets/images/portfolio/` e ajuste os atributos `width` e `height`.
+Elas representam os projetos reais, incluindo os espaços reservados para fotos e o
+catálogo vazio da Veener; não são links para sites publicados.
 
 ### TorneioApp
 
@@ -154,3 +163,16 @@ Gerar os arquivos atualiza a cópia local. Após conferir as mudanças, faça
 commit apenas dos arquivos envolvidos e envie para `origin/main`, que aciona
 a publicação na Vercel. Confirme o deployment antes de considerar a edição
 publicada.
+
+## Publicação do rebranding
+
+A home e os assets não exigem build. Antes do envio, execute
+`python3 scripts/build_blog.py --check` e `git diff --check`, confira as páginas
+no navegador e faça commit somente dos arquivos do rebranding. O push para
+`origin/main` aciona a integração existente da Vercel. Confirme o deployment do
+mesmo commit e os endereços públicos da home, blog e apresentação do TorneioApp.
+
+Se for necessário voltar ao visual anterior, reverta somente o commit do rebranding
+com `git revert` e envie a reversão para `origin/main`; isso preserva as notícias
+publicadas em outros commits. Nenhuma configuração de segurança ou agendamento
+é alterada por essa mudança.

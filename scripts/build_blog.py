@@ -100,8 +100,7 @@ def page(title, description, path, body, structured):
   <meta name="twitter:image" content="{DOMAIN}/assets/images/og-rodrigo-guimaraes.jpg">
   <link rel="icon" href="{prefix}favicon.ico">
   <link rel="apple-touch-icon" href="{prefix}apple-touch-icon.png">
-  <link rel="preload" href="{prefix}assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="{prefix}assets/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{prefix}assets/fonts/cascadia-code.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{prefix}style.css">
   <link rel="stylesheet" href="{prefix}blog.css">
   <script type="application/ld+json">{structured_json}</script>
@@ -110,7 +109,7 @@ def page(title, description, path, body, structured):
   <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
   <header class="topo">
     <div class="container navbar">
-      <a href="{prefix}index.html" class="marca"><img class="marca-avatar" src="{prefix}assets/images/avatar-rodrigo.webp" alt="" width="40" height="40"><span>Dev<span class="ponto">.</span>Rodrigo</span></a>
+      <a href="{prefix}index.html" class="marca"><span class="marca-terminal" aria-hidden="true">r:</span><span>dev<span class="ponto">.</span>rodrigo<span class="marca-suffix">.os</span></span></a>
       <nav class="blog-menu" aria-label="Navegação principal"><a href="{prefix}index.html#portfolio">Portfólio</a><a href="{prefix}blog.html" aria-current="{'page' if path == '/blog' else 'true'}">Blog</a><a class="blog-contato" href="{prefix}index.html#contato">Contato</a></nav>
     </div>
   </header>

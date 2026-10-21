@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Rodrigo Guimarães — Desenvolvedor Full Stack Júnior em BH</title>
-  <meta name="description" content="Rodrigo Guimarães, desenvolvedor full stack em Belo Horizonte: PHP, Laravel, TypeScript, React e Node.js. Aberto a vagas júnior, presenciais ou remotas.">
+  <title>Rodrigo Guimarães — Full Stack, Hacking Ético e Pentest</title>
+  <meta name="description" content="Rodrigo Guimarães, desenvolvedor full stack em Belo Horizonte. PHP, Laravel, TypeScript, React e Node.js, com habilidades em hacking ético e pentest.">
   <meta name="author" content="Rodrigo Guimarães">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <link rel="canonical" href="https://devrodfullstack-portifolio.vercel.app/">
@@ -18,7 +18,7 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Dev.Rodrigo">
   <meta property="og:url" content="https://devrodfullstack-portifolio.vercel.app/">
-  <meta property="og:title" content="Rodrigo Guimarães — Desenvolvedor Full Stack">
+  <meta property="og:title" content="Rodrigo Guimarães — Full Stack e Segurança Ofensiva">
   <meta property="og:description" content="Desenvolvedor full stack em Belo Horizonte. PHP, Laravel, TypeScript, React e Node.js. Aberto a vagas júnior, presenciais ou remotas.">
   <meta property="og:image" content="https://devrodfullstack-portifolio.vercel.app/assets/images/og-rodrigo-guimaraes.jpg">
   <meta property="og:image:type" content="image/jpeg">
@@ -28,7 +28,7 @@
   <meta property="profile:first_name" content="Rodrigo">
   <meta property="profile:last_name" content="Guimarães">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Rodrigo Guimarães — Desenvolvedor Full Stack">
+  <meta name="twitter:title" content="Rodrigo Guimarães — Full Stack e Segurança Ofensiva">
   <meta name="twitter:description" content="Desenvolvedor full stack em Belo Horizonte. PHP, Laravel, TypeScript, React e Node.js.">
   <meta name="twitter:image" content="https://devrodfullstack-portifolio.vercel.app/assets/images/og-rodrigo-guimaraes.jpg">
   <meta name="twitter:image:alt" content="Rodrigo Guimarães, desenvolvedor full stack em Belo Horizonte">
@@ -37,446 +37,232 @@
   <link rel="icon" href="/icon-96.png" type="image/png" sizes="96x96">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <!-- Fontes servidas pelo próprio site: sem ida ao Google Fonts antes de
-       pintar a página. Só os pesos e caracteres usados (ver @font-face). -->
-  <link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Cascadia Code variável, servida localmente em WOFF2. -->
+  <link rel="preload" href="assets/fonts/cascadia-code.woff2" as="font" type="font/woff2" crossorigin>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://devrodfullstack-portifolio.vercel.app/#website",
-        "url": "https://devrodfullstack-portifolio.vercel.app/",
-        "name": "Rodrigo Guimarães — Desenvolvedor Full Stack",
-        "alternateName": "Dev.Rodrigo",
-        "inLanguage": "pt-BR",
-        "publisher": { "@id": "https://devrodfullstack-portifolio.vercel.app/#rodrigo" }
-      },
-      {
-        "@type": "ProfilePage",
-        "@id": "https://devrodfullstack-portifolio.vercel.app/#perfil",
-        "url": "https://devrodfullstack-portifolio.vercel.app/",
-        "name": "Rodrigo Guimarães — Desenvolvedor Full Stack Júnior em BH",
-        "inLanguage": "pt-BR",
-        "isPartOf": { "@id": "https://devrodfullstack-portifolio.vercel.app/#website" },
-        "dateModified": "2026-10-06",
-        "mainEntity": { "@id": "https://devrodfullstack-portifolio.vercel.app/#rodrigo" }
-      },
-      {
-        "@type": "Person",
-        "@id": "https://devrodfullstack-portifolio.vercel.app/#rodrigo",
-        "name": "Rodrigo Guimarães",
-        "givenName": "Rodrigo",
-        "familyName": "Guimarães",
-        "alternateName": ["Rodrigo Guimarães Barbosa Henriques Silva", "Dev.Rodrigo"],
-        "jobTitle": "Desenvolvedor Full Stack",
-        "description": "Desenvolvedor full stack em Belo Horizonte, com sete anos de experiência como autônomo no ramo de barbearia. Trabalha com PHP, Laravel, TypeScript, React e Node.js.",
-        "url": "https://devrodfullstack-portifolio.vercel.app/",
-        "image": "https://devrodfullstack-portifolio.vercel.app/assets/images/foto-rodrigo.jpg",
-        "email": "mailto:rodrigogbhs@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Belo Horizonte",
-          "addressRegion": "MG",
-          "addressCountry": "BR"
-        },
-        "affiliation": {
-          "@type": "CollegeOrUniversity",
-          "name": "Centro Universitário Newton Paiva"
-        },
-        "knowsAbout": [
-          "Desenvolvimento Full Stack", "PHP", "Laravel", "TypeScript", "JavaScript",
-          "React", "Next.js", "Node.js", "Express", "Prisma", "PostgreSQL",
-          "Tailwind CSS", "HTML", "CSS", "Git", "APIs REST"
-        ],
-        "sameAs": [
-          "https://github.com/Rodrigogbhs",
-          "https://www.linkedin.com/in/rodrigogbhs/",
-          "https://www.instagram.com/dev.rodrigo/"
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://devrodfullstack-portifolio.vercel.app/#website",
+      "url": "https://devrodfullstack-portifolio.vercel.app/",
+      "name": "Rodrigo Guimarães — Desenvolvedor Full Stack",
+      "alternateName": "Dev.Rodrigo",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://devrodfullstack-portifolio.vercel.app/#rodrigo"
       }
-    ]
-  }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://devrodfullstack-portifolio.vercel.app/#perfil",
+      "url": "https://devrodfullstack-portifolio.vercel.app/",
+      "name": "Rodrigo Guimarães — Full Stack, Hacking Ético e Pentest",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://devrodfullstack-portifolio.vercel.app/#website"
+      },
+      "dateModified": "2026-10-21",
+      "mainEntity": {
+        "@id": "https://devrodfullstack-portifolio.vercel.app/#rodrigo"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://devrodfullstack-portifolio.vercel.app/#rodrigo",
+      "name": "Rodrigo Guimarães",
+      "givenName": "Rodrigo",
+      "familyName": "Guimarães",
+      "alternateName": [
+        "Rodrigo Guimarães Barbosa Henriques Silva",
+        "Dev.Rodrigo"
+      ],
+      "jobTitle": "Desenvolvedor Full Stack",
+      "description": "Desenvolvedor full stack em Belo Horizonte, com sete anos de experiência como autônomo no ramo de barbearia. Trabalha com PHP, Laravel, TypeScript, React e Node.js.",
+      "url": "https://devrodfullstack-portifolio.vercel.app/",
+      "image": "https://devrodfullstack-portifolio.vercel.app/assets/images/foto-rodrigo.jpg",
+      "email": "mailto:rodrigogbhs@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Belo Horizonte",
+        "addressRegion": "MG",
+        "addressCountry": "BR"
+      },
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "Centro Universitário Newton Paiva"
+      },
+      "knowsAbout": [
+        "Desenvolvimento Full Stack",
+        "PHP",
+        "Laravel",
+        "TypeScript",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "Node.js",
+        "Express",
+        "Prisma",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "HTML",
+        "CSS",
+        "Git",
+        "APIs REST",
+        "Hacking ético",
+        "Pentest",
+        "Segurança ofensiva",
+        "Kali Linux"
+      ],
+      "sameAs": [
+        "https://github.com/Rodrigogbhs",
+        "https://www.linkedin.com/in/rodrigogbhs/",
+        "https://www.instagram.com/dev.rodrigo/"
+      ]
+    }
+  ]
+}
   </script>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="root-os.css">
+  <script src="root-os.js" defer></script>
+  <script src="portfolio.js" defer></script>
 </head>
-<body>
-
-  <svg class="svg-defs" aria-hidden="true" focusable="false">
-    <defs>
-      <symbol id="i-github" viewBox="0 0 24 24">
-        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-      </symbol>
-      <symbol id="i-linkedin" viewBox="0 0 24 24">
-        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-      </symbol>
-      <symbol id="i-instagram" viewBox="0 0 24 24">
-        <path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/>
-      </symbol>
-      <symbol id="i-gmail" viewBox="0 0 24 24">
-        <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
-      </symbol>
-      <symbol id="i-download" viewBox="0 0 24 24">
-        <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/>
-      </symbol>
-    </defs>
-  </svg>
-
-  <header class="topo" id="topo">
-    <div class="container navbar">
-      <a href="#inicio" class="marca">
-        <img class="marca-avatar" src="assets/images/avatar-rodrigo.webp" alt="" width="40" height="40" decoding="async">
-        <span>Dev<span class="ponto">.</span>Rodrigo</span>
-      </a>
-
-      <nav class="menu">
-        <ul>
-          <li><a href="#inicio">Início</a></li>
-          <li class="menu-portfolio"><a href="#portfolio">Portfólio</a></li>
-          <li class="menu-blog"><a href="blog.html">Blog</a></li>
-          <li><a href="#tecnologias">Tecnologias</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-        <a href="assets/curriculo_rodrigo_atualizado.pdf" class="btn-curriculo" download="curriculo-Rodrigo Guimarães.pdf">
-          <svg class="icone" aria-hidden="true"><use href="#i-download"></use></svg>
-          Currículo
-        </a>
-      </nav>
-    </div>
+<body class="root-os">
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header wrap" id="inicio">
+    <a href="#inicio" class="brand" aria-label="Dev Rodrigo, início"><span class="brand-icon" aria-hidden="true">r:</span><span>dev<span class="amber">.</span>rodrigo.os</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" hidden>Menu +</button>
+    <nav class="site-nav" id="main-nav" aria-label="Menu principal"><a href="#portfolio">./projetos</a><a href="#sobre">./sobre</a><a href="#tecnologias">./skills</a><a href="blog.html">./blog</a><a href="#contato" class="nav-contact">Vamos conversar <span aria-hidden="true">↗</span></a></nav>
   </header>
-
-  <main>
-
-    <section class="hero container" id="inicio">
-
-      <div class="hero-retrato">
-        <figure class="foto">
-          <img src="assets/images/foto-rodrigo.jpg"
-               srcset="assets/images/foto-rodrigo-480.webp 480w, assets/images/foto-rodrigo-960.webp 960w, assets/images/foto-rodrigo.jpg 1254w"
-               sizes="(max-width: 940px) 425px, 475px"
-               alt="Rodrigo Guimarães, desenvolvedor full stack, sorrindo em seu espaço de trabalho"
-               width="1254" height="1254" loading="eager" fetchpriority="high">
-        </figure>
-
-        <ul class="redes">
-          <li>
-            <a class="btn-rede rede-gmail" href="mailto:rodrigogbhs@gmail.com">
-              <svg class="icone" aria-hidden="true"><use href="#i-gmail"></use></svg>
-              <span class="rede-texto">
-                <strong>Gmail</strong>
-                <small>rodrigogbhs@gmail.com</small>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a class="btn-rede rede-github" href="https://github.com/Rodrigogbhs" target="_blank" rel="noopener noreferrer">
-              <svg class="icone" aria-hidden="true"><use href="#i-github"></use></svg>
-              <span class="rede-texto">
-                <strong>GitHub</strong>
-                <small>@Rodrigogbhs</small>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a class="btn-rede rede-linkedin" href="https://www.linkedin.com/in/rodrigogbhs/" target="_blank" rel="noopener noreferrer">
-              <svg class="icone" aria-hidden="true"><use href="#i-linkedin"></use></svg>
-              <span class="rede-texto">
-                <strong>LinkedIn</strong>
-                <small>/in/rodrigogbhs</small>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a class="btn-rede rede-instagram" href="https://www.instagram.com/dev.rodrigo/" target="_blank" rel="noopener noreferrer">
-              <svg class="icone" aria-hidden="true"><use href="#i-instagram"></use></svg>
-              <span class="rede-texto">
-                <strong>Instagram</strong>
-                <small>@dev.rodrigo</small>
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="hero-texto">
-        <p class="papel">Belo Horizonte, MG</p>
-
-        <h1 class="nome">Rodrigo Guimarães</h1>
-
-        <p class="cargo">Desenvolvedor Full Stack</p>
-
-        <div class="bio">
-          <p>
-            Passei <strong>sete anos</strong> como autônomo no ramo de barbearia
-            antes de migrar para a tecnologia. Hoje quero construir um novo
-            caminho na minha carreira como desenvolvedor.
-          </p>
-          <p>
-            Curso Análise e Desenvolvimento de Sistemas na Faculdade Newton
-            Paiva e trabalho principalmente com PHP, Laravel, TypeScript,
-            React e Node.js.
-            Meus projetos nascem de problemas reais que vi de perto atendendo
-            clientes todos os dias.
-          </p>
-          <p>
-            Procuro minha primeira vaga como <strong>desenvolvedor júnior</strong>,
-            presencial em Belo Horizonte ou remota.
-          </p>
+  <main id="conteudo">
+    <section class="desktop-hero wrap" aria-labelledby="hero-title">
+      <h1 class="sr-only" id="hero-title">Rodrigo Guimarães — Desenvolvedor Full Stack</h1>
+      <div class="desktop-systembar"><span><i class="status-dot" aria-hidden="true"></i> PORTFOLIO.OS <b>/</b> sessão criativa</span><span>BH, BR <b>·</b> <span class="blue">CASCADIA CODE</span></span></div>
+      <div class="desktop-grid">
+        <aside class="file-tree" aria-label="Atalhos do portfólio"><p>EXPLORADOR</p><a href="#inicio" class="file-root">⌄ rodrigo/</a><a href="#sobre" class="file-active">├─ readme.md</a><a href="#portfolio">├─ projetos/ <span>04</span></a><a href="#tecnologias">├─ stack.json</a><a href="#seguranca">├─ security.md</a><a href="blog.html">├─ blog/</a><a href="#contato">└─ contato.txt</a><div class="tree-bottom"><i class="status-dot" aria-hidden="true"></i> JÚNIOR / FULL STACK<br><span class="muted">Belo Horizonte, MG</span></div></aside>
+        <div class="readme-window">
+          <div class="window-title"><span><i class="square" aria-hidden="true"></i> rodrigo@bh: ~</span><span aria-hidden="true">− &nbsp; □ &nbsp; ×</span></div>
+          <div class="os-tabs" role="tablist" aria-label="Informações de Rodrigo" hidden>
+            <button type="button" role="tab" aria-selected="true" aria-controls="panel-readme" id="tab-readme">readme.md</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="panel-stack" id="tab-stack" tabindex="-1">stack.json</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="panel-contact" id="tab-contact" tabindex="-1">contato.txt</button>
+          </div>
+          <section class="os-content" id="panel-readme" role="tabpanel" aria-labelledby="tab-readme" tabindex="0">
+            <p class="terminal-prompt"><span>rodrigo@bh</span><span class="muted">:~$ cat readme.md</span></p>
+            <p class="code-comment"># Olá, mundo. Eu sou o</p>
+            <h2 class="os-name">Rodrigo<br>Guimarães<span class="cursor" aria-hidden="true">_</span></h2>
+            <p class="os-role">Desenvolvedor <span class="amber">Full Stack</span></p><p class="security-role">Hacking ético &amp; Pentest</p>
+            <p class="hero-description">Da experiência com pessoas ao código.<br>Construindo sistemas para a vida real.</p>
+            <div class="hero-actions"><a href="#portfolio" class="button primary">cd projetos/ <span aria-hidden="true">↳</span></a><a href="assets/curriculo_rodrigo_atualizado.pdf" class="button secondary" download>currículo ↓</a></div><a class="resume-english" href="assets/curriculo_rodrigo_en.pdf" download>Resume in English ↓</a>
+          </section>
+          <section class="os-content" id="panel-stack" role="tabpanel" aria-labelledby="tab-stack" tabindex="0">
+            <p class="code-comment">// Ferramentas do meu dia a dia</p><h2 class="sr-only">Tecnologias e habilidades</h2>
+            <pre class="stack-code">{
+  <span class="blue">"backend"</span>: [<span class="amber">"PHP", "Laravel", "Node.js"</span>],
+  <span class="blue">"frontend"</span>: [<span class="amber">"React", "TypeScript"</span>],
+  <span class="blue">"database"</span>: <span class="amber">"PostgreSQL"</span>,
+  <span class="blue">"seguranca"</span>: [<span class="amber">"Hacking ético", "Pentest"</span>],
+  <span class="blue">"ambiente"</span>: <span class="amber">"Kali Linux"</span>
+}</pre><a href="#tecnologias" class="inline-link">Ver a stack completa ↘</a>
+          </section>
+          <section class="os-content" id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" tabindex="0">
+            <p class="code-comment">// Uma boa ideia começa com uma conversa.</p><h2 class="os-contact-title">Vamos construir<br>algo juntos<span class="amber">?</span></h2><p>Aberto a vagas júnior e projetos freelance.</p><a class="inline-link" href="mailto:rodrigogbhs@gmail.com">rodrigogbhs@gmail.com ↗</a><div class="os-socials"><a href="https://github.com/Rodrigogbhs" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/rodrigogbhs/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://www.instagram.com/dev.rodrigo/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div>
+          </section>
+          <div class="window-status"><span>main <span class="blue" aria-hidden="true">⎇</span></span><span>UTF-8 <b>·</b> PT-BR <b>·</b> Full Stack</span></div>
         </div>
-
-        <div class="hero-acoes">
-          <a href="assets/curriculo_rodrigo_atualizado.pdf" class="btn-primario" download="curriculo-Rodrigo Guimarães.pdf">
-            <svg class="icone" aria-hidden="true"><use href="#i-download"></use></svg>
-            Baixar currículo
+        <div class="desktop-right">
+          <figure class="identity-window"><div class="window-title"><span><i class="square" aria-hidden="true"></i> identity.png</span><span aria-hidden="true">×</span></div><div class="identity-image"><div class="portrait-reveal">
+              <img class="portrait-photo" src="assets/images/foto-rodrigo-480.webp" srcset="assets/images/foto-rodrigo-480.webp 480w, assets/images/foto-rodrigo-960.webp 960w" sizes="(max-width: 620px) 90vw, 350px" alt="Rodrigo Guimarães sorrindo em seu espaço de trabalho" width="480" height="480" loading="eager" fetchpriority="high" decoding="async">
+              <img class="portrait-mask" src="assets/images/anonymous-halftone.webp" alt="" aria-hidden="true" width="1254" height="1254" loading="lazy" fetchpriority="low" decoding="async">
+            </div><span class="identity-label">RODRIGO / FULL STACK</span></div><figcaption class="identity-hint">Passe o mouse sobre a foto.</figcaption></figure>
+          <div class="desktop-note"><p class="eyebrow">// LEMBRETE</p><p>Por trás de cada linha,<br>uma pessoa de verdade.</p><a href="#sobre">→ Conhecer minha história</a></div>
+        </div>
+      </div>
+      <div class="desktop-shortcuts"><span><span class="amber" aria-hidden="true">⌘</span> Código aberto. Mente aberta.</span><div><a href="https://github.com/Rodrigogbhs" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/rodrigogbhs/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://www.instagram.com/dev.rodrigo/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></div>
+    </section>
+    <section class="projects-section wrap section" id="portfolio" aria-labelledby="projects-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / TRABALHOS SELECIONADOS</p><h2 id="projects-title">projetos/<span class="amber" aria-hidden="true">_</span></h2></div><p>Problemas reais.<br>Quatro maneiras de resolver.</p></div>
+      <div class="project-grid">
+        <article class="project-item" aria-labelledby="projeto-torneioapp">
+          <a class="project-image projeto-previa" href="assets/images/portfolio/torneioapp/dashboard.webp" data-projeto="TorneioApp" aria-label="Ampliar a interface de TorneioApp" target="_blank" rel="noopener noreferrer">
+            <span class="project-window-bar"><span>⎇ torneioapp / preview</span><span aria-hidden="true">↗</span></span>
+            <img src="assets/images/portfolio/torneioapp/dashboard.webp" alt="Dashboard do TorneioApp com gestão de torneios e inscrições" width="1440" height="1000" loading="lazy" decoding="async">
+            <span class="project-image-cta">Explorar interface ↗</span>
           </a>
-          <a href="assets/curriculo_rodrigo_en.pdf" class="btn-secundario" download="Rodrigo Guimaraes - resume (EN).pdf">
-            Resume in English
+          <div class="project-copy"><p class="project-type"><span>01</span> SISTEMA WEB / ESPORTE</p><h3 id="projeto-torneioapp">TorneioApp</h3>
+            <p class="project-description">Gestão de torneios, inscrições e pagamentos Pix. Do organizador ao participante, tudo no mesmo lugar.</p><ul class="project-tags" aria-label="Tecnologias"><li>PHP</li><li>Laravel</li><li>Livewire</li><li>PostgreSQL</li></ul>
+            <div class="project-links"><a class="inline-link" href="torneioapp.html">Conhecer o projeto ↗</a><a class="inline-link" href="https://github.com/Rodrigogbhs/torneioapp" target="_blank" rel="noopener noreferrer">Código no GitHub ↗</a></div>
+          </div>
+        </article>
+        <article class="project-item" aria-labelledby="projeto-virlene">
+          <a class="project-image projeto-previa" href="assets/images/portfolio/virlene-alves.webp" data-projeto="Virlene Alves" aria-label="Ampliar a interface de Virlene Alves" target="_blank" rel="noopener noreferrer">
+            <span class="project-window-bar"><span>⎇ virlene / preview</span><span aria-hidden="true">↗</span></span>
+            <img src="assets/images/portfolio/virlene-alves.webp" alt="Página de aulas particulares da professora Virlene Alves" width="1200" height="2725" loading="lazy" decoding="async">
+            <span class="project-image-cta">Explorar interface ↗</span>
           </a>
-        </div>
+          <div class="project-copy"><p class="project-type"><span>02</span> LANDING PAGE / EDUCAÇÃO</p><h3 id="projeto-virlene">Virlene Alves</h3>
+            <p class="project-description">Uma presença digital acolhedora para conectar uma professora de matemática aos seus próximos alunos.</p><ul class="project-tags" aria-label="Tecnologias"><li>HTML</li><li>CSS</li><li>Responsivo</li></ul>
+            <div class="project-links"><a class="inline-link" href="assets/images/portfolio/virlene-alves.webp" target="_blank" rel="noopener noreferrer">Explorar a interface ↗</a></div>
+          </div>
+        </article>
+        <article class="project-item" aria-labelledby="projeto-toussaint">
+          <a class="project-image projeto-previa" href="assets/images/portfolio/toussaint.webp" data-projeto="Barbearia Toussaint" aria-label="Ampliar a interface de Barbearia Toussaint" target="_blank" rel="noopener noreferrer">
+            <span class="project-window-bar"><span>⎇ toussaint / preview</span><span aria-hidden="true">↗</span></span>
+            <img src="assets/images/portfolio/toussaint.webp" alt="Site da Barbearia Toussaint com serviços e agendamento" width="1200" height="4010" loading="lazy" decoding="async">
+            <span class="project-image-cta">Explorar interface ↗</span>
+          </a>
+          <div class="project-copy"><p class="project-type"><span>03</span> SITE INSTITUCIONAL / SERVIÇOS</p><h3 id="projeto-toussaint">Barbearia Toussaint</h3>
+            <p class="project-description">Da cadeira para a tela: serviços, profissionais e agendamento com a personalidade da barbearia.</p><ul class="project-tags" aria-label="Tecnologias"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            <div class="project-links"><a class="inline-link" href="assets/images/portfolio/toussaint.webp" target="_blank" rel="noopener noreferrer">Explorar a interface ↗</a></div>
+          </div>
+        </article>
+        <article class="project-item" aria-labelledby="projeto-veener">
+          <a class="project-image projeto-previa" href="assets/images/portfolio/veener.webp" data-projeto="Veener" aria-label="Ampliar a interface de Veener" target="_blank" rel="noopener noreferrer">
+            <span class="project-window-bar"><span>⎇ veener / preview</span><span aria-hidden="true">↗</span></span>
+            <img src="assets/images/portfolio/veener.webp" alt="Loja de joias Veener com catálogo e identidade em verde" width="1200" height="3467" loading="lazy" decoding="async">
+            <span class="project-image-cta">Explorar interface ↗</span>
+          </a>
+          <div class="project-copy"><p class="project-type"><span>04</span> E-COMMERCE / JOALHERIA</p><h3 id="projeto-veener">Veener</h3>
+            <p class="project-description">Prata 925, identidade própria e uma experiência completa: catálogo, carrinho, checkout e administração.</p><ul class="project-tags" aria-label="Tecnologias"><li>Next.js</li><li>TypeScript</li><li>Prisma</li><li>PostgreSQL</li></ul>
+            <div class="project-links"><a class="inline-link" href="assets/images/portfolio/veener.webp" target="_blank" rel="noopener noreferrer">Explorar a interface ↗</a></div>
+          </div>
+        </article>
       </div>
-
+      <div class="section-bottom"><span>4 projetos / 4 experiências diferentes</span><a href="https://github.com/Rodrigogbhs" target="_blank" rel="noopener noreferrer">Mais código no GitHub ↗</a></div>
     </section>
-
-    <div class="container"><div class="degrade degrade-secao" aria-hidden="true"></div></div>
-
-    <section class="secao container portfolio" id="portfolio" aria-labelledby="titulo-portfolio">
-      <div class="portfolio-cabecalho">
-        <div>
-          <p class="portfolio-sobretitulo">Do código à experiência</p>
-          <h2 class="titulo-secao" id="titulo-portfolio">Portfólio<span class="portfolio-ponto">.</span></h2>
-          <p class="linha-secao">Projetos que saíram da ideia e ganharam forma. Explore cada detalhe.</p>
-        </div>
-        <div class="portfolio-controles" hidden>
-          <span class="portfolio-contador" aria-live="polite" aria-atomic="true"><span id="portfolio-atual">01</span> / <span id="portfolio-total">04</span></span>
-          <button class="portfolio-seta" type="button" id="portfolio-anterior" aria-label="Projeto anterior" aria-controls="portfolio-galeria" disabled>←</button>
-          <button class="portfolio-seta" type="button" id="portfolio-proximo" aria-label="Próximo projeto" aria-controls="portfolio-galeria">→</button>
-        </div>
-      </div>
-
-      <p class="portfolio-instrucao" id="portfolio-instrucao">Deslize para explorar os projetos. Selecione uma prévia para ampliar e rolar a página.</p>
-      <ul class="portfolio-galeria" id="portfolio-galeria" tabindex="0" aria-label="Galeria de projetos" aria-describedby="portfolio-instrucao">
-        <li class="projeto">
-          <article aria-labelledby="projeto-torneioapp">
-            <a class="projeto-previa" href="assets/images/portfolio/torneioapp/dashboard.webp" target="_blank" rel="noopener" data-projeto="TorneioApp · Dashboard" aria-label="Ampliar tela do dashboard do TorneioApp">
-              <span class="projeto-janela" aria-hidden="true"><span class="projeto-pontos"><i></i><i></i><i></i></span><span>TorneioApp · Gestão de torneios esportivos</span><span>↗</span></span>
-              <span class="projeto-tela"><img src="assets/images/portfolio/torneioapp/dashboard.webp" alt="Dashboard do TorneioApp com atalhos para criar torneios, descobrir eventos e acompanhar inscrições" width="1440" height="1000" loading="lazy" decoding="async"></span>
-              <span class="projeto-ampliar">Ampliar tela <span aria-hidden="true">↗</span></span>
-            </a>
-            <div class="projeto-info">
-              <div class="projeto-categoria"><span>01 / Esporte</span><span>Sistema web</span></div>
-              <h3 id="projeto-torneioapp">TorneioApp</h3>
-              <p>Sistema para organizar torneios esportivos, cadastrar participantes e gerenciar inscrições e pagamentos Pix com confirmação manual. Áreas do organizador e do participante, com temas claro e escuro.</p>
-              <ul class="projeto-stack" aria-label="Tecnologias do projeto"><li>PHP</li><li>Laravel</li><li>Livewire</li><li>PostgreSQL</li><li>Tailwind CSS</li></ul>
-              <div class="projeto-links"><a href="torneioapp.html">Ver funcionalidades, telas e acesso <span aria-hidden="true">↗</span></a><a href="https://github.com/Rodrigogbhs/torneioapp" target="_blank" rel="noopener noreferrer">Código no GitHub <span aria-hidden="true">↗</span></a></div>
-            </div>
-          </article>
-        </li>
-        <li class="projeto">
-          <article aria-labelledby="projeto-virlene">
-            <a class="projeto-previa" href="assets/images/portfolio/virlene-alves.webp" target="_blank" rel="noopener" data-projeto="Virlene Alves" aria-label="Ampliar prévia do projeto Virlene Alves">
-              <span class="projeto-janela" aria-hidden="true"><span class="projeto-pontos"><i></i><i></i><i></i></span><span>Virlene Alves · Aulas particulares</span><span>↗</span></span>
-              <span class="projeto-tela"><img src="assets/images/portfolio/virlene-alves.webp" alt="Página da professora Virlene Alves, com tons lilás, retrato e apresentação das aulas de matemática" width="1200" height="2725" loading="lazy" decoding="async"></span>
-              <span class="projeto-ampliar">Ampliar prévia <span aria-hidden="true">↗</span></span>
-            </a>
-            <div class="projeto-info">
-              <div class="projeto-categoria"><span>02 / Educação</span><span>Landing page</span></div>
-              <h3 id="projeto-virlene">Virlene Alves</h3>
-              <p>Uma apresentação acolhedora para aulas particulares de matemática, com informações sobre o acompanhamento e contato direto pelo WhatsApp.</p>
-              <ul class="projeto-stack" aria-label="Tecnologias do projeto"><li>HTML</li><li>CSS</li><li>Responsivo</li></ul>
-            </div>
-          </article>
-        </li>
-        <li class="projeto">
-          <article aria-labelledby="projeto-toussaint">
-            <a class="projeto-previa" href="assets/images/portfolio/toussaint.webp" target="_blank" rel="noopener" data-projeto="Barbearia Toussaint" aria-label="Ampliar prévia do projeto Barbearia Toussaint">
-              <span class="projeto-janela" aria-hidden="true"><span class="projeto-pontos"><i></i><i></i><i></i></span><span>Barbearia Toussaint · Belo Horizonte</span><span>↗</span></span>
-              <span class="projeto-tela"><img src="assets/images/portfolio/toussaint.webp" alt="Site da Barbearia Toussaint, com identidade azul, serviços, equipe e informações de agendamento" width="1200" height="4010" loading="lazy" decoding="async"></span>
-              <span class="projeto-ampliar">Ampliar prévia <span aria-hidden="true">↗</span></span>
-            </a>
-            <div class="projeto-info">
-              <div class="projeto-categoria"><span>03 / Serviços</span><span>Site institucional</span></div>
-              <h3 id="projeto-toussaint">Barbearia Toussaint</h3>
-              <p>A personalidade da barbearia em uma presença digital: serviços, profissionais, depoimentos e caminhos simples para agendar um horário.</p>
-              <ul class="projeto-stack" aria-label="Tecnologias do projeto"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
-            </div>
-          </article>
-        </li>
-        <li class="projeto">
-          <article aria-labelledby="projeto-veener">
-            <a class="projeto-previa" href="assets/images/portfolio/veener.webp" target="_blank" rel="noopener" data-projeto="Veener" aria-label="Ampliar prévia do projeto Veener">
-              <span class="projeto-janela" aria-hidden="true"><span class="projeto-pontos"><i></i><i></i><i></i></span><span>Veener · Joias em prata 925</span><span>↗</span></span>
-              <span class="projeto-tela"><img src="assets/images/portfolio/veener.webp" alt="Página da loja Veener, com identidade verde, tipografia editorial e espaços reservados para fotografias de joias" width="1200" height="3467" loading="lazy" decoding="async"></span>
-              <span class="projeto-ampliar">Ampliar prévia <span aria-hidden="true">↗</span></span>
-            </a>
-            <div class="projeto-info">
-              <div class="projeto-categoria"><span>04 / Joalheria</span><span>E-commerce</span></div>
-              <h3 id="projeto-veener">Veener</h3>
-              <p>Loja de joias em prata 925, com catálogo, carrinho, checkout e painel administrativo. Uma experiência de compra com identidade própria.</p>
-              <ul class="projeto-stack" aria-label="Tecnologias do projeto"><li>Next.js</li><li>TypeScript</li><li>Prisma</li><li>PostgreSQL</li></ul>
-            </div>
-          </article>
-        </li>
-      </ul>
-      <div class="portfolio-rodape"><span>4 projetos · 4 experiências diferentes</span><a href="#contato">Vamos criar o próximo? <span aria-hidden="true">↗</span></a></div>
+    <section class="about-section wrap section" id="sobre" aria-labelledby="about-title">
+      <div class="about-photo"><div class="portrait-reveal">
+              <img class="portrait-photo" src="assets/images/foto-rodrigo-480.webp" srcset="assets/images/foto-rodrigo-480.webp 480w, assets/images/foto-rodrigo-960.webp 960w" sizes="(max-width: 620px) 90vw, 350px" alt="Rodrigo Guimarães sorrindo em seu espaço de trabalho" width="480" height="480" loading="lazy"  decoding="async">
+              <img class="portrait-mask" src="assets/images/anonymous-halftone.webp" alt="" aria-hidden="true" width="1254" height="1254" loading="lazy" fetchpriority="low" decoding="async">
+            </div><span>RG / BELO HORIZONTE, MG</span></div>
+      <div class="about-copy"><p class="eyebrow">02 / POR TRÁS DO CÓDIGO</p><h2 id="about-title">A estética é hacker.<br>A história é <em>humana.</em></h2><p>Sete anos trabalhando como barbeiro me ensinaram a ouvir, resolver problemas e cuidar de cada detalhe. Hoje levo isso para o desenvolvimento.</p><p>Curso Análise e Desenvolvimento de Sistemas na Newton Paiva e construo projetos com PHP, Laravel, TypeScript, React e Node.js. Também exploro hacking ético e pentest para entender vulnerabilidades e criar aplicações mais seguras.</p><p>Busco minha primeira vaga como desenvolvedor júnior, em Belo Horizonte ou remota.</p><a href="assets/curriculo_rodrigo_atualizado.pdf" class="inline-link" download>Conhecer minha trajetória ↓</a></div>
     </section>
-
-    <div class="container"><div class="degrade degrade-secao" aria-hidden="true"></div></div>
-
-    <section class="secao container" id="tecnologias">
-      <h2 class="titulo-secao">Tecnologias</h2>
-      <p class="linha-secao">O que uso hoje, do banco de dados até a interface.</p>
-
-      <ul class="chips">
-        <li style="--i:0"><img src="assets/icons/html5.svg" alt="" width="23" height="23">HTML</li>
-        <li style="--i:1"><img src="assets/icons/css3.svg" alt="" width="23" height="23">CSS</li>
-        <li style="--i:2"><img src="assets/icons/javascript.svg" alt="" width="23" height="23">JavaScript</li>
-        <li style="--i:3"><img src="assets/icons/php.svg" alt="" width="23" height="23">PHP</li>
-        <li style="--i:4"><img src="assets/icons/laravel.svg" alt="" width="23" height="23">Laravel</li>
-        <li style="--i:5"><img src="assets/icons/typescript.svg" alt="" width="23" height="23">TypeScript</li>
-        <li style="--i:6"><img src="assets/icons/react.svg" alt="" width="23" height="23">React</li>
-        <li style="--i:7"><img src="assets/icons/nextjs.svg" alt="" width="23" height="23">Next.js</li>
-        <li style="--i:8"><img src="assets/icons/nodejs.svg" alt="" width="23" height="23">Node.js</li>
-        <li style="--i:9"><img src="assets/icons/express.svg" alt="" width="23" height="23">Express</li>
-        <li style="--i:10"><img src="assets/icons/prisma.svg" alt="" width="23" height="23">Prisma</li>
-        <li style="--i:11"><img src="assets/icons/postgresql.svg" alt="" width="23" height="23">PostgreSQL</li>
-        <li style="--i:12"><img src="assets/icons/tailwindcss.svg" alt="" width="23" height="23">Tailwind CSS</li>
-        <li style="--i:13"><img src="assets/icons/git.svg" alt="" width="23" height="23">Git</li>
-      </ul>
-    </section>
-
-    <div class="container"><div class="degrade degrade-secao" aria-hidden="true"></div></div>
-
-    <section class="secao container" id="contato">
-      <div class="contato-grade">
-        <div>
-          <h2 class="titulo-secao">Vamos conversar</h2>
-          <p class="linha-secao">
-            Estou aberto a vagas júnior e freelas. Me chame em qualquer um
-            destes canais.
-          </p>
-
-          <ul class="redes">
-            <li>
-              <a class="btn-rede rede-gmail" href="mailto:rodrigogbhs@gmail.com">
-                <svg class="icone" aria-hidden="true"><use href="#i-gmail"></use></svg>
-                <span class="rede-texto">
-                  <strong>Gmail</strong>
-                  <small>rodrigogbhs@gmail.com</small>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a class="btn-rede rede-github" href="https://github.com/Rodrigogbhs" target="_blank" rel="noopener noreferrer">
-                <svg class="icone" aria-hidden="true"><use href="#i-github"></use></svg>
-                <span class="rede-texto">
-                  <strong>GitHub</strong>
-                  <small>@Rodrigogbhs</small>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a class="btn-rede rede-linkedin" href="https://www.linkedin.com/in/rodrigogbhs/" target="_blank" rel="noopener noreferrer">
-                <svg class="icone" aria-hidden="true"><use href="#i-linkedin"></use></svg>
-                <span class="rede-texto">
-                  <strong>LinkedIn</strong>
-                  <small>/in/rodrigogbhs</small>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a class="btn-rede rede-instagram" href="https://www.instagram.com/dev.rodrigo/" target="_blank" rel="noopener noreferrer">
-                <svg class="icone" aria-hidden="true"><use href="#i-instagram"></use></svg>
-                <span class="rede-texto">
-                  <strong>Instagram</strong>
-                  <small>@dev.rodrigo</small>
-                </span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <a href="assets/curriculo_rodrigo_atualizado.pdf" class="btn-primario" download="curriculo-Rodrigo Guimarães.pdf">
-          <svg class="icone" aria-hidden="true"><use href="#i-download"></use></svg>
-          Baixar currículo
-        </a>
+    <section class="stack-section wrap section" id="tecnologias" aria-labelledby="stack-title">
+      <div class="section-heading"><div><p class="eyebrow">03 / TECNOLOGIAS E HABILIDADES</p><h2 id="stack-title">Meu ambiente de criação.</h2></div><span class="code-comment">// sempre aprendendo</span></div>
+      <div class="stack-groups">
+        <article class="stack-group"><h3>[01] interface</h3><ul class="technology-list"><li><img src="assets/icons/html5.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy"><span>HTML</span></li><li><img src="assets/icons/css3.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy"><span>CSS</span></li><li><img src="assets/icons/javascript.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy"><span>JavaScript</span></li><li><img src="assets/icons/typescript.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy"><span>TypeScript</span></li><li><img src="assets/icons/react.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy"><span>React</span></li><li><img src="assets/icons/nextjs.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy"><span>Next.js</span></li><li><img src="assets/icons/tailwindcss.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy"><span>Tailwind CSS</span></li></ul></article>
+<article class="stack-group"><h3>[02] servidor</h3><ul class="technology-list"><li><img src="assets/icons/php.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy"><span>PHP</span></li><li><img src="assets/icons/laravel.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy"><span>Laravel</span></li><li><img src="assets/icons/nodejs.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy"><span>Node.js</span></li><li><img src="assets/icons/express.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy"><span>Express</span></li></ul></article>
+<article class="stack-group"><h3>[03] dados &amp; fluxo</h3><ul class="technology-list"><li><img src="assets/icons/postgresql.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy"><span>PostgreSQL</span></li><li><img src="assets/icons/prisma.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy"><span>Prisma</span></li><li><img src="assets/icons/git.svg" alt="" aria-hidden="true" width="22" height="22" loading="lazy"><span>Git</span></li></ul></article>
+        <article class="stack-group security-group" id="seguranca"><h3>[04] segurança ofensiva</h3><div class="kali-technology"><img src="assets/icons/kali-linux.svg" alt="" aria-hidden="true" width="58" height="58" loading="lazy"><span>Kali Linux™</span></div><ul class="security-skills"><li>Hacker ético</li><li>Pentest web</li><li>Análise de vulnerabilidades</li></ul><p class="security-caption">Segurança ofensiva com responsabilidade.</p></article>
       </div>
     </section>
-
+    <section class="blog-section wrap section" aria-labelledby="blog-title">
+      <div class="section-heading"><div><p class="eyebrow">04 / TRANSMISSÕES RECENTES</p><h2 id="blog-title">O que move a tecnologia.</h2></div><a class="inline-link" href="blog.html">Abrir o blog ↗</a></div>
+      <div class="blog-entries" id="recent-posts">
+        <a class="blog-entry" href="blog/2026-10-21-nvidia-openshell-arquitetura-agentes-ia.html"><time datetime="2026-10-21T14:17:23-03:00">21.10.2026</time><div><p>Inteligência artificial e desenvolvimento</p><h3>NVIDIA apresenta arquitetura para limitar ações de agentes de IA</h3></div><span aria-hidden="true">↗</span></a>
+        <a class="blog-entry" href="blog/2026-10-21-php-correcoes-emergencia-falhas-criticas.html"><time datetime="2026-10-21T14:13:47-03:00">21.10.2026</time><div><p>Segurança e desenvolvimento</p><h3>PHP lança correções de emergência para duas falhas críticas</h3></div><span aria-hidden="true">↗</span></a>
+        <a class="blog-entry" href="blog/2026-10-20-google-cloud-falha-londres-servicos-bancarios.html"><time datetime="2026-10-20T13:13:52-03:00">20.10.2026</time><div><p>Infraestrutura e serviços em nuvem</p><h3>Falha no Google Cloud em Londres afeta serviços bancários</h3></div><span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <section class="contact-section wrap section" id="contato" aria-labelledby="contact-title"><p class="eyebrow">05 / PRÓXIMO COMMIT</p><div class="contact-heading"><h2 id="contact-title">Uma ideia?<br>Vamos dar <em>um start.</em><span class="cursor" aria-hidden="true">_</span></h2><a href="mailto:rodrigogbhs@gmail.com" class="contact-arrow" aria-label="Enviar e-mail para Rodrigo">↗</a></div><div class="contact-bottom"><a href="mailto:rodrigogbhs@gmail.com">rodrigogbhs@gmail.com ↗</a><div><a href="https://github.com/Rodrigogbhs" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/rodrigogbhs/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://www.instagram.com/dev.rodrigo/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></div></section>
   </main>
-
-  <footer class="rodape container">
-    <p>© 2026 Rodrigo Guimarães. Todos os direitos reservados.</p>
-    <ul class="redes-mini">
-      <li>
-        <a href="mailto:rodrigogbhs@gmail.com" aria-label="Enviar e-mail">
-          <svg class="icone" aria-hidden="true"><use href="#i-gmail"></use></svg>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/Rodrigogbhs" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <svg class="icone" aria-hidden="true"><use href="#i-github"></use></svg>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/rodrigogbhs/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <svg class="icone" aria-hidden="true"><use href="#i-linkedin"></use></svg>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/dev.rodrigo/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <svg class="icone" aria-hidden="true"><use href="#i-instagram"></use></svg>
-        </a>
-      </li>
-    </ul>
-  </footer>
-
+  <footer class="site-footer wrap"><span>© 2026 RODRIGO GUIMARÃES</span><span>Feito de código, café e curiosidade.</span><a href="#inicio">Voltar ao topo ↑</a><small>Kali Linux é uma marca da OffSec.</small></footer>
   <dialog class="portfolio-dialog" id="portfolio-dialog" aria-labelledby="portfolio-dialog-titulo">
-    <div class="portfolio-dialog-topo">
-      <div><h2 id="portfolio-dialog-titulo">Prévia do projeto</h2><p>Role para conhecer a página completa.</p></div>
-      <form method="dialog"><button class="portfolio-fechar" aria-label="Fechar prévia" autofocus>Fechar <span aria-hidden="true">×</span></button></form>
-    </div>
+    <div class="portfolio-dialog-topo"><div><p class="eyebrow">ARQUIVO DO PROJETO</p><h2 id="portfolio-dialog-titulo">Prévia do projeto</h2><p>Role para conhecer a página completa.</p></div><form method="dialog"><button class="portfolio-fechar" aria-label="Fechar prévia" autofocus>Fechar ×</button></form></div>
     <div class="portfolio-dialog-conteudo" tabindex="0" role="region" aria-label="Captura completa do projeto"></div>
   </dialog>
-  <script src="portfolio.js" defer></script>
-
-  <script>
-    // Progressive enhancement: sem JS a página fica inteira, só sem os dois
-    // efeitos abaixo. Nada de conteúdo depende deste script.
-    (function () {
-      var topo = document.getElementById('topo');
-      var aoRolar = function () {
-        topo.classList.toggle('rolado', window.scrollY > 8);
-      };
-      aoRolar();
-      addEventListener('scroll', aoRolar, { passive: true });
-
-      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      if (!('IntersectionObserver' in window)) return;
-
-      // cascata dos chips: só liga o efeito depois de confirmar que o JS roda
-      document.documentElement.classList.add('js-cascata');
-      var chips = document.querySelector('.chips');
-      var mostrar = function () {
-        chips.classList.add('visivel');
-      };
-      var olho = new IntersectionObserver(function (entradas) {
-        entradas.forEach(function (e) {
-          if (!e.isIntersecting) return;
-          mostrar();
-          olho.unobserve(e.target);
-        });
-      }, { threshold: 0.2 });
-      olho.observe(chips);
-
-      // Rede de segurança: se o observer não disparar por qualquer motivo,
-      // os chips aparecem mesmo assim. Conteúdo não pode depender do efeito.
-      setTimeout(mostrar, 3000);
-    })();
-  </script>
-
 </body>
 </html>
