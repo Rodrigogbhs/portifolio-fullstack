@@ -1,5 +1,30 @@
 [
   {
+    "slug": "2026-10-21-php-correcoes-emergencia-falhas-criticas",
+    "title": "PHP lança correções de emergência para duas falhas críticas",
+    "category": "Segurança e desenvolvimento",
+    "summary": "Atualizações corrigem falhas que podem permitir executar código sem autenticação; projeto recomenda ação imediata em servidores que usam a linguagem.",
+    "published_at": "2026-10-21T14:13:47-03:00",
+    "edition": "13:00",
+    "paragraphs": [
+      "A equipe do PHP publicou em 21 de outubro as versões 8.5.12, 8.4.27, 8.3.36 e 8.2.35 para corrigir duas vulnerabilidades críticas: CVE-2026-109618 e CVE-2026-109619. Conhecidas como PHP2Shell, elas podem permitir que um invasor execute código no servidor sem fazer login.",
+      "Segundo o projeto, o alerta abrange instalações que atendem requisições web, incluindo PHP-FPM e Apache com mod_php. O risco é considerado maior no mod_php, onde foi demonstrado um ataque antes da execução do código da aplicação. As falhas envolvem corrupção de memória e estado interno reaproveitado indevidamente entre requisições.",
+      "Para equipes que mantêm sites e sistemas em PHP, a prioridade é atualizar o ambiente de execução, conferindo também os pacotes fornecidos pela distribuição Linux ou hospedagem. A equipe informa que ajustes de configuração reduzem apenas alguns caminhos de ataque: a correção completa exige atualização. Versões antigas precisam de correções do fornecedor ou migração para uma versão mantida."
+    ],
+    "sources": [
+      {
+        "name": "PHP · Aviso oficial, versões corrigidas e orientações de atualização",
+        "url": "https://www.php.net/archive/2026.php#2026-10-21-5",
+        "published_on": "2026-10-21"
+      },
+      {
+        "name": "BleepingComputer · Confirmação independente do lançamento das correções PHP2Shell",
+        "url": "https://www.bleepingcomputer.com/news/security/php-ships-emergency-patches-for-critical-php2shell-flaws/",
+        "published_on": "2026-10-21"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-20-google-cloud-falha-londres-servicos-bancarios",
     "title": "Falha no Google Cloud em Londres afeta serviços bancários",
     "category": "Infraestrutura e serviços em nuvem",
