@@ -108,7 +108,7 @@ h1, h2, h3 { font-weight: 600; line-height: 1.2; }
 .identity-window { border: 1px solid var(--line-strong); }
 .identity-image { aspect-ratio: 1; position: relative; overflow: hidden; }
 .identity-label { position: absolute; bottom: 10px; left: 10px; padding: 4px 6px; background: var(--bg); font-size: 6px; letter-spacing: 1px; pointer-events: none; }
-.desktop-note { margin-left: 12px; padding: 18px; border: 1px solid var(--line-strong); background: var(--surface); transform: rotate(1.5deg); }
+.desktop-note { padding: 18px; border: 1px solid var(--line-strong); background: var(--surface); }
 .desktop-note > .eyebrow { font-size: 8px; color: var(--blue); }
 .desktop-note p:not(.eyebrow) { font-size: 11px; margin-block: 9px; }
 .desktop-note > a { color: var(--amber); font-size: 8px; }
@@ -268,7 +268,7 @@ h1, h2, h3 { font-weight: 600; line-height: 1.2; }
   .desktop-right { display: grid; grid-template-columns: 1.1fr .9fr; gap: 12px; align-items: center; }
   .identity-window > .window-title { font-size: 7px; padding-inline: 10px; }
   .identity-label { font-size: 5px; left: 6px; bottom: 6px; }
-  .desktop-note { padding: 14px 10px; margin: 0; transform: rotate(2deg); }
+  .desktop-note { padding: 14px 10px; margin: 0; }
   .desktop-note > .eyebrow { font-size: 6px; }
   .desktop-note p:not(.eyebrow) { font-size: 9px; }
   .desktop-note > a { font-size: 7px; }
@@ -312,7 +312,6 @@ h1, h2, h3 { font-weight: 600; line-height: 1.2; }
 @media (max-width: 350px) {
   .wrap { width: calc(100% - 32px); }
   .desktop-right { grid-template-columns: minmax(0, 1fr); }
-  .desktop-note { transform: none; }
   .os-tabs > button { font-size: 7px; }
   .contact-bottom > div { gap: 14px; font-size: 8px; }
 }
