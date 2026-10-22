@@ -1,19 +1,5 @@
 /* Melhoria progressiva: navegação e notícias complementam o HTML estático. */
 (() => {
-  const portraits = Array.from(document.querySelectorAll('.portrait-reveal'));
-  const clearPortraits = () => portraits.forEach(portrait => portrait.classList.remove('mouse-over'));
-  portraits.forEach(portrait => {
-    const trackPointer = event => portrait.classList.toggle('mouse-over', event.pointerType === 'mouse');
-    portrait.addEventListener('pointerenter', trackPointer);
-    portrait.addEventListener('pointermove', trackPointer);
-    portrait.addEventListener('pointerleave', () => portrait.classList.remove('mouse-over'));
-    portrait.addEventListener('pointercancel', () => portrait.classList.remove('mouse-over'));
-  });
-  document.addEventListener('pointerdown', event => {
-    if (event.pointerType !== 'mouse') clearPortraits();
-  }, {passive: true});
-  window.addEventListener('blur', clearPortraits);
-
   const tabs = Array.from(document.querySelectorAll('.os-tabs [role="tab"]'));
   const panels = tabs.map(tab => document.getElementById(tab.getAttribute('aria-controls')));
   if (tabs.length && panels.every(Boolean)) {

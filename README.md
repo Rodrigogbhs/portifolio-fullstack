@@ -14,7 +14,7 @@ python3 -m http.server 8000
 
 ```
 index.html                 home estática na identidade Root OS
-root-os.css                layout Root OS, foto com máscara no hover e tecnologias
+root-os.css                layout Root OS, retrato e tecnologias
 root-os.js                 abas, menu mobile e notícias recentes
 style.css                  estilos compartilhados do blog e dos projetos
 portfolio.js               prévias ampliadas; galeria das páginas de projeto
@@ -70,11 +70,8 @@ A direção aprovada é **Root OS**: um desktop com explorador, janelas e abas
 para apresentar o trabalho de Rodrigo. A paleta [Kanagawa Wave](https://github.com/rebelot/kanagawa.nvim)
 foi preservada; a fonte é **Cascadia Code**, variável e servida localmente em WOFF2.
 
-A foto original continua como retrato principal. Uma máscara com textura lo-fi
-aparece apenas enquanto um ponteiro do tipo mouse está sobre a imagem. O efeito
-não alterna por clique nem fica ativo por toque, inclusive em notebooks híbridos. A preferência por redução
-de movimento elimina a transição. A arte foi gerada com ImageGen e distribuída em
-WebP sem perdas; a foto original não foi editada.
+A foto original aparece nos retratos da apresentação e da biografia, sem
+sobreposição ou mudança ao passar o mouse.
 
 A seção de tecnologias apresenta as ferramentas de desenvolvimento e as habilidades
 em hacking ético, pentest web e análise de vulnerabilidades. O Kali Linux usa apenas
@@ -89,7 +86,7 @@ páginas de projeto; Escape e o botão Fechar encerram a prévia e restauram o f
 Sem JavaScript, os links continuam abrindo as capturas diretamente.
 
 O HTML contém projetos, biografia, tecnologias, contato, currículos PT/EN e notícias.
-JavaScript acrescenta as abas, o menu mobile e a máscara por eventos de ponteiro. As últimas três notícias são atualizadas
+JavaScript acrescenta as abas e o menu mobile. As últimas três notícias são atualizadas
 pela leitura de `blog/posts.json`, com conteúdo inserido por nós DOM e filtro de datas
 futuras. Se a leitura falhar, permanecem o conteúdo estático e o link do blog. As
 Automações do blog continuam usando o mesmo gerador, formato e rascunhos locais.
