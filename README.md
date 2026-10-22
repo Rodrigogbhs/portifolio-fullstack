@@ -18,10 +18,11 @@ root-os.css                layout Root OS, retrato e tecnologias
 root-os.js                 abas, menu mobile e notícias recentes
 style.css                  estilos compartilhados do blog e dos projetos
 portfolio.js               prévias ampliadas; galeria das páginas de projeto
-blog.html                  índice de notícias de tecnologia
+blog.html                  primeira página do blog (até seis notícias)
 blog.css                   estilos do blog, usando a paleta do portfólio
 blog/posts.json            notícias publicadas e suas fontes
 blog/*.html                páginas estáticas das notícias
+blog/pagina-*.html          demais páginas do índice, até seis notícias por página
 scripts/build_blog.py      gera o blog e atualiza o sitemap (Python 3.9+)
 drafts/blog/               rascunhos locais, ignorados pelo Git e pela Vercel
 torneioapp.html             funcionalidades, telas e acesso ao TorneioApp
@@ -118,6 +119,12 @@ fontes, metadados de compartilhamento e entradas no sitemap. As duas notícias
 iniciais foram selecionadas em 6 de outubro de 2026; seus horários indicam
 a preparação do conteúdo, sem simular as edições das 7h ou das 13h.
 
+O índice mostra até seis notícias por página, da mais recente para a mais antiga.
+Os links Anterior e Próxima dão acesso ao histórico em `/blog/pagina-2`,
+`/blog/pagina-3` e assim por diante, inclusive sem JavaScript. O gerador atualiza
+essas páginas e o sitemap junto com cada edição e remove páginas de paginação
+geradas que deixem de ser necessárias.
+
 As edições usam o fuso `America/Sao_Paulo`: uma notícia às 7h de segunda a
 sexta-feira e outra às 13h todos os dias. A seleção prioriza relevância,
 novidades das últimas 24 horas e fontes primárias; a segunda edição deve
@@ -145,6 +152,7 @@ e gere as páginas:
 ```bash
 python3 scripts/build_blog.py
 python3 scripts/build_blog.py --check
+python3 -m unittest discover -s scripts -p 'test_*.py'
 ```
 
 Cada objeto contém `slug`, `title`, `category`, `summary`, `published_at`

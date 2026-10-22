@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DOMAIN = "https://devrodfullstack-portifolio.vercel.app"
 TIMEZONE = ZoneInfo("America/Sao_Paulo")
 MONTHS = ("jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez")
+POSTS_PER_PAGE = 6
 
 
 def escape(value):
@@ -76,6 +77,7 @@ def metadata(post):
 
 def page(title, description, path, body, structured):
     prefix = "../" if path.startswith("/blog/") else ""
+    is_article = structured["@type"] == "BlogPosting"
     structured_json = json.dumps(structured, ensure_ascii=False).replace("<", "\\u003c")
     return f'''<!DOCTYPE html>
 <!-- Gerado por scripts/build_blog.py. Edite o conteúdo em blog/posts.json. -->
@@ -87,7 +89,7 @@ def page(title, description, path, body, structured):
   <meta name="description" content="{escape(description)}">
   <meta name="theme-color" content="#1f1f28">
   <link rel="canonical" href="{DOMAIN}{path}">
-  <meta property="og:type" content="{'article' if path.startswith('/blog/') else 'website'}">
+  <meta property="og:type" content="{'article' if is_article else 'website'}">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Dev.Rodrigo">
   <meta property="og:title" content="{escape(title)}">
@@ -110,7 +112,7 @@ def page(title, description, path, body, structured):
   <header class="topo">
     <div class="container navbar">
       <a href="{prefix}index.html" class="marca"><span class="marca-terminal" aria-hidden="true">r:</span><span>dev<span class="ponto">.</span>rodrigo<span class="marca-suffix">.os</span></span></a>
-      <nav class="blog-menu" aria-label="Navegação principal"><a href="{prefix}index.html#portfolio">Portfólio</a><a href="{prefix}blog.html" aria-current="{'page' if path == '/blog' else 'true'}">Blog</a><a class="blog-contato" href="{prefix}index.html#contato">Contato</a></nav>
+      <nav class="blog-menu" aria-label="Navegação principal"><a href="{prefix}index.html#portfolio">Portfólio</a><a href="{prefix}blog.html" aria-current="{'true' if is_article else 'page'}">Blog</a><a class="blog-contato" href="{prefix}index.html#contato">Contato</a></nav>
     </div>
   </header>
   <main id="conteudo">{body}
@@ -121,10 +123,22 @@ def page(title, description, path, body, structured):
 '''
 
 
-def build_pages(posts):
+def listing_path(number):
+    return "/blog" if number == 1 else f"/blog/pagina-{number}"
+
+
+def pagination(number, total):
+    if total == 1:
+        return ""
+    previous = f'<a href="{listing_path(number - 1)}.html" rel="prev">← Anterior</a>' if number > 1 else '<span class="blog-paginacao-limite" aria-disabled="true">← Anterior</span>'
+    following = f'<a href="{listing_path(number + 1)}.html" rel="next">Próxima →</a>' if number < total else '<span class="blog-paginacao-limite" aria-disabled="true">Próxima →</span>'
+    return f'<nav class="blog-paginacao" aria-label="Paginação das notícias">{previous}<span aria-current="page">Página {number} de {total}</span>{following}</nav>'
+
+
+def build_listing(posts, number, total, count):
     cards = []
     for post in posts:
-        url = f'blog/{post["slug"]}.html'
+        url = f'/blog/{post["slug"]}.html'
         cards.append(f'''<article class="blog-card">
           <p class="blog-categoria">{escape(post["category"])}</p>
           <h3><a href="{url}">{escape(post["title"])}</a></h3>
@@ -132,8 +146,8 @@ def build_pages(posts):
           {metadata(post)}
           <a class="blog-ler" href="{url}" aria-label="Ler: {escape(post["title"])}">Ler notícia <span aria-hidden="true">↗</span></a>
         </article>''')
-    count = f"{len(posts)} {'notícia' if len(posts) == 1 else 'notícias'} · Mais recentes primeiro"
     listing = '<div class="blog-grade">' + "\n".join(cards) + '</div>' if cards else '<p class="blog-vazio">A primeira edição está chegando. Volte em breve para acompanhar as notícias de tecnologia.</p>'
+    count_label = f"{count} {'notícia' if count == 1 else 'notícias'} · Mais recentes primeiro"
     body = f'''
     <section class="blog-hero container" aria-labelledby="titulo-blog">
       <p class="blog-sobretitulo">Blog · Radar de tecnologia</p>
@@ -142,11 +156,24 @@ def build_pages(posts):
       <div class="degrade" aria-hidden="true"></div>
     </section>
     <section class="blog-edicoes container" aria-labelledby="titulo-edicoes">
-      <div class="blog-lista-topo"><h2 id="titulo-edicoes">Últimas notícias</h2><p>{count}</p></div>
+      <div class="blog-lista-topo"><h2 id="titulo-edicoes">Últimas notícias</h2><p>{count_label}</p></div>
       {listing}
+      {pagination(number, total)}
     </section>'''
-    structured = {"@context": "https://schema.org", "@type": "Blog", "name": "Radar de tecnologia — Dev.Rodrigo", "url": DOMAIN + "/blog", "inLanguage": "pt-BR", "blogPost": [{"@type": "BlogPosting", "headline": post["title"], "url": f'{DOMAIN}/blog/{post["slug"]}', "datePublished": post["published_at"]} for post in posts]}
-    outputs = {ROOT / "blog.html": page("Blog de tecnologia", "Notícias de tecnologia em português: inteligência artificial, desenvolvimento, segurança e inovação, com contexto e fontes.", "/blog", body, structured)}
+    path = listing_path(number)
+    title = "Blog de tecnologia" if number == 1 else f"Blog de tecnologia — Página {number}"
+    structured = {"@context": "https://schema.org", "@type": "Blog", "name": "Radar de tecnologia — Dev.Rodrigo", "url": DOMAIN + path, "inLanguage": "pt-BR", "blogPost": [{"@type": "BlogPosting", "headline": post["title"], "url": f'{DOMAIN}/blog/{post["slug"]}', "datePublished": post["published_at"]} for post in posts]}
+    return page(title, "Notícias de tecnologia em português: inteligência artificial, desenvolvimento, segurança e inovação, com contexto e fontes.", path, body, structured)
+
+
+def build_pages(posts):
+    total = max(1, (len(posts) + POSTS_PER_PAGE - 1) // POSTS_PER_PAGE)
+    outputs = {}
+    for number in range(1, total + 1):
+        start = (number - 1) * POSTS_PER_PAGE
+        visible = posts[start:start + POSTS_PER_PAGE]
+        output = ROOT / (listing_path(number).lstrip("/") + ".html")
+        outputs[output] = build_listing(visible, number, total, len(posts))
     for post in posts:
         paragraphs = "\n".join(f'<p>{escape(text)}</p>' for text in post["paragraphs"])
         sources = "\n".join(f'<li><a href="{escape(source["url"])}" target="_blank" rel="noopener noreferrer">{escape(source["name"])} <span aria-hidden="true">↗</span></a><small>Fonte publicada em {date_label(source["published_on"])}</small></li>' for source in post["sources"])
@@ -162,7 +189,7 @@ def build_pages(posts):
     sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
     sitemap = re.sub(r"  <url>\s*<loc>" + re.escape(DOMAIN) + r"/blog(?:/[^<]*)?</loc>.*?</url>\n", "", sitemap, flags=re.S)
     lastmod = datetime.fromisoformat(posts[0]["published_at"]).astimezone(TIMEZONE).date().isoformat() if posts else datetime.now(TIMEZONE).date().isoformat()
-    entries = f"  <url>\n    <loc>{DOMAIN}/blog</loc>\n    <lastmod>{lastmod}</lastmod>\n  </url>\n"
+    entries = "".join(f"  <url>\n    <loc>{DOMAIN}{listing_path(number)}</loc>\n    <lastmod>{lastmod}</lastmod>\n  </url>\n" for number in range(1, total + 1))
     for post in posts:
         modified = datetime.fromisoformat(post["published_at"]).astimezone(TIMEZONE).date().isoformat()
         entries += f'  <url>\n    <loc>{DOMAIN}/blog/{post["slug"]}</loc>\n    <lastmod>{modified}</lastmod>\n  </url>\n'
@@ -180,13 +207,16 @@ def main():
     except (ValueError, KeyError, TypeError) as error:
         parser.exit(1, f"Conteúdo inválido: {error}\n")
     changed = [path for path, value in outputs.items() if not path.exists() or path.read_text(encoding="utf-8") != value]
-    if args.check and changed:
-        parser.exit(1, "Páginas desatualizadas: " + ", ".join(str(p.relative_to(ROOT)) for p in changed) + "\n")
+    obsolete = [path for path in (ROOT / "blog").glob("pagina-*.html") if re.fullmatch(r"pagina-[0-9]+\.html", path.name) and path not in outputs and "<!-- Gerado por scripts/build_blog.py." in path.read_text(encoding="utf-8")]
+    if args.check and (changed or obsolete):
+        parser.exit(1, "Páginas desatualizadas: " + ", ".join(str(p.relative_to(ROOT)) for p in changed + obsolete) + "\n")
     if not args.check:
         for path in changed:
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(outputs[path], encoding="utf-8")
-    print(f"Blog verificado: {len(posts)} posts, {len(changed)} arquivos {'pendentes' if args.check else 'atualizados'}.")
+        for path in obsolete:
+            path.unlink()
+    print(f"Blog verificado: {len(posts)} posts, {len(changed) + len(obsolete)} arquivos {'pendentes' if args.check else 'atualizados'}.")
 
 
 if __name__ == "__main__":
