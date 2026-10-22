@@ -125,10 +125,14 @@ Os links Anterior e Próxima dão acesso ao histórico em `/blog/pagina-2`,
 essas páginas e o sitemap junto com cada edição e remove páginas de paginação
 geradas que deixem de ser necessárias.
 
-As edições usam o fuso `America/Sao_Paulo`: uma notícia às 7h de segunda a
-sexta-feira e outra às 13h todos os dias. A seleção prioriza relevância,
-novidades das últimas 24 horas e fontes primárias; a segunda edição deve
-trazer um acontecimento diferente da primeira.
+As edições usam o fuso `America/Sao_Paulo`. Às 7h, de segunda a sexta-feira,
+a cobertura é de tecnologia em geral. Às 13h, todos os dias, o foco é o mundo
+hacker: invasões e ataques cibernéticos, vazamentos de dados, ransomware e
+hacktivismo. A seleção prioriza relevância, novidades das últimas 24 horas
+e fontes primárias, com confirmação independente quando disponível.
+Reivindicações de grupos são diferenciadas de incidentes confirmados. A edição
+das 13h traz um acontecimento diferente da manhã; sem notícia verificável
+dentro do seu recorte, a automação informa o impedimento.
 
 As duas Automações no Codex pesquisam e verificam as fontes, salvam uma cópia
 local em `drafts/blog/AAAA-MM-DD-0700.json` ou
