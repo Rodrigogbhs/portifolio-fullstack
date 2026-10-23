@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- Gerado por scripts/build_blog.py. Edite o conteúdo em blog/posts.json. -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenSSL 4.1 é lançado com DTLS 1.3 e melhorias de criptografia — Dev.Rodrigo</title>
+  <meta name="description" content="Atualização amplia o suporte a comunicações seguras e otimiza operações em processadores compatíveis; projeto registra problemas conhecidos no novo suporte a DTLS.">
+  <meta name="theme-color" content="#1f1f28">
+  <link rel="canonical" href="https://devrodfullstack-portifolio.vercel.app/blog/2026-10-23-openssl-4-1-dtls-criptografia">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Dev.Rodrigo">
+  <meta property="og:title" content="OpenSSL 4.1 é lançado com DTLS 1.3 e melhorias de criptografia">
+  <meta property="og:description" content="Atualização amplia o suporte a comunicações seguras e otimiza operações em processadores compatíveis; projeto registra problemas conhecidos no novo suporte a DTLS.">
+  <meta property="og:url" content="https://devrodfullstack-portifolio.vercel.app/blog/2026-10-23-openssl-4-1-dtls-criptografia">
+  <meta property="og:image" content="https://devrodfullstack-portifolio.vercel.app/assets/images/og-rodrigo-guimaraes.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="OpenSSL 4.1 é lançado com DTLS 1.3 e melhorias de criptografia">
+  <meta name="twitter:description" content="Atualização amplia o suporte a comunicações seguras e otimiza operações em processadores compatíveis; projeto registra problemas conhecidos no novo suporte a DTLS.">
+  <meta name="twitter:image" content="https://devrodfullstack-portifolio.vercel.app/assets/images/og-rodrigo-guimaraes.jpg">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/cascadia-code.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../blog.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "OpenSSL 4.1 é lançado com DTLS 1.3 e melhorias de criptografia", "description": "Atualização amplia o suporte a comunicações seguras e otimiza operações em processadores compatíveis; projeto registra problemas conhecidos no novo suporte a DTLS.", "datePublished": "2026-10-23T11:23:01-03:00", "inLanguage": "pt-BR", "url": "https://devrodfullstack-portifolio.vercel.app/blog/2026-10-23-openssl-4-1-dtls-criptografia", "author": {"@type": "Person", "name": "Rodrigo Guimarães", "url": "https://devrodfullstack-portifolio.vercel.app"}, "image": "https://devrodfullstack-portifolio.vercel.app/assets/images/og-rodrigo-guimaraes.jpg", "isPartOf": {"@type": "Blog", "url": "https://devrodfullstack-portifolio.vercel.app/blog"}, "citation": ["https://github.com/openssl/openssl/releases/tag/openssl-4.1.0", "https://www.phoronix.com/news/OpenSSL-4.1-Released"]}</script>
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topo">
+    <div class="container navbar">
+      <a href="../index.html" class="marca"><span class="marca-terminal" aria-hidden="true">r:</span><span>dev<span class="ponto">.</span>rodrigo<span class="marca-suffix">.os</span></span></a>
+      <nav class="blog-menu" aria-label="Navegação principal"><a href="../index.html#portfolio">Portfólio</a><a href="../blog.html" aria-current="true">Blog</a><a class="blog-contato" href="../index.html#contato">Contato</a></nav>
+    </div>
+  </header>
+  <main id="conteudo">
+    <article class="blog-artigo container">
+      <a class="blog-voltar" href="../blog.html">← Todas as notícias</a>
+      <header><p class="blog-categoria">Software e segurança</p><h1>OpenSSL 4.1 é lançado com DTLS 1.3 e melhorias de criptografia</h1><div class="blog-meta"><time datetime="2026-10-23T11:23:01-03:00">23 out 2026 · 11:23 (Brasília)</time><span>Edição das 07:00</span><span>1 min de leitura</span></div><p class="blog-resumo">Atualização amplia o suporte a comunicações seguras e otimiza operações em processadores compatíveis; projeto registra problemas conhecidos no novo suporte a DTLS.</p></header>
+      <div class="blog-texto"><p>O projeto OpenSSL lançou em 23 de outubro a versão estável 4.1.0, com suporte ao DTLS 1.3. O protocolo leva mecanismos de proteção do TLS 1.3 a aplicações que usam UDP, nas quais mensagens podem chegar fora de ordem ou se perder. A novidade amplia as opções para quem desenvolve comunicações seguras sem uma conexão TCP.</p>
+<p>A versão também adiciona GREASE, mecanismo que ajuda a verificar se os sistemas lidam corretamente com valores desconhecidos durante a negociação de uma conexão. Segundo as notas oficiais, há otimizações para operações de criptografia e assinatura digital, incluindo instruções AVX-512 em processadores compatíveis. O ganho real depende do hardware e da aplicação.</p>
+<p>Para equipes de desenvolvimento, o lançamento traz recursos que precisam ser avaliados junto às dependências de cada sistema. O projeto lista problemas conhecidos no novo suporte a DTLS, incluindo falhas durante a negociação após perda de pacotes. Por isso, vale testar a compatibilidade e acompanhar as correções antes de adotar os novos recursos em produção.</p></div>
+      <aside class="blog-fontes" aria-labelledby="titulo-fontes"><h2 id="titulo-fontes">Fontes para continuar a leitura</h2><ul><li><a href="https://github.com/openssl/openssl/releases/tag/openssl-4.1.0" target="_blank" rel="noopener noreferrer">OpenSSL · Lançamento oficial, novidades e problemas conhecidos da versão 4.1.0 <span aria-hidden="true">↗</span></a><small>Fonte publicada em 23 out 2026</small></li>
+<li><a href="https://www.phoronix.com/news/OpenSSL-4.1-Released" target="_blank" rel="noopener noreferrer">Phoronix · Confirmação independente do lançamento e das otimizações <span aria-hidden="true">↗</span></a><small>Fonte publicada em 23 out 2026</small></li></ul></aside>
+    </article>
+  </main>
+  <footer class="rodape container blog-rodape"><p>© 2026 Rodrigo Guimarães.</p><a href="../index.html">Conheça meu trabalho <span aria-hidden="true">↗</span></a></footer>
+</body>
+</html>

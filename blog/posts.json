@@ -1,5 +1,30 @@
 [
   {
+    "slug": "2026-10-23-openssl-4-1-dtls-criptografia",
+    "title": "OpenSSL 4.1 é lançado com DTLS 1.3 e melhorias de criptografia",
+    "category": "Software e segurança",
+    "summary": "Atualização amplia o suporte a comunicações seguras e otimiza operações em processadores compatíveis; projeto registra problemas conhecidos no novo suporte a DTLS.",
+    "published_at": "2026-10-23T11:23:01-03:00",
+    "edition": "07:00",
+    "paragraphs": [
+      "O projeto OpenSSL lançou em 23 de outubro a versão estável 4.1.0, com suporte ao DTLS 1.3. O protocolo leva mecanismos de proteção do TLS 1.3 a aplicações que usam UDP, nas quais mensagens podem chegar fora de ordem ou se perder. A novidade amplia as opções para quem desenvolve comunicações seguras sem uma conexão TCP.",
+      "A versão também adiciona GREASE, mecanismo que ajuda a verificar se os sistemas lidam corretamente com valores desconhecidos durante a negociação de uma conexão. Segundo as notas oficiais, há otimizações para operações de criptografia e assinatura digital, incluindo instruções AVX-512 em processadores compatíveis. O ganho real depende do hardware e da aplicação.",
+      "Para equipes de desenvolvimento, o lançamento traz recursos que precisam ser avaliados junto às dependências de cada sistema. O projeto lista problemas conhecidos no novo suporte a DTLS, incluindo falhas durante a negociação após perda de pacotes. Por isso, vale testar a compatibilidade e acompanhar as correções antes de adotar os novos recursos em produção."
+    ],
+    "sources": [
+      {
+        "name": "OpenSSL · Lançamento oficial, novidades e problemas conhecidos da versão 4.1.0",
+        "url": "https://github.com/openssl/openssl/releases/tag/openssl-4.1.0",
+        "published_on": "2026-10-23"
+      },
+      {
+        "name": "Phoronix · Confirmação independente do lançamento e das otimizações",
+        "url": "https://www.phoronix.com/news/OpenSSL-4.1-Released",
+        "published_on": "2026-10-23"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-21-nvidia-openshell-arquitetura-agentes-ia",
     "title": "NVIDIA apresenta arquitetura para limitar ações de agentes de IA",
     "category": "Inteligência artificial e desenvolvimento",
