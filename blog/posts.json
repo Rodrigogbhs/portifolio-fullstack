@@ -1,5 +1,35 @@
 [
   {
+    "slug": "2026-10-23-railway-notifica-clientes-possivel-exposicao-credenciais",
+    "title": "Railway notifica clientes após possível exposição de credenciais",
+    "category": "Segurança e serviços em nuvem",
+    "summary": "Plataforma retoma deploys em todos os planos, mas mantém investigação sobre possível acesso a segredos de aplicações e recomenda substituir credenciais.",
+    "published_at": "2026-10-23T11:26:48-03:00",
+    "edition": "13:00",
+    "paragraphs": [
+      "A Railway informou em 23 de outubro que notificou por e-mail clientes com alta probabilidade de terem sido afetados por um incidente de segurança. A plataforma de hospedagem de aplicações também confirmou que builds e deploys voltaram a funcionar normalmente em todos os planos. A análise forense continua, e novos cadastros permanecem temporariamente suspensos.",
+      "O alerta inicial, divulgado em 21 de outubro, descreveu atividade suspeita nos sistemas que armazenam variáveis de ambiente dos clientes. Segundo a empresa, um terceiro pode ter acessado essas variáveis criptografadas e obtido o conteúdo descriptografado de algumas delas, que pode incluir chaves de API e credenciais de bancos de dados. A quantidade de contas afetadas ainda não foi divulgada.",
+      "A orientação da Railway é que todos os usuários substituam os segredos armazenados na plataforma, incluindo credenciais de registros privados de contêineres, e revisem os logs dos serviços em busca de atividade incomum. Isso importa porque uma credencial exposta pode permitir acesso a dados ou uso indevido de serviços pagos. A retomada dos deploys permite aplicar as novas credenciais, mas não encerra a investigação."
+    ],
+    "sources": [
+      {
+        "name": "Railway · Histórico do incidente, atualizado em 23/10 às 6h34 de Brasília",
+        "url": "https://status.railway.com/incident/QH8L8B3E",
+        "published_on": "2026-10-21"
+      },
+      {
+        "name": "Railway · Comunicado original sobre possível acesso a variáveis e medidas defensivas",
+        "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+        "published_on": "2026-10-21"
+      },
+      {
+        "name": "BleepingComputer · Cobertura independente do alerta e do risco às credenciais",
+        "url": "https://www.bleepingcomputer.com/news/security/railway-warns-devs-to-rotate-secrets-after-potential-breach/",
+        "published_on": "2026-10-22"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-23-openssl-4-1-dtls-criptografia",
     "title": "OpenSSL 4.1 é lançado com DTLS 1.3 e melhorias de criptografia",
     "category": "Software e segurança",
