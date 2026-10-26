@@ -1,5 +1,35 @@
 [
   {
+    "slug": "2026-10-26-ifixit-iphone-duo-reparo-tela",
+    "title": "iFixit dá nota provisória 5 de 10 ao reparo do iPhone Duo",
+    "category": "Hardware e reparabilidade",
+    "summary": "Desmontagem elogia a remoção das baterias, mas aponta dificuldades no reparo da tela interna e investiga falhas relatadas por usuários.",
+    "published_at": "2026-10-26T09:51:49-03:00",
+    "edition": "07:00",
+    "paragraphs": [
+      "A iFixit publicou em 25 de outubro sua desmontagem do iPhone Duo e atribuiu nota provisória 5 de 10 à facilidade de reparo. É a maior avaliação que a equipe já deu a um celular dobrável. A nota ainda depende da disponibilidade de peças de reposição.",
+      "Segundo a análise, as duas baterias usam adesivo liberado por eletricidade, e componentes como câmeras exigem pouca desmontagem adicional. A tela interna e a dobradiça, porém, continuam trabalhosas de substituir. A Apple já disponibilizou o manual de reparo, mas a iFixit ainda aguardava peças para concluir a avaliação.",
+      "A equipe também comparou imagens de telas danificadas com tomografias e um modelo da dobradiça. A análise sugere concentração de esforço perto do suporte central, sem confirmar a causa das falhas relatadas. Para usuários e assistências, o resultado mostra que facilitar a troca de baterias é apenas parte do desafio de prolongar a vida útil de um dobrável."
+    ],
+    "sources": [
+      {
+        "name": "iFixit · Desmontagem original, nota provisória e hipóteses sobre a tela",
+        "url": "https://www.ifixit.com/News/119895/iphone-duo-teardown",
+        "published_on": "2026-10-25"
+      },
+      {
+        "name": "Apple · Manual oficial de reparo do iPhone Duo, publicado em 23/10",
+        "url": "https://support.apple.com/en-us/127682",
+        "published_on": "2026-10-23"
+      },
+      {
+        "name": "9to5Mac · Confirmação independente da desmontagem e dos limites da análise",
+        "url": "https://9to5mac.com/2026/10/25/ifixit-tears-down-iphone-duo-finds-possible-causes-of-early-screen-failures/",
+        "published_on": "2026-10-25"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-23-railway-notifica-clientes-possivel-exposicao-credenciais",
     "title": "Railway notifica clientes após possível exposição de credenciais",
     "category": "Segurança e serviços em nuvem",
