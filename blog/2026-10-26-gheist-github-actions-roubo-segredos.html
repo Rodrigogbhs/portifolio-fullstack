@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- Gerado por scripts/build_blog.py. Edite o conteúdo em blog/posts.json. -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hackers usam GitHub Actions para roubar segredos de repositórios privados — Dev.Rodrigo</title>
+  <meta name="description" content="Campanha abusa de tokens roubados para expor credenciais nos logs de automação; Wiz recomenda revogar acessos e substituir segredos.">
+  <meta name="theme-color" content="#1f1f28">
+  <link rel="canonical" href="https://devrodfullstack-portifolio.vercel.app/blog/2026-10-26-gheist-github-actions-roubo-segredos">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Dev.Rodrigo">
+  <meta property="og:title" content="Hackers usam GitHub Actions para roubar segredos de repositórios privados">
+  <meta property="og:description" content="Campanha abusa de tokens roubados para expor credenciais nos logs de automação; Wiz recomenda revogar acessos e substituir segredos.">
+  <meta property="og:url" content="https://devrodfullstack-portifolio.vercel.app/blog/2026-10-26-gheist-github-actions-roubo-segredos">
+  <meta property="og:image" content="https://devrodfullstack-portifolio.vercel.app/assets/images/og-rodrigo-guimaraes.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hackers usam GitHub Actions para roubar segredos de repositórios privados">
+  <meta name="twitter:description" content="Campanha abusa de tokens roubados para expor credenciais nos logs de automação; Wiz recomenda revogar acessos e substituir segredos.">
+  <meta name="twitter:image" content="https://devrodfullstack-portifolio.vercel.app/assets/images/og-rodrigo-guimaraes.jpg">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/cascadia-code.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../blog.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Hackers usam GitHub Actions para roubar segredos de repositórios privados", "description": "Campanha abusa de tokens roubados para expor credenciais nos logs de automação; Wiz recomenda revogar acessos e substituir segredos.", "datePublished": "2026-10-26T09:54:28-03:00", "inLanguage": "pt-BR", "url": "https://devrodfullstack-portifolio.vercel.app/blog/2026-10-26-gheist-github-actions-roubo-segredos", "author": {"@type": "Person", "name": "Rodrigo Guimarães", "url": "https://devrodfullstack-portifolio.vercel.app"}, "image": "https://devrodfullstack-portifolio.vercel.app/assets/images/og-rodrigo-guimaraes.jpg", "isPartOf": {"@type": "Blog", "url": "https://devrodfullstack-portifolio.vercel.app/blog"}, "citation": ["https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles", "https://github.blog/changelog/2026-07-28-github-actions-holds-potentially-malicious-workflows-for-approval/", "https://thehackernews.com/2026/10/gheist-uses-stolen-github-tokens-to.html"]}</script>
+</head>
+<body>
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topo">
+    <div class="container navbar">
+      <a href="../index.html" class="marca"><span class="marca-terminal" aria-hidden="true">r:</span><span>dev<span class="ponto">.</span>rodrigo<span class="marca-suffix">.os</span></span></a>
+      <nav class="blog-menu" aria-label="Navegação principal"><a href="../index.html#portfolio">Portfólio</a><a href="../blog.html" aria-current="true">Blog</a><a class="blog-contato" href="../index.html#contato">Contato</a></nav>
+    </div>
+  </header>
+  <main id="conteudo">
+    <article class="blog-artigo container">
+      <a class="blog-voltar" href="../blog.html">← Todas as notícias</a>
+      <header><p class="blog-categoria">Segurança e desenvolvimento</p><h1>Hackers usam GitHub Actions para roubar segredos de repositórios privados</h1><div class="blog-meta"><time datetime="2026-10-26T09:54:28-03:00">26 out 2026 · 09:54 (Brasília)</time><span>Edição das 13:00</span><span>1 min de leitura</span></div><p class="blog-resumo">Campanha abusa de tokens roubados para expor credenciais nos logs de automação; Wiz recomenda revogar acessos e substituir segredos.</p></header>
+      <div class="blog-texto"><p>A Wiz revelou em 25 de outubro a campanha Gheist, que usa tokens roubados do GitHub para inserir automações maliciosas em repositórios. Os pesquisadores identificaram mais de 13.500 branches em mais de 850 contas comprometidas. A atividade é acompanhada desde 15 de setembro e continuava ativa em 24 de outubro; o número de organizações com segredos expostos não foi informado.</p>
+<p>Segundo a Wiz, as automações registram segredos codificados nos logs do GitHub Actions. Os invasores baixam esses registros e apagam a execução em seguida. Houve exploração bem-sucedida em repositórios privados e no GitHub Enterprise. Nos repositórios públicos examinados, as execuções ficaram bloqueadas para aprovação. O GitHub confirma que essa proteção automática se aplica somente a repositórios públicos no github.com.</p>
+<p>O risco alcança chaves de serviços em nuvem usadas por aplicações. A Wiz recomenda procurar branches com prefixo ci-sync-, revisar logs, revogar os tokens envolvidos e substituir todos os segredos acessíveis aos repositórios afetados. Apagar a branch não desfaz a exposição. Exigir aprovação para ambientes com credenciais de produção também é recomendado.</p></div>
+      <aside class="blog-fontes" aria-labelledby="titulo-fontes"><h2 id="titulo-fontes">Fontes para continuar a leitura</h2><ul><li><a href="https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles" target="_blank" rel="noopener noreferrer">Wiz · Relatório técnico da campanha Gheist, divulgado em 25/10 às 14h55 de Brasília <span aria-hidden="true">↗</span></a><small>Fonte publicada em 25 out 2026</small></li>
+<li><a href="https://github.blog/changelog/2026-07-28-github-actions-holds-potentially-malicious-workflows-for-approval/" target="_blank" rel="noopener noreferrer">GitHub · Alcance da proteção automática contra workflows suspeitos <span aria-hidden="true">↗</span></a><small>Fonte publicada em 28 jul 2026</small></li>
+<li><a href="https://thehackernews.com/2026/10/gheist-uses-stolen-github-tokens-to.html" target="_blank" rel="noopener noreferrer">The Hacker News · Cobertura independente da campanha e das recomendações <span aria-hidden="true">↗</span></a><small>Fonte publicada em 26 out 2026</small></li></ul></aside>
+    </article>
+  </main>
+  <footer class="rodape container blog-rodape"><p>© 2026 Rodrigo Guimarães.</p><a href="../index.html">Conheça meu trabalho <span aria-hidden="true">↗</span></a></footer>
+</body>
+</html>

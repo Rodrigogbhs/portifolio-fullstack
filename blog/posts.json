@@ -1,5 +1,35 @@
 [
   {
+    "slug": "2026-10-26-gheist-github-actions-roubo-segredos",
+    "title": "Hackers usam GitHub Actions para roubar segredos de repositórios privados",
+    "category": "Segurança e desenvolvimento",
+    "summary": "Campanha abusa de tokens roubados para expor credenciais nos logs de automação; Wiz recomenda revogar acessos e substituir segredos.",
+    "published_at": "2026-10-26T09:54:28-03:00",
+    "edition": "13:00",
+    "paragraphs": [
+      "A Wiz revelou em 25 de outubro a campanha Gheist, que usa tokens roubados do GitHub para inserir automações maliciosas em repositórios. Os pesquisadores identificaram mais de 13.500 branches em mais de 850 contas comprometidas. A atividade é acompanhada desde 15 de setembro e continuava ativa em 24 de outubro; o número de organizações com segredos expostos não foi informado.",
+      "Segundo a Wiz, as automações registram segredos codificados nos logs do GitHub Actions. Os invasores baixam esses registros e apagam a execução em seguida. Houve exploração bem-sucedida em repositórios privados e no GitHub Enterprise. Nos repositórios públicos examinados, as execuções ficaram bloqueadas para aprovação. O GitHub confirma que essa proteção automática se aplica somente a repositórios públicos no github.com.",
+      "O risco alcança chaves de serviços em nuvem usadas por aplicações. A Wiz recomenda procurar branches com prefixo ci-sync-, revisar logs, revogar os tokens envolvidos e substituir todos os segredos acessíveis aos repositórios afetados. Apagar a branch não desfaz a exposição. Exigir aprovação para ambientes com credenciais de produção também é recomendado."
+    ],
+    "sources": [
+      {
+        "name": "Wiz · Relatório técnico da campanha Gheist, divulgado em 25/10 às 14h55 de Brasília",
+        "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
+        "published_on": "2026-10-25"
+      },
+      {
+        "name": "GitHub · Alcance da proteção automática contra workflows suspeitos",
+        "url": "https://github.blog/changelog/2026-07-28-github-actions-holds-potentially-malicious-workflows-for-approval/",
+        "published_on": "2026-07-28"
+      },
+      {
+        "name": "The Hacker News · Cobertura independente da campanha e das recomendações",
+        "url": "https://thehackernews.com/2026/10/gheist-uses-stolen-github-tokens-to.html",
+        "published_on": "2026-10-26"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-26-ifixit-iphone-duo-reparo-tela",
     "title": "iFixit dá nota provisória 5 de 10 ao reparo do iPhone Duo",
     "category": "Hardware e reparabilidade",
