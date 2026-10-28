@@ -1,5 +1,30 @@
 [
   {
+    "slug": "2026-10-28-chrome-156-correcoes-seguranca",
+    "title": "Chrome 156 chega com 52 correções de segurança, quatro delas críticas",
+    "category": "Software e segurança",
+    "summary": "Atualização para Windows, macOS e Linux começou a ser distribuída em 27 de outubro; Google mantém parte dos detalhes técnicos restrita.",
+    "published_at": "2026-10-28T14:47:20-03:00",
+    "edition": "07:00",
+    "paragraphs": [
+      "O Google começou a distribuir em 27 de outubro uma atualização estável do Chrome 156 com 52 correções de segurança. Quatro falhas foram classificadas como críticas. Os pacotes são 156.0.8078.73/.74 para Windows e macOS e 156.0.8078.73 para Linux, com liberação gradual nos próximos dias e semanas.",
+      "Segundo o aviso oficial, os problemas críticos envolvem corrupção de memória, validação de dados e uso de memória já liberada em componentes de arquivos e de exibição de páginas. O Google mantém parte dos detalhes restrita até que a maioria dos usuários receba a correção. O comunicado não informa exploração ativa dessas falhas.",
+      "Para usuários e equipes de desenvolvimento, a medida imediata é conferir a versão instalada, concluir a atualização e reiniciar o navegador. No Linux, a atualização usa o gerenciador de pacotes. Manter o navegador atualizado protege uma ferramenta usada diariamente para acessar contas, trabalhar e testar aplicações."
+    ],
+    "sources": [
+      {
+        "name": "Google Chrome · Aviso oficial, versões corrigidas e classificação das falhas",
+        "url": "https://chromereleases.googleblog.com/2026/10/stable-channel-update-for-desktop_0562499947.html",
+        "published_on": "2026-10-27"
+      },
+      {
+        "name": "SecurityWeek · Confirmação independente da atualização e das correções críticas",
+        "url": "https://www.securityweek.com/chrome-and-firefox-updates-patch-over-200-vulnerabilities/",
+        "published_on": "2026-10-28"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-26-gheist-github-actions-roubo-segredos",
     "title": "Hackers usam GitHub Actions para roubar segredos de repositórios privados",
     "category": "Segurança e desenvolvimento",
