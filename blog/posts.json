@@ -1,5 +1,35 @@
 [
   {
+    "slug": "2026-10-28-volt-typhoon-silent-train-invasoes",
+    "title": "Pesquisa revela como o Volt Typhoon usa roteadores invadidos para esconder ataques",
+    "category": "Segurança e ciberespionagem",
+    "summary": "Relatório da Lumen descreve a estrutura Silent Train, usada contra organizações nos EUA, e recomenda proteger painéis administrativos e preservar logs.",
+    "published_at": "2026-10-28T14:48:36-03:00",
+    "edition": "13:00",
+    "paragraphs": [
+      "A Black Lotus Labs, equipe de pesquisa da Lumen, divulgou em 28 de outubro um relatório sobre a Silent Train, estrutura que atribui ao grupo hacker Volt Typhoon. Monitorada desde o fim de 2023, a operação usa cadeias de roteadores e outros equipamentos invadidos para ocultar ataques a organizações nos Estados Unidos.",
+      "Segundo os pesquisadores, centenas de vítimas foram notificadas durante a investigação, incluindo operadoras de telecomunicações, órgãos públicos e empresas de infraestrutura crítica. Os invasores montam conexões temporárias e apagam vestígios ao encerrar as sessões. O estudo documenta exploração de falhas em plataformas de administração, cujo acesso pode alcançar sistemas de clientes.",
+      "Essas ferramentas concentram permissões sobre muitos equipamentos, ampliando o impacto de uma invasão. A Lumen recomenda restringir o acesso externo aos painéis administrativos, priorizar correções, revisar relações de confiança e centralizar logs com maior retenção. Também orienta investigar logins administrativos e transferências de arquivos fora do padrão."
+    ],
+    "sources": [
+      {
+        "name": "Lumen / Black Lotus Labs · Pesquisa original sobre a Silent Train e recomendações defensivas",
+        "url": "https://www.lumen.com/blog/en-us/silent-train-volt-typhoon-operational-framework",
+        "published_on": "2026-10-28"
+      },
+      {
+        "name": "CyberScoop · Cobertura independente e entrevista com o pesquisador responsável",
+        "url": "https://cyberscoop.com/volt-typhoon-silent-train-covert-ephemeral-network-black-lotus-labs/",
+        "published_on": "2026-10-28"
+      },
+      {
+        "name": "BleepingComputer · Confirmação independente da divulgação e dos ataques investigados",
+        "url": "https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/",
+        "published_on": "2026-10-28"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-28-chrome-156-correcoes-seguranca",
     "title": "Chrome 156 chega com 52 correções de segurança, quatro delas críticas",
     "category": "Software e segurança",
