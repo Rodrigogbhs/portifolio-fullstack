@@ -1,5 +1,35 @@
 [
   {
+    "slug": "2026-10-29-dhs-vazamento-registros-hacktivistas",
+    "title": "Vazamento expõe dados de mais de 41 mil funcionários e contratados do DHS",
+    "category": "Segurança e hacktivismo",
+    "summary": "Base divulgada por hacktivistas reúne contatos e permissões de acesso; DHS reconhece possível violação, e Okta diz não ter evidências de invasão dos próprios sistemas.",
+    "published_at": "2026-10-29T14:13:06-03:00",
+    "edition": "13:00",
+    "paragraphs": [
+      "A organização DDoSecrets publicou em 28 de outubro a base Icepick, que, segundo ela, identifica mais de 41 mil funcionários e contratados do Departamento de Segurança Interna dos Estados Unidos (DHS). O material reúne nomes, contatos profissionais e informações de acesso a sistemas de órgãos como ICE, CBP e CISA. O CyberScoop confirmou a presença de funcionários atuais e antigos da CISA.",
+      "O grupo hacktivista Department of Peace forneceu os arquivos e apresenta o vazamento como reação à intensificação das ações migratórias do ICE. O grupo afirma ter obtido a base de um serviço de login Okta usado pelo DHS. Essa origem permanece uma alegação: a Okta diz não ter evidências de invasão dos próprios sistemas, e o DHS informou à SecurityWeek que trabalha para responder a uma possível violação.",
+      "Em atualização de 29 de outubro, o CyberScoop informou que o domínio original da ferramenta de consulta saiu do ar. Isso não comprova a contenção do incidente. Como alertou um especialista ouvido pela SecurityWeek, conhecer quem acessa cada sistema ajuda a escolher alvos para novos ataques. O DHS prometeu proteger os funcionários e divulgar novas informações; a resposta citada não detalha correções técnicas nem confirma a data da invasão."
+    ],
+    "sources": [
+      {
+        "name": "DDoSecrets · Descrição da publicação Icepick e alegações do grupo",
+        "url": "https://ddosecrets.org/article/icepick",
+        "published_on": "2026-10-28"
+      },
+      {
+        "name": "CyberScoop · Verificação parcial dos registros e atualização de 29/10",
+        "url": "https://cyberscoop.com/dhs-employee-data-leak-ddosecrets/",
+        "published_on": "2026-10-28"
+      },
+      {
+        "name": "SecurityWeek · Respostas do DHS e da Okta sobre o incidente",
+        "url": "https://www.securityweek.com/over-41000-dhs-employee-records-leaked-online/",
+        "published_on": "2026-10-29"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-29-apple-macbook-pro-tela-sensivel-toque",
     "title": "Apple anuncia primeiro MacBook Pro com tela sensível ao toque",
     "category": "Hardware e desenvolvimento",
