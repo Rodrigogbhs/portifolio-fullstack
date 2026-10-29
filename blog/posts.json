@@ -1,5 +1,35 @@
 [
   {
+    "slug": "2026-10-29-apple-macbook-pro-tela-sensivel-toque",
+    "title": "Apple anuncia primeiro MacBook Pro com tela sensível ao toque",
+    "category": "Hardware e desenvolvimento",
+    "summary": "Modelos de 14 e 16 polegadas combinam OLED e chips M5 Pro ou M5 Max; pré-venda começou em 28 de outubro, com entregas a partir de 6 de novembro.",
+    "published_at": "2026-10-29T11:30:26-03:00",
+    "edition": "07:00",
+    "paragraphs": [
+      "A Apple apresentou em 28 de outubro seu primeiro MacBook Pro com tela sensível ao toque. Os modelos de 14 e 16 polegadas usam o painel OLED chamado PROLED XDR e chips M5 Pro ou M5 Max. A pré-venda começou no mesmo dia, com disponibilidade a partir de 6 de novembro em mercados selecionados.",
+      "O toque permite rolar páginas, ampliar fotos e arrastar conteúdo, mantendo o teclado e o trackpad. Segundo a Apple, o macOS converte toques em cliques para interagir com aplicativos existentes, e APIs de gestos permitem criar experiências específicas para a tela.",
+      "A mudança abre uma nova frente de testes de usabilidade para quem cria interfaces: avaliar botões, menus e gestos com os dedos, além do mouse e do teclado. A Apple publicou vídeos e materiais para ajudar desenvolvedores a preparar seus aplicativos."
+    ],
+    "sources": [
+      {
+        "name": "Apple · Anúncio oficial, características e disponibilidade do MacBook Pro com Touch",
+        "url": "https://www.apple.com/newsroom/2026/10/apple-unveils-groundbreaking-macbook-pro-with-proled-xdr-display/",
+        "published_on": "2026-10-28"
+      },
+      {
+        "name": "Apple Developer · Vídeos e recursos para preparar aplicativos para o toque no Mac",
+        "url": "https://developer.apple.com/news/?id=i9boeiqc",
+        "published_on": "2026-10-28"
+      },
+      {
+        "name": "MacRumors · Confirmação independente do anúncio, da pré-venda e da data de lançamento",
+        "url": "https://www.macrumors.com/2026/10/28/apple-executives-touch-screen-explanation/",
+        "published_on": "2026-10-28"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-28-volt-typhoon-silent-train-invasoes",
     "title": "Pesquisa revela como o Volt Typhoon usa roteadores invadidos para esconder ataques",
     "category": "Segurança e ciberespionagem",
