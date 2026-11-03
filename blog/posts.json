@@ -1,5 +1,35 @@
 [
   {
+    "slug": "2026-11-03-mercado-bitcoin-ataque-bloqueio-ativos",
+    "title": "Após ataque hacker, Mercado Bitcoin anuncia bloqueio de US$ 11,2 milhões",
+    "category": "Segurança e criptoativos",
+    "summary": "Corretora suspendeu serviços após invasão em 2 de novembro e afirma que preservará os ativos dos clientes; investigação e rastreamento continuam.",
+    "published_at": "2026-11-03T08:19:00-03:00",
+    "edition": "13:00",
+    "paragraphs": [
+      "O Mercado Bitcoin informou, em atualização de 2 de novembro, que bloqueou US$ 11,2 milhões em criptoativos após um ataque ocorrido na madrugada daquele dia. A corretora brasileira suspendeu temporariamente os serviços para investigar o incidente e afirmou que nenhum cliente perderá seus ativos. A promessa foi reiterada na cobertura da CoinDesk de 3 de novembro.",
+      "A Chainalysis, que participa da resposta, estimou cerca de US$ 49 milhões inicialmente desviados e descreveu transferências em várias blockchains. Segundo a empresa, o rastreamento permitiu acionar emissores e autoridades para congelar parte dos recursos. O bloqueio dificulta novas movimentações, mas não significa que todo o valor roubado tenha sido recuperado.",
+      "Para os clientes, o impacto inclui a interrupção do acesso aos serviços e o risco de golpes que explorem o incidente. Na nota reproduzida pela CNN Brasil, o Mercado Bitcoin orienta acompanhar seus canais oficiais e alerta que não solicita senhas, códigos de verificação ou frases de recuperação, nem oferece reembolsos por links, WhatsApp ou telefone. A empresa disse que divulgará o prazo de retomada em novas atualizações."
+    ],
+    "sources": [
+      {
+        "name": "Chainalysis · Relato da equipe que rastreou os ativos e coordenou bloqueios",
+        "url": "https://www.chainalysis.com/blog/chainalysis-response-mercado-bitcoin/",
+        "published_on": "2026-11-02"
+      },
+      {
+        "name": "CNN Brasil · Nota da corretora, bloqueio de ativos e alerta aos clientes; atualizada em 2/11",
+        "url": "https://www.cnnbrasil.com.br/economia/money/negocios/mercado-bitcoin-bloqueia-us-112-milhoes-apos-incidente-de-seguranca/",
+        "published_on": "2026-11-02"
+      },
+      {
+        "name": "CoinDesk · Cobertura de 3/11 sobre a resposta e o compromisso com os clientes",
+        "url": "https://www.coindesk.com/business/2026/11/03/mercado-bitcoin-pledges-to-cover-all-user-losses-after-near-usd40-million-hack",
+        "published_on": "2026-11-03"
+      }
+    ]
+  },
+  {
     "slug": "2026-10-29-dhs-vazamento-registros-hacktivistas",
     "title": "Vazamento expõe dados de mais de 41 mil funcionários e contratados do DHS",
     "category": "Segurança e hacktivismo",
