@@ -1,5 +1,30 @@
 [
   {
+    "slug": "2026-11-03-marvell-lumentum-acordo-conectividade-ia",
+    "title": "Marvell fecha acordo de US$ 115 bilhões pela Lumentum para ampliar conectividade de IA",
+    "category": "Infraestrutura e IA",
+    "summary": "Negócio em ações combina chips e tecnologias ópticas para data centers; conclusão depende de aprovações e é prevista para o primeiro semestre de 2028.",
+    "published_at": "2026-11-03T08:20:58-03:00",
+    "edition": "07:00",
+    "paragraphs": [
+      "A Marvell anunciou em 2 de novembro um acordo para adquirir a Lumentum em uma operação inteiramente em ações. O valor empresarial divulgado é de US$ 115 bilhões, incluindo dívida. A conclusão está prevista para o primeiro semestre de 2028, sujeita a aprovações de acionistas e reguladores.",
+      "A proposta reúne chips personalizados e equipamentos de rede da Marvell com lasers e componentes ópticos da Lumentum. Segundo as empresas, o crescimento do tráfego de IA e os limites das conexões de cobre exigem integrar melhor as tecnologias elétricas e ópticas. Elas esperam ampliar a capacidade de transmissão e a eficiência energética.",
+      "Para quem desenvolve serviços de IA, o anúncio destaca a importância da rede que conecta os processadores. É uma aposta na infraestrutura que sustenta treinamento e execução de modelos; os ganhos prometidos pelas empresas ainda dependem da integração futura."
+    ],
+    "sources": [
+      {
+        "name": "Marvell e Lumentum · Comunicado oficial, tecnologias e condições do acordo",
+        "url": "https://investor.marvell.com/news-events/press-releases/detail/1040/marvell-and-lumentum-to-combine-creating-a-category-leader-in-ai-connectivity",
+        "published_on": "2026-11-02"
+      },
+      {
+        "name": "TechCrunch · Confirmação independente do acordo e do valor que inclui dívida",
+        "url": "https://techcrunch.com/2026/11/02/in-one-of-the-largest-deals-in-tech-history-marvell-buys-lumentum-for-115b/",
+        "published_on": "2026-11-02"
+      }
+    ]
+  },
+  {
     "slug": "2026-11-03-mercado-bitcoin-ataque-bloqueio-ativos",
     "title": "Após ataque hacker, Mercado Bitcoin anuncia bloqueio de US$ 11,2 milhões",
     "category": "Segurança e criptoativos",
